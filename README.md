@@ -16,12 +16,24 @@
 最好的祝福！
 
 ## 目录
-### C语言
+### 如何提问
+[HowToQuestion](/skills-learn/HowToQuestion.md)
+### 工具学习
+- [屏幕截图工具的使用](/tools-learn/screencapture-use.md)
+### 语言学习
+#### C语言
 [C语言学习建议](./C-learn/C语言学习.md)
 ### Java
 [Java学习建议](./Java-learn/Java%E5%AD%A6%E4%B9%A0.md)
 ### Python
 [Python学习建议](./Python-learn/python-learn.md)
+
+## 操作系统学习
+- [Windows系统学习](/System-learn/Windows-learn.md)
+- [Linux系统学习](/System-learn/Linux-learn.md)
+
+## 学习习惯
+- [学习习惯](/Habit-learn/habit.md)
 ## 致谢 (｀･ω･´)ゞ(｀･ω･´)ゞ
 > 感谢下面的这些小伙伴们的支持，我们的这个文档才得以完善！
 > (**按照加入项目的顺序添加**)
