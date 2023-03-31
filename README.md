@@ -20,6 +20,9 @@
 [HowToQuestion](/skills-learn/HowToQuestion.md)
 ### 工具学习
 - [屏幕截图工具的使用](/tools-learn/screencapture-use.md)
+- [vscode编辑器使用](/tools-learn/vscode-use.md)
+- [markdown笔记标记语言学习](/tools-learn/markdown-use.md)
+- [vim编辑器学习](/tools-learn/vim-use.md)
 ### 语言学习
 #### C语言
 [C语言学习建议](./C-learn/C语言学习.md)
@@ -27,6 +30,9 @@
 [Java学习建议](./Java-learn/Java%E5%AD%A6%E4%B9%A0.md)
 ### Python
 [Python学习建议](./Python-learn/python-learn.md)
+
+### 前端学习
+- [html学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
 
 ## 操作系统学习
 - [Windows系统学习](/System-learn/Windows-learn.md)
