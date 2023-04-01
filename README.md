@@ -23,6 +23,7 @@
 - [vscode编辑器使用](/tools-learn/vscode-use.md)
 - [markdown笔记标记语言学习](/tools-learn/markdown-use.md)
 - [vim编辑器学习](/tools-learn/vim-use.md)
+- [Github-向开源项目贡献](/skills-learn/Github-use.md)
 ### 语言学习
 #### C语言
 [C语言学习建议](./C-learn/C语言学习.md)
@@ -50,5 +51,12 @@
 > 
 > 希望漂亮的学妹们照顾照顾我们这些**孤单的**学长**ಥ_ಥ**,有时间跟学长们谈谈心。。。
 
-文档已经存在
-<iframe src="https://free.timeanddate.com/countdown/i8sch106/n33/cf114/cm0/cu4/ct0/cs0/ca0/co1/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs250/szw448/szh189/tatTime%20left%20to%20Event%20in/tac000/tptdoc-for-sxau/tpc000/iso2023-03-28T00:00:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe>
+---
+
+
+
+## 关注该项目
+文档已经存在 5 天
+![Github Stars](https://img.shields.io/github/stars/meowrain/doc-for-sxau?style=social)
+![GitHub forks](https://img.shields.io/github/forks/meowrain/doc-for-sxau?style=social)
+<!-- <iframe src="https://free.timeanddate.com/countdown/i8sch106/n33/cf114/cm0/cu4/ct0/cs0/ca0/co1/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs250/szw448/szh189/tatTime%20left%20to%20Event%20in/tac000/tptdoc-for-sxau/tpc000/iso2023-03-28T00:00:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe> -->
