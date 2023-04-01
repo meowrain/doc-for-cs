@@ -46,7 +46,6 @@ ipconfig /flushdns
 - OSChina 开源指北: https://oschina.gitee.io/opensource-guide/
 
   看上面的这个就行了，相信你会受益匪浅
-
 ## 参与开源项目
 
 > 想在 github 参与别的开源项目，或者参与这个文档？
