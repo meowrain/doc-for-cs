@@ -29,7 +29,7 @@
 - [markdown 笔记标记语言学习](/tools-learn/markdown-use.md)
 - [vim 编辑器学习](/tools-learn/vim-use.md)
 - [Github-向开源项目贡献](/skills-learn/Github-use.md)
-
+- [Git学习](/tools-learn/git-learn.md)
 ### 语言学习
 
 #### C 语言
