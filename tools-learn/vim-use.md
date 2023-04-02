@@ -1,3 +1,5 @@
+# 目录
+[TOC]
 # 为什么学习vim
 ![](https://static.meowrain.cn/i/2023/03/31/yvole7-3.webp)
 

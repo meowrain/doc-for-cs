@@ -16,23 +16,38 @@
 
 最好的祝福！
 
-## 目录
+加群了解更多信息(加群验证加上:专业班级姓名)：
+🌈University Programmer 开摆群 🌈
+![](https://static.meowrain.cn/i/2023/04/02/ipor86-3.webp)
 
-### 如何提问
+---
+
+# 目录
+
+[TOC]
+
+---
+
+# 如何提问
 
 [HowToQuestion](/skills-learn/HowToQuestion.md)
 
-### 工具学习
+---
+
+## 工具学习
 
 - [屏幕截图工具的使用](/tools-learn/screencapture-use.md)
 - [vscode 编辑器使用](/tools-learn/vscode-use.md)
 - [markdown 笔记标记语言学习](/tools-learn/markdown-use.md)
 - [vim 编辑器学习](/tools-learn/vim-use.md)
 - [Github-向开源项目贡献](/skills-learn/Github-use.md)
-- [Git学习](/tools-learn/git-learn.md)
-### 语言学习
+- [Git 学习](/tools-learn/git-learn.md)
 
-#### C 语言
+---
+
+## 语言学习
+
+### C 语言
 
 [C 语言学习建议](./C-learn/C语言学习.md)
 
@@ -46,9 +61,36 @@
 
 ### 前端学习
 
-- [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
+#### 第一阶段(前端三件套)
 
-## 操作系统学习
+- [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
+- [css 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
+- [css 扩展](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
+- [javascript 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
+  > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
+
+#### 第二阶段(框架学习)
+
+> Typescript 可以提前学一下
+
+- [Typescript 学习](/Front-learn/%E5%85%B6%E5%AE%83/Typescript-learn.md)
+- [Vue 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
+- [React 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn.md)
+
+#### 第三阶段(Nodejs 学习)
+
+- [Nodejs 学习](/Front-learn/%E5%85%B6%E5%AE%83/nodejs-learn.md)
+
+---
+
+## 计算机基础学习
+
+### 算法与数据结构学习
+
+- [数据结构学习](/Datastructure%26%26Algorithm-learn/datastructure-learn.md)
+- [算法学习](/Datastructure%26%26Algorithm-learn/algorithm-learn.md)
+
+### 操作系统学习
 
 - [Windows 系统学习](/System-learn/Windows-learn.md)
 - [Linux 系统学习](/System-learn/Linux-learn.md)
@@ -56,6 +98,8 @@
 ## 学习习惯
 
 - [学习习惯](/Habit-learn/habit.md)
+
+---
 
 ## 致谢 (｀･ω･´)ゞ(｀･ω･´)ゞ
 
@@ -68,8 +112,9 @@
 > - **lcekold**(菜比)
 >
 > 希望漂亮的学妹们照顾照顾我们这些**孤单的**学长**ಥ_ಥ**,有时间跟学长们谈谈心。。。
+> **PS:虽然我们有几个是社恐。。。**
 
----
+## ![](https://static.meowrain.cn/i/2023/04/02/ioxix9-3.gif)
 
 ## 关注该项目
 
