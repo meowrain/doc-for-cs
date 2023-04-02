@@ -1,5 +1,10 @@
 # 目录
-[TOC]
+- [目录](#目录)
+- [前言](#前言)
+  - [Java SE](#java-se)
+  - [Java EE](#java-ee)
+    - [Java Web](#java-web)
+
 
 # 前言
 ![](https://static.meowrain.cn/i/2023/04/02/j37wt2-3.webp)
