@@ -26,3 +26,4 @@
 # 资源推荐
 - [vimrc配置-阮一峰老师](https://www.ruanyifeng.com/blog/2018/09/vimrc.html)
 - [vim练级手册](https://www.bookstack.cn/read/wxnacy/docs-key-position.md)
+- ⭐[慕课视频教程-玩转Vim 从放弃到爱不释手](https://www.imooc.com/learn/1129)
