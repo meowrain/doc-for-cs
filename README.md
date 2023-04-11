@@ -87,7 +87,8 @@
 [Python 学习建议](./Python-learn/python-learn.md)
 
 ### 前端学习
-
+全套学习可以参考这个：
+[100-days-of-code-frontend](https://github.com/nas5w/100-days-of-code-frontend/tree/master/chinese)
 #### 第一阶段(前端三件套)
 
 - [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
