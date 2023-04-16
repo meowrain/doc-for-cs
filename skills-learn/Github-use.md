@@ -52,5 +52,25 @@ ipconfig /flushdns
 > 来看下面的文章：
 > https://github.com/firstcontributions/first-contributions/blob/main/translations/README.zh-cn.md
 
+## 想要书写酷酷的github个人主页？
+>### 1.建仓
+>在 GitHub 中创建一个与 GitHub ID 同名的仓库，例如我的 GitHub ID 为 lcekold，因此创建的仓库名也为 lcekold。：
+>![这是图片](https://static.meowrain.cn/i/2023/04/12/11a7349.webp)
+>由于我已创建了这个仓库，所以 GitHub 会在下方提示我已经创建过同名的仓库了。  
+>
+>创建时记得勾选从下方的「Add a README file」，在仓库中添加一个 README 的 Markdown 文件，等会我们就是要在这个文件中创建我们最终想要的个人主页样式。  
+>
+>创建仓库之后，点击右上角的个人头像，选择「Your profile」回到你的 GitHub 主页，你应该就可以看到 Hi there 的文本内容。
+>![这是图片](https://static.meowrain.cn/i/2023/04/12/11cou7h.webp)
+>点击右侧的编辑按钮，进入 REMDME 文件的编辑状态。
+进入编辑状态，这个文档是使用 Markdown 语法来编辑的，如果你之前用过 Markdown 的话，编辑起来应该非常简单，如果你没接触过，想学的话十分钟也可以入门。
+>
+>只需要记住一点，上一行结束时，要在最末尾加多至少两个空格，才能实现换行，否则本来想分行的两行内容会连在一起。
+>![这是图片](https://static.meowrain.cn/i/2023/04/12/1239qir.webp)
+>编辑的过程中，点击上方的「Preview changes」选项卡，查看 Markdown 渲染后的效果
+
+
 上面的文章详细说明了如何 pull requests
 如果有厉害的学弟学妹，欢迎大家来补充这个文档！
+
+
