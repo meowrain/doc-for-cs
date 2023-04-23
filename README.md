@@ -40,6 +40,7 @@
   - [前端学习](#前端学习)
     - [第一阶段(前端三件套)](#第一阶段前端三件套)
     - [第二阶段(框架学习)](#第二阶段框架学习)
+      - [框架文档](#框架文档)
   - [后端学习](#后端学习)
     - [Nodejs](#nodejs)
       - [数据库](#数据库)
@@ -98,7 +99,6 @@
 
 全套学习可以参考这个：
 [100-days-of-code-frontend](https://github.com/nas5w/100-days-of-code-frontend/tree/master/chinese)
-
 ### 第一阶段(前端三件套)
 
 - [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
@@ -109,8 +109,9 @@
     > [Emmet 语法大全](/Front-learn/%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
 
 ### 第二阶段(框架学习)
-
-> Typescript 可以提前学一下
+#### 框架文档
+一些同学可能英语能力不太好，可以看这个,个人认为收藏的很好
+[⭐印记中文官方公众号](https://docschina.org/)
 
 - [Typescript 学习](/Front-learn/%E5%85%B6%E5%AE%83/Typescript-learn.md)
 - [Vue 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
@@ -163,5 +164,3 @@
 文档已经存在 n 天
 ![Github Stars](https://img.shields.io/github/stars/meowrain/doc-for-sxau?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/meowrain/doc-for-sxau?style=social)
-
-<!-- <iframe src="https://free.timeanddate.com/countdown/i8sch106/n33/cf114/cm0/cu4/ct0/cs0/ca0/co1/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs250/szw448/szh189/tatTime%20left%20to%20Event%20in/tac000/tptdoc-for-sxau/tpc000/iso2023-03-28T00:00:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe> -->
