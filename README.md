@@ -79,7 +79,7 @@
 ---
 
 ## 工具学习
-
+- [😽博客搭建](/tools-learn/blog-create.md)
 - [屏幕截图工具的使用](/tools-learn/screencapture-use.md)
 - [vscode 编辑器使用](/tools-learn/vscode-use.md)
 - [markdown 笔记标记语言学习](/tools-learn/markdown-use.md)
