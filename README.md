@@ -48,7 +48,7 @@
     - [算法与数据结构学习](#算法与数据结构学习)
     - [操作系统学习](#操作系统学习)
   - [学习习惯](#学习习惯)
-  - [💎备忘清单](#备忘清单)
+  - [💎 备忘清单](#-备忘清单)
   - [贡献者](#贡献者)
   - [关注该项目](#关注该项目)
 
@@ -99,19 +99,22 @@
 
 全套学习可以参考这个：
 [100-days-of-code-frontend](https://github.com/nas5w/100-days-of-code-frontend/tree/master/chinese)
+
 ### 第一阶段(前端三件套)
 
 - [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
 - [css 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
 - [css 扩展](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
 - [javascript 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
-    > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
-    > [Emmet 语法大全](/Front-learn/%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
+  > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
+  > [Emmet 语法大全](/Front-learn/%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
 
 ### 第二阶段(框架学习)
+
 #### 框架文档
+
 一些同学可能英语能力不太好，可以看这个,个人认为收藏的很好
-[⭐印记中文官方公众号](https://docschina.org/)
+[⭐ 印记中文官方公众号](https://docschina.org/)
 
 - [Typescript 学习](/Front-learn/%E5%85%B6%E5%AE%83/Typescript-learn.md)
 - [Vue 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
@@ -126,6 +129,7 @@
 #### 数据库
 
 - [MYSQL](/Backend-learn/MySQL-Learn.md)
+- [MYSQL-meowrain](/Backend-learn/MYSQL-Learn-meowrain.md)
 
 ---
 
@@ -147,7 +151,7 @@
 
 ---
 
-## 💎备忘清单
+## 💎 备忘清单
 
 - [Quick Reference](https://wangchujiang.com/reference/index.html)
 
