@@ -27,3 +27,6 @@
 - [vimrc配置-阮一峰老师](https://www.ruanyifeng.com/blog/2018/09/vimrc.html)
 - [vim练级手册](https://www.bookstack.cn/read/wxnacy/docs-key-position.md)
 - ⭐[慕课视频教程-玩转Vim 从放弃到爱不释手](https://www.imooc.com/learn/1129)
+- [130+vim基本命令](https://wklken.me/posts/2013/08/17/130-essential-vim-commands.html#stq=&stp=0)
+- [简明 VIM 练级攻略](https://coolshell.cn/articles/5426.html)
+- [vi / vim 初学者入门（系列文章）](https://blog.easwy.com/archives/vi-vim-beginner-abc/)
