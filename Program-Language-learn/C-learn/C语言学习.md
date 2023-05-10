@@ -9,6 +9,9 @@
 # C 语言的学习
 
 ## MeowRain 的意见：
+> 再补充一些刷题网站
+> https://www.hackerrank.com/domains/c
+> https://www.codewars.com/
 
 > MeowRain 的意见：我觉得吧，视频教程可以看，但别太依赖，不能是离开视频就不会了。
 >
