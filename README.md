@@ -106,11 +106,11 @@
 
 ### C 语言(第一门语言)
 
-[C 语言学习建议](./Program-Language-learn/C-learn/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0.md)
+[C 语言学习建议](./Program-Language-learn/C-learn/C-learn.md)
 
 ### Java
 
-[Java 学习建议](./Program-Language-learn/Java-learn/Java%E5%AD%A6%E4%B9%A0.md)
+[Java 学习建议](./Program-Language-learn/Java-learn/Java-learn.md)
 
 ### Python
 
@@ -131,20 +131,20 @@
 
 ### 第一阶段(前端三件套)
 
-- [html 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
-- [css 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
-- [css 扩展](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
-- [javascript 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
+- [html 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
+- [css 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
+- [css 扩展](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
+- [javascript 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
   > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
-  > [Emmet 语法大全](/Front-learn/%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
+  > [Emmet 语法大全](/Front-learn//%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
 
 ### 第二阶段(框架学习)
 
 #### 框架文档
 
-- [Typescript 学习](/Front-learn/%E5%85%B6%E5%AE%83/Typescript-learn.md)
-- [Vue 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
-- [React 学习](/Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn.md)
+- [Typescript 学习](/Front-learn//%E5%85%B6%E5%AE%83/Typescript-learn.md)
+- [Vue 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
+- [React 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn.md)
 
 ### 第三阶段(应用开发)
 
@@ -158,7 +158,7 @@
 
 ### Nodejs
 
-- [Nodejs 学习](/Front-learn/%E5%85%B6%E5%AE%83/nodejs-learn.md)
+- [Nodejs 学习](/Front-learn//%E5%85%B6%E5%AE%83/nodejs-learn.md)
 
 #### 数据库
 
@@ -171,8 +171,8 @@
 
 ### 算法与数据结构学习
 
-- [数据结构学习](/Datastructure%26%26Algorithm-learn/datastructure-learn.md)
-- [算法学习](/Datastructure%26%26Algorithm-learn/algorithm-learn.md)
+- [数据结构学习](/Datastructure/datastructure-learn.md)
+- [算法学习](/Datastructure/algorithm-learn.md)
 
 ### 操作系统学习
 
