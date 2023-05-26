@@ -1,5 +1,5 @@
 ## 前言
-你可以到[山西农业大学开源软件团队](http://github.io/doc-for-sxau)查看文档
+你可以到[山西农业大学开源软件团队](https://meowrain.github.io/doc-for-sxau/)查看文档
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=meowrain/doc-for-sxau&type=Date)](https://star-history.com/#meowrain/doc-for-sxau&Date)
