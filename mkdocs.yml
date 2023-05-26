@@ -1,4 +1,10 @@
 site_name: 山西农业大学开源软件团队
+site_url: https://meowrain.github.io/doc-for-sxau/
+site_description: >-
+  山西农业大学开源软件团队文档
+repo_name: doc-for-sxau
+repo_url: https://github.com/meowrain/doc-for-sxau
+copyright: Copyright &copy; 2023-present <a href="https://github.com/meowrain" target="_blank" rel="noopener noreferrer">MeowRain</a>
 theme:
   language: zh
   name: material
@@ -9,6 +15,11 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - header.autohide
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.annotate
 extra:
   homepage: #
   constent:

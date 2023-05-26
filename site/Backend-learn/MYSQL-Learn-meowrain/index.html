@@ -1,0 +1,2718 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="山西农业大学开源软件团队文档">
+      
+      
+      
+        <link rel="canonical" href="https://meowrain.github.io/doc-for-sxau/Backend-learn/MYSQL-Learn-meowrain/">
+      
+      
+        <link rel="prev" href="../../Artificial%20Intelligence/use-ai/">
+      
+      
+        <link rel="next" href="../MySQL-Learn/">
+      
+      <link rel="icon" href="../../assets/129314812.jpg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+    
+    
+      
+        <title>MYSQL - 山西农业大学开源软件团队</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mysql" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="山西农业大学开源软件团队" class="md-header__button md-logo" aria-label="山西农业大学开源软件团队" data-md-component="logo">
+      
+  <img src="../../assets/129314812.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            山西农业大学开源软件团队
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MYSQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/meowrain/doc-for-sxau" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc-for-sxau
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="山西农业大学开源软件团队" class="md-nav__button md-logo" aria-label="山西农业大学开源软件团队" data-md-component="logo">
+      
+  <img src="../../assets/129314812.jpg" alt="logo">
+
+    </a>
+    山西农业大学开源软件团队
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/meowrain/doc-for-sxau" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc-for-sxau
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Artificial Intelligence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Artificial Intelligence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/about-ai/" class="md-nav__link">
+        About ai
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/use-ai/" class="md-nav__link">
+        使用GPT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Backend learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Backend learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MYSQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        MYSQL
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ddl" class="md-nav__link">
+    DDL 数据定义语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DDL 数据定义语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据库相关命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    表相关命令
+  </a>
+  
+    <nav class="md-nav" aria-label="表相关命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    显示表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    创建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    重命名表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    删除表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    更改表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dml" class="md-nav__link">
+    DML 数据操作语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DML 数据操作语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    插入数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    修改数据 UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    删除数据 DELETE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dql" class="md-nav__link">
+    DQL 数据查询语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DQL 数据查询语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    SELECT 查询语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-where" class="md-nav__link">
+    SELECT + WHERE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique" class="md-nav__link">
+    关于 UNIQUE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-null" class="md-nav__link">
+    关于 NOT NULL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    关于 CHECK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    关于 DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-key" class="md-nav__link">
+    关于 PRIMARY KEY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_increament" class="md-nav__link">
+    关于 AUTO_INCREAMENT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreign-key" class="md-nav__link">
+    关于 FOREIGN KEY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    关于 JOINS
+  </a>
+  
+    <nav class="md-nav" aria-label="关于 JOINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    INNER JOIN 实战
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-joinright-join" class="md-nav__link">
+    实战 LEFT JOIN，RIGHT JOIN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on" class="md-nav__link">
+    关于 ON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andornot" class="md-nav__link">
+    关于 AND,OR,NOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#like" class="md-nav__link">
+    关于 LIKE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MySQL-Learn/" class="md-nav__link">
+        MySQL数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Datastructure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Datastructure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Datastructure/algorithm-learn/" class="md-nav__link">
+        算法学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Datastructure/datastructure-learn/" class="md-nav__link">
+        数据结构学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Front learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Front learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/Front-end/" class="md-nav__link">
+        前端学习一些不错的文档网站汇总
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          其它
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          其它
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%85%B6%E5%AE%83/Typescript-learn/" class="md-nav__link">
+        Typescript学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%85%B6%E5%AE%83/nodejs-learn/" class="md-nav__link">
+        Nodejs 学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          前端三件套
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          前端三件套
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css/" class="md-nav__link">
+        CSS 扩展
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css/" class="md-nav__link">
+        怎么学习CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          Html
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html/" class="md-nav__link">
+        怎么学习HTML
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn/" class="md-nav__link">
+        Javascript学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          前端框架
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          前端框架
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn/" class="md-nav__link">
+        React 学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Front-learn/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn/" class="md-nav__link">
+        Vue 学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Habit learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Habit learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Habit-learn/habit/" class="md-nav__link">
+        Habit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Nice document for cs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Nice document for cs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nice-document-for-cs/Collections-Document-CsStudent/" class="md-nav__link">
+        Collections Document CsStudent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nice-document-for-cs/Nice-Books-CsStudent/" class="md-nav__link">
+        Nice Books CsStudent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nice-document-for-cs/license-learn/" class="md-nav__link">
+        License learn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Program Language learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Program Language learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          C learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          C learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Program-Language-learn/C-learn/C-learn/" class="md-nav__link">
+        VSCODE C/C++环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          Java learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Program-Language-learn/Java-learn/Java-learn/" class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          Lua learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lua learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Program-Language-learn/Lua-learn/Lua/" class="md-nav__link">
+        Lua 介绍
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          Python learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Python learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Program-Language-learn/Python-learn/python-learn/" class="md-nav__link">
+        Python learn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Software engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Software engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software-engineering/versioning-scheme/" class="md-nav__link">
+        版本号命名规范
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          System learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          System learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../System-learn/Linux-learn/" class="md-nav__link">
+        Linux 介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../System-learn/Windows-learn/" class="md-nav__link">
+        Windows learn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          Skills learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Skills learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills-learn/Github-use/" class="md-nav__link">
+        Github use
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills-learn/HowToQuestion/" class="md-nav__link">
+        HowToQuestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills-learn/regexp/" class="md-nav__link">
+        正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          Tools learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Tools learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/Browser-use/" class="md-nav__link">
+        如何使用浏览器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/blog-create/" class="md-nav__link">
+        搭建自己的博客
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/git-learn/" class="md-nav__link">
+        Git learn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/markdown-use/" class="md-nav__link">
+        学会使用markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/screencapture-use/" class="md-nav__link">
+        关于截图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/search-engine-use/" class="md-nav__link">
+        Search engine use
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/vim-use/" class="md-nav__link">
+        目录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-learn/vscode-use/" class="md-nav__link">
+        如何使用vscode编辑器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ddl" class="md-nav__link">
+    DDL 数据定义语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DDL 数据定义语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据库相关命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    表相关命令
+  </a>
+  
+    <nav class="md-nav" aria-label="表相关命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    显示表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    创建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    重命名表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    删除表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    更改表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dml" class="md-nav__link">
+    DML 数据操作语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DML 数据操作语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    插入数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    修改数据 UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    删除数据 DELETE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dql" class="md-nav__link">
+    DQL 数据查询语言
+  </a>
+  
+    <nav class="md-nav" aria-label="DQL 数据查询语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    SELECT 查询语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-where" class="md-nav__link">
+    SELECT + WHERE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique" class="md-nav__link">
+    关于 UNIQUE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-null" class="md-nav__link">
+    关于 NOT NULL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    关于 CHECK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    关于 DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-key" class="md-nav__link">
+    关于 PRIMARY KEY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_increament" class="md-nav__link">
+    关于 AUTO_INCREAMENT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreign-key" class="md-nav__link">
+    关于 FOREIGN KEY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    关于 JOINS
+  </a>
+  
+    <nav class="md-nav" aria-label="关于 JOINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    INNER JOIN 实战
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-joinright-join" class="md-nav__link">
+    实战 LEFT JOIN，RIGHT JOIN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on" class="md-nav__link">
+    关于 ON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andornot" class="md-nav__link">
+    关于 AND,OR,NOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#like" class="md-nav__link">
+    关于 LIKE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="mysql">MYSQL</h1>
+<h2 id="ddl">DDL 数据定义语言</h2>
+<h3 id="_1">数据库相关命令</h3>
+<pre><code class="language-mysql">CREATE DATABASE IF NOT EXISTS myDB; -- 创建数据库
+USE myDB; -- 使用当前数据库
+DROP DATABASE myDB; -- 删除数据库
+</code></pre>
+<h3 id="_2">表相关命令</h3>
+<h4 id="_3">显示表</h4>
+<pre><code class="language-sql">SHOW TABLES;
+</code></pre>
+<p><img alt="image-20230501113946219" src="https://static.meowrain.cn/i/2023/05/01/iuercd-3.webp" /></p>
+<h4 id="_4">创建表</h4>
+<pre><code class="language-sql">CREATE TABLE employees (
+employee_id INT,
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+hourly_pay DECIMAL(5,2),
+hire_date DATE
+);
+</code></pre>
+<h4 id="_5">重命名表</h4>
+<pre><code class="language-sql">RENAME TABLE employees TO workers;
+</code></pre>
+<p><img alt="image-20230501112218950" src="https://static.meowrain.cn/i/2023/05/01/ik4loa-3.webp" /></p>
+<h4 id="_6">删除表</h4>
+<pre><code class="language-SQL">DROP TABLE employees;
+</code></pre>
+<p><img alt="image-20230501112351215" src="https://static.meowrain.cn/i/2023/05/01/ikwu9v-3.webp" /></p>
+<h4 id="_7">更改表</h4>
+<pre><code class="language-sql">ALTER TABLE employees
+ADD phone_number VARCHAR(15);
+</code></pre>
+<p><img alt="image-20230501112512802" src="https://static.meowrain.cn/i/2023/05/01/ilvmk6-3.webp" /></p>
+<p><img alt="image-20230501112539405" src="https://static.meowrain.cn/i/2023/05/01/im13sy-3.webp" /></p>
+<p>修改字段名</p>
+<pre><code class="language-sql">ALTER TABLE employees
+CHANGE COLUMN `email` `emails` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `phone_number`;
+</code></pre>
+<p><img alt="image-20230501114358029" src="https://static.meowrain.cn/i/2023/05/01/iwv2u8-3.webp" /></p>
+<p><img alt="image-20230501114409126" src="https://static.meowrain.cn/i/2023/05/01/ix5vh0-3.webp" /></p>
+<p>修改字段数据类型</p>
+<pre><code class="language-sql">ALTER TABLE employees
+MODIFY COLUMN `email` VARCHAR(300);
+</code></pre>
+<p><img alt="image-20230501114500300" src="https://static.meowrain.cn/i/2023/05/01/ixph3s-3.webp" /></p>
+<p>移动字段名位置</p>
+<pre><code class="language-sql">ALTER TABLE employees
+MODIFY COLUMN `email` VARCHAR(300)
+AFTER hire_date;
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501115516327" src="https://static.meowrain.cn/i/2023/05/01/j3rcj2-3.webp" /></p>
+<p>删除字段名</p>
+<pre><code class="language-sql">ALTER TABLE employees
+DROP COLUMN `email`;
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501115606158" src="https://static.meowrain.cn/i/2023/05/01/j4akil-3.webp" /></p>
+<h2 id="dml">DML 数据操作语言</h2>
+<h3 id="_8">插入数据</h3>
+<pre><code class="language-sql">INSERT INTO employees
+VALUES
+    ( 1, &quot;Eugene&quot;, &quot;Krabs&quot;, 25.50, &quot;2023-05-01&quot;, &quot;12345677889&quot;, &quot;meowrian@126.com&quot; ),
+    ( 2, &quot;rain&quot;, &quot;meow&quot;, 30.20, &quot;2023-04-30&quot;, &quot;17456778901&quot;, &quot;meowrain@sf.com&quot; ),
+    ( 3, &quot;Smith&quot;, &quot;Johm&quot;, 45.20, &quot;2022-12-20&quot;, &quot;18890997652&quot;, &quot;meow@google.com&quot; );
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501120125051" src="https://static.meowrain.cn/i/2023/05/01/jv70n7-3.webp" /></p>
+<p><img alt="image-20230501120200153" src="https://static.meowrain.cn/i/2023/05/01/jvn557-3.webp" /></p>
+<p>插入部分数据</p>
+<pre><code class="language-sql">INSERT INTO employees(employee_id,first_name,last_name)
+VALUES (4,&quot;Smith&quot;,&quot;Mike&quot;);
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501143646380" src="https://static.meowrain.cn/i/2023/05/01/nr8cme-3.webp" /></p>
+<h3 id="update">修改数据 UPDATE</h3>
+<pre><code class="language-sql">UPDATE employees
+SET hourly_pay = 10.25
+WHERE employee_id = 1;
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501150657502" src="https://static.meowrain.cn/i/2023/05/01/owzbc7-3.webp" /></p>
+<p><img alt="image-20230501150739810" src="https://static.meowrain.cn/i/2023/05/01/oxgvis-3.webp" /></p>
+<p><img alt="image-20230501150844274" src="https://static.meowrain.cn/i/2023/05/01/oy38bo-3.webp" /></p>
+<h3 id="delete">删除数据 DELETE</h3>
+<pre><code class="language-sql">DELETE FROM employees
+WHERE last_name = 'Kate';
+SELECT * FROM employees;
+</code></pre>
+<p><img alt="image-20230501151635101" src="https://static.meowrain.cn/i/2023/05/01/p2srq7-3.webp" /></p>
+<p>插入时间数据</p>
+<p>创建表</p>
+<pre><code class="language-sql">CREATE TABLE time(
+    my_date DATE,
+    my_time TIME,
+    my_datetime DATETIME
+);
+</code></pre>
+<p><img alt="image-20230501161655899" src="https://static.meowrain.cn/i/2023/05/01/qqqml5-3.webp" /></p>
+<pre><code class="language-sql">SELECT * FROM time;
+</code></pre>
+<p><img alt="image-20230501161748316" src="https://static.meowrain.cn/i/2023/05/01/qr0et5-3.webp" /></p>
+<p>插入数据，并且查询结果</p>
+<pre><code class="language-sql">INSERT INTO time
+VALUES (
+CURRENT_DATE(),CURRENT_TIME(),NOW()
+);
+SELECT * FROM time;
+</code></pre>
+<p><img alt="image-20230501161929904" src="https://static.meowrain.cn/i/2023/05/01/qs32ae-3.webp" /></p>
+<p>这样可以插入第二天的日期数据</p>
+<p><img alt="image-20230501162134528" src="https://static.meowrain.cn/i/2023/05/01/qtazuo-3.webp" /></p>
+<h2 id="dql">DQL 数据查询语言</h2>
+<h3 id="select">SELECT 查询语句</h3>
+<pre><code class="language-sql">SELECT first_name, last_name FROM employees;
+</code></pre>
+<p><img alt="image-20230501143908315" src="https://static.meowrain.cn/i/2023/05/01/nssll3-3.webp" /></p>
+<p>通过上面的这个命令，我就能拿到数据库中已经存储的所有人名了</p>
+<h3 id="select-where">SELECT + WHERE</h3>
+<pre><code class="language-sql">SELECT * FROM employees WHERE employee_id = 1;
+</code></pre>
+<p><img alt="image-20230501144058078" src="https://static.meowrain.cn/i/2023/05/01/ntooq0-3.webp" /></p>
+<blockquote>
+<p>通过上面的命令，我们就能获取到 id 为 1 的这个员工的所有数据了，当然了，我们也可以用名字查找</p>
+</blockquote>
+<pre><code class="language-sql">SELECT * FROM employees WHERE first_name = 'Eugene' AND last_name = 'Krabs';
+</code></pre>
+<p><img alt="image-20230501144406858" src="https://static.meowrain.cn/i/2023/05/01/nvrlcf-3.webp" /></p>
+<blockquote>
+<p>也可以用下面这个命令找到雇佣日期不是 NULL 的所有人的信息</p>
+</blockquote>
+<pre><code class="language-sql"> SELECT * FROM employees WHERE hire_date IS NOT NULL;
+</code></pre>
+<p><img alt="image-20230501145923095" src="https://static.meowrain.cn/i/2023/05/01/o4sj8o-3.webp" /></p>
+<h3 id="unique">关于 UNIQUE</h3>
+<blockquote>
+<p>在创建表时， UNIQUE 关键字用于指定一个或多个列的值必须唯一。</p>
+</blockquote>
+<pre><code class="language-sql">CREATE TABLE products (
+    product_id INT,
+    product_name VARCHAR(25) UNIQUE,
+    price DECIMAL(4,2)
+);
+-- 在创建表时， UNIQUE 关键字用于指定一个或多个列的值必须唯一。在这里的例子中， UNIQUE 关键字强制 product_name 列中的每个值都是唯一的，这意味着不能有相同的 product_name 值存在于该表中的不同行中。如果插入的数据违反此限制，将会出现唯一键冲突错误。
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE products (
+    product_id INT,
+    product_name VARCHAR(25),
+    price DECIMAL(4,2)
+);
+-- 在创建表时， UNIQUE 关键字用于指定一个或多个列的值必须唯一。在这里的例子中， UNIQUE 关键字强制 product_name 列中的每个值都是唯一的，这意味着不能有相同的 product_name 值存在于该表中的不同行中。如果插入的数据违反此限制，将会出现唯一键冲突错误。
+ALTER TABLE products
+ADD CONSTRAINT
+UNIQUE(product_name);
+-- 这是一个 SQL 语句，它的意思是在名为 &quot;products&quot; 的表中添加一个名为 &quot;product_name&quot; 的唯一约束 (UNIQUE CONSTRAINT)。这意味着在该表中，每个产品名称只能出现一次。如果尝试插入具有相同产品名称的行，则会触发唯一约束，从而防止错误数据的插入。
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM products;
+</code></pre>
+<p><img alt="image-20230501163032840" src="https://static.meowrain.cn/i/2023/05/01/qynlia-3.webp" /></p>
+<p>接下来实战一下，可以看到 unique 有什么作用</p>
+<p><img alt="image-20230501163302899" src="https://static.meowrain.cn/i/2023/05/01/r09f4p-3.webp" /></p>
+<p><img src="https://static.meowrain.cn/i/2023/05/01/r0emcn-3.webp" alt="image-20230501163326880" style="zoom: 50%;" /></p>
+<p>这样写就正常了</p>
+<p><img alt="image-20230501163433958" src="https://static.meowrain.cn/i/2023/05/01/r11gr8-3.webp" /></p>
+<p><img alt="image-20230501163452829" src="https://static.meowrain.cn/i/2023/05/01/r15kst-3.webp" /></p>
+<h3 id="not-null">关于 NOT NULL</h3>
+<blockquote>
+<p>NOT NULL 约束用于保证列的值不能为空(NULL)。它的语法格式为:</p>
+<p><code>sql
+sql
+column_name datatype NOT NULL</code></p>
+</blockquote>
+<pre><code class="language-sql">CREATE TABLE products(
+    product_id INT,
+    product_name VARCHAR(25),
+    price DECIMAL(4,2) NOT NULL
+);
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE products(
+    product_id INT,
+    product_name VARCHAR(25),
+    price DECIMAL(4,2)
+);
+ALTER TABLE products
+MODIFY price DECIMAL(4,2) NOT NULL;
+
+</code></pre>
+<p><img alt="image-20230501163920984" src="https://static.meowrain.cn/i/2023/05/01/r3xxt7-3.webp" /></p>
+<p>实战报错：</p>
+<p><img alt="image-20230501164239816" src="https://static.meowrain.cn/i/2023/05/01/r5u8ef-3.webp" /></p>
+<p>正确演示：</p>
+<p><img alt="image-20230501164130723" src="https://static.meowrain.cn/i/2023/05/01/r56ud0-3.webp" /></p>
+<h3 id="check">关于 CHECK</h3>
+<blockquote>
+<p>CHECK 约束用于限制列中的值范围,保证数据的完整性。它的语法格式为:</p>
+<p><code>sql
+column_name datatype CHECK (condition)</code></p>
+<p>condition 是要求列必须满足的条件,可以是比较运算符、BETWEEN、IN 运算符等。</p>
+</blockquote>
+<p>创建</p>
+<pre><code class="language-sql">CREATE TABLE employees_test (
+    employee_id INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    hourly_pay DECIMAL(5,2),
+    hire_date DATE,
+    CONSTRAINT chk_hourly_pay CHECK (hourly_pay &gt;= 10.00)
+);
+</code></pre>
+<p>追加</p>
+<pre><code class="language-sql">ALTER TABLE employees
+ADD CONSTRAINT chk_hourly_pay CHECK(hourly_pay &gt;= 10.00);
+</code></pre>
+<blockquote>
+<p>在 MySQL 中，CHECK 约束是被支持的，但是并不被实际执行。也就是说，虽然你在创建表时定义了 CHECK 约束，但是 MySQL 并不会在插入数据时执行该约束，也不会报错。所以，即使你插入了不符合 CHECK 约束的数据，MySQL 也不会报错，而是会继续插入该数据。</p>
+</blockquote>
+<h3 id="default">关于 DEFAULT</h3>
+<blockquote>
+<p>在 SQL 中,DEFAULT 关键字用于为列定义默认值。当向表中插入新行时,如果未显式为某列指定值,则会使用默认值。默认值使我们无需每次插入新行时都指定每个列的值,有助于简化插入语句和提高效率。</p>
+</blockquote>
+<pre><code class="language-sql">CREATE TABLE products (
+    product_id INT,
+    product_name VARCHAR(50),
+    price DECIMAL(4,2) DEFAULT 0
+);
+</code></pre>
+<p>如果表已经存在</p>
+<pre><code class="language-sql">ALTER TABLE products
+ALTER price SET DEFAULT 0
+</code></pre>
+<p>我们插入数据</p>
+<pre><code class="language-sql">INSERT INTO products(product_id,product_name)
+VALUES (104,&quot;straw&quot;),(105,&quot;napkin&quot;),(106,&quot;fork&quot;),(106,&quot;spoon&quot;);
+SELECT * FROM products;
+</code></pre>
+<p><img alt="image-20230502111217698" src="https://static.meowrain.cn/i/2023/05/02/ie5pr1-3.webp" /></p>
+<h3 id="primary-key">关于 PRIMARY KEY</h3>
+<blockquote>
+<p>在 SQL 中，PRIMARY KEY（主键）是一种约束条件，用于标识表中的一列或多列，它们的值唯一标识每行数据。主键可以确保表中每行数据的唯一性，因此它通常被用作表中的索引。主键可以是一个或多个列，但通常都是使用单个列作为主键。</p>
+<p>在创建表时，可以将主键定义为一个列或多个列的组合。主键可以通过以下两种方式定义：</p>
+<ol>
+<li>在列定义时，使用 PRIMARY KEY 关键字将该列指定为主键。</li>
+<li>在列定义后，使用 ALTER TABLE 命令将列指定为主键。</li>
+</ol>
+<p>一个表只能有一个主键，主键的值不能为 NULL，因为主键用于标识每行数据，如果主键为空，那么就无法唯一标识每行数据。如果要在表中使用多个列作为主键，可以使用复合主键，这种情况下，每个列的值的组合必须唯一标识每行数据。</p>
+<p>主键还可以用于定义外键，外键是一个表中的列，它引用另一个表中的主键列。外键用于确保表之间的数据一致性，它定义了两个表之间的关系，可以用于防止在一个表中插入无效的数据，以及在删除一个表中的数据时，自动删除相关的数据。</p>
+</blockquote>
+<p>主键是唯一且不能为空的</p>
+<p>主键是一种唯一且不能为空的标识符，可以用于唯一标识表中的每一行数据。就像人们的身份证号一样，每个人的身份证号都是唯一的，用于唯一标识一个人。同样地，每行数据的主键也必须是唯一的，以便可以唯一标识该行数据。主键可以由一个或多个列组成，但每个主键值的组合必须是唯一的。</p>
+<pre><code class="language-sql">CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    amount DECIMAL(5,2)
+);
+SELECT * FROM transactions;
+</code></pre>
+<p><img alt="image-20230502153015175" src="https://static.meowrain.cn/i/2023/05/02/pb0lk4-3.webp" /></p>
+<p>如果已经存在表，可以直接修改 id 为主键</p>
+<pre><code class="language-sql">ALTER TABLE transactions
+ADD CONSTRAINT
+PRIMARY KEY(transaction_id);
+SELECT * FROM transactions;
+</code></pre>
+<p><img alt="image-20230502153535947" src="https://static.meowrain.cn/i/2023/05/02/pe3ybi-3.webp" /></p>
+<blockquote>
+<p>从上图我们可以知道，主键不能为 NULL</p>
+</blockquote>
+<h3 id="auto_increament">关于 AUTO_INCREAMENT</h3>
+<p>在 MySQL 中，AUTO_INCREMENT 是一种列属性，它可以为表中的某一列指定一个自动增长的整数值，每次插入新记录时，该列的值都会自动递增。通常情况下，AUTO_INCREMENT 属性应该用于定义主键列，以确保每行数据都有唯一的标识符。</p>
+<p>可以通过在表定义中使用 AUTO_INCREMENT 关键字来为表中的某个列指定自动增长属性，例如：</p>
+<pre><code class="language-sql">CREATE TABLE customers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  email VARCHAR(50)
+);
+</code></pre>
+<p>在上面的例子中，id 列被指定为主键，并使用 AUTO_INCREMENT 属性，因此每次插入新记录时，id 列的值都会自动递增。</p>
+<pre><code class="language-sql">CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    amount DECIMAL(5,2)
+);
+SELECT * FROM transactions;
+</code></pre>
+<pre><code class="language-sql">INSERT INTO transactions(amount)
+VALUES (4.99),(5.43),(3.22);
+SELECT * FROM transactions;
+</code></pre>
+<p><img alt="image-20230502154052065" src="https://static.meowrain.cn/i/2023/05/02/ph6qsh-3.webp" /></p>
+<blockquote>
+<p>设置自增起始值</p>
+</blockquote>
+<pre><code class="language-sql">ALTER TABLE transactions
+AUTO_INCREMENT = 1000;
+</code></pre>
+<pre><code class="language-sql">INSERT INTO transactions(amount)
+VALUES (4.23),(5.66),(5.78),(7.32);
+SELECT * FROM transactions;
+</code></pre>
+<p><img alt="image-20230502154418032" src="https://static.meowrain.cn/i/2023/05/02/pjd370-3.webp" /></p>
+<h3 id="foreign-key">关于 FOREIGN KEY</h3>
+<pre><code>在 MySQL 中，FOREIGN KEY（外键）是一种约束条件，用于指定一个表的列与另一个表的列之间的关系。外键用于确保表之间的数据一致性，它定义了两个表之间的关系，可以用于防止在一个表中插入无效的数据，以及在删除一个表中的数据时，自动删除相关的数据。
+</code></pre>
+<p>外键通常用于建立表与表之间的关联关系，例如在关系型数据库中，可以使用外键将一张表中的列与另一张表中的主键列关联起来。在 MySQL 中，可以在创建表时使用 FOREIGN KEY 关键字来定义外键，例如：</p>
+<pre><code class="language-sql">CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT,
+  order_date DATE,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+</code></pre>
+<p>在上面的例子中，orders 表中的 customer_id 列被定义为一个外键，它引用了 customers 表中的 id 列。这意味着，orders 表中的每个 customer_id 值必须存在于 customers 表的 id 列中。如果尝试向 orders 表中插入一个 customer_id 值，而该值不存在于 customers 表中的 id 列中，则会引发一个错误。</p>
+<p>案例：</p>
+<p>创建 customers 表</p>
+<pre><code class="language-sql">CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
+);
+SELECT * FROM customers;
+</code></pre>
+<p><img alt="image-20230502154923754" src="https://static.meowrain.cn/i/2023/05/02/pmdkkr-3.webp" /></p>
+<p>插入数据到 customers 表</p>
+<pre><code class="language-sql">INSERT INTO customers ( first_name, last_name )
+VALUES
+    ( &quot;Fred&quot;, &quot;Fish&quot; ),
+    ( &quot;Larry&quot;, &quot;Lobster&quot; ),
+    ( &quot;Bubble&quot;, &quot;Bass&quot; );
+SELECT * FROM customers;
+</code></pre>
+<p><img alt="image-20230502155120066" src="https://static.meowrain.cn/i/2023/05/02/pnjs9d-3.webp" /></p>
+<p>创建 transaction 表</p>
+<pre><code class="language-sql">CREATE TABLE transactions (
+transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+amount DECIMAL(5,2),
+customer_id INT,
+FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+);
+SELECT * FROM transactions;
+</code></pre>
+<p><img alt="image-20230502155331725" src="https://static.meowrain.cn/i/2023/05/02/poszon-3.webp" /></p>
+<p>插入数据</p>
+<p><img alt="image-20230502155734009" src="https://static.meowrain.cn/i/2023/05/02/pr766o-3.webp" /></p>
+<p>接下来我们尝试删除 customers 表中的一个人，但是这个人和 transactions 中的一个字段相关联</p>
+<p>我们就会得到下面的报错
+<img alt="image-20230502155846887" src="https://static.meowrain.cn/i/2023/05/02/prvbg0-3.webp" /></p>
+<h3 id="joins">关于 JOINS</h3>
+<p>在 MySQL 中，JOIN 是一种用于将两个或多个表中的数据组合在一起的操作。JOIN 操作基于两个或多个表之间的关系，它将一张表中的数据与另一张表中的数据进行匹配，以便从这些表中检索相关的数据。</p>
+<p>MySQL 中有多种类型的 JOIN 操作，包括 INNER JOIN、LEFT JOIN、RIGHT JOIN 和 FULL OUTER JOIN。下面是各种 JOIN 操作的说明：</p>
+<ol>
+<li>INNER JOIN：返回两个表中匹配的行。它只返回两个表中都存在的行。</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+</code></pre>
+<ol>
+<li>LEFT JOIN：返回左表中的所有行以及右表中匹配的行。如果右表中没有匹配的行，则返回 NULL 值。</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+</code></pre>
+<ol>
+<li>RIGHT JOIN：返回右表中的所有行以及左表中匹配的行。如果左表中没有匹配的行，则返回 NULL 值。</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM table1
+RIGHT JOIN table2
+ON table1.column = table2.column;
+</code></pre>
+<ol>
+<li>FULL OUTER JOIN：返回两个表中的所有行。如果某个表中没有匹配的行，则返回 NULL 值。</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column = table2.column;
+</code></pre>
+<p>在使用 JOIN 操作时，需要指定两个表之间的关系，这通常通过使用 ON 关键字来实现。ON 关键字用于指定两个表之间的关联条件，例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.customer_id = customers.id;
+</code></pre>
+<p>在上面的例子中，orders 表和 customers 表之间的关联条件是 orders.customer_id = <a href="http://customers.id/">customers.id</a>。这意味着，只有 orders 表中的 customer_id 值与 customers 表中的 id 值匹配时，才会返回相关的行。</p>
+<p>JOIN 操作也可以使用 WHERE 子句来指定关联条件，例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM orders, customers
+WHERE orders.customer_id = customers.id;
+</code></pre>
+<p>在上面的例子中，orders 表和 customers 表之间的关联条件是 orders.customer_id = <a href="http://customers.id/">customers.id</a>。这种写法与使用 INNER JOIN 操作是等价的。</p>
+<h4 id="inner-join">INNER JOIN 实战</h4>
+<p><img alt="image-20230502163046327" src="https://static.meowrain.cn/i/2023/05/02/qyql0w-3.webp" /></p>
+<p>我们先来看一下 transactions 表和 customers 表中的内容</p>
+<p><img alt="image-20230502162430520" src="https://static.meowrain.cn/i/2023/05/02/qv2kxm-3.webp" /></p>
+<p><img alt="image-20230502162441061" src="https://static.meowrain.cn/i/2023/05/02/qv4oxu-3.webp" /></p>
+<pre><code class="language-sql">SELECT *
+FROM transactions INNER JOIN customers
+ON transactions.customer_id = customers.customer_id;
+</code></pre>
+<p><img alt="" src="https://static.meowrain.cn/i/2023/05/02/qukjp4-3.webp" /></p>
+<p><img alt="image-20230502162747415" src="https://static.meowrain.cn/i/2023/05/02/qwyg06-3.webp" /></p>
+<blockquote>
+<p>可以看到，我们这样拼起来，就能清晰的获得到用户的<code>transaction_id</code>还有<code>name</code>，以及消费的<code>amount</code></p>
+<p>上面的代码中，我们使用<code>customer_id</code>这个属性把两个表连接起来</p>
+</blockquote>
+<h4 id="left-joinright-join">实战 LEFT JOIN，RIGHT JOIN</h4>
+<p><img alt="image-20230502163030371" src="https://static.meowrain.cn/i/2023/05/02/qyn197-3.webp" /></p>
+<p><img alt="image-20230502163451489" src="https://static.meowrain.cn/i/2023/05/02/r15fhf-3.webp" /></p>
+<p>现在我们往 transactions 表中插入一个没有 customer_id 属性的字段</p>
+<p><img alt="image-20230502163255683" src="https://static.meowrain.cn/i/2023/05/02/qzzb78-3.webp" /></p>
+<p>INNER JOIN 结果是这样的</p>
+<p><img alt="image-20230502163323936" src="https://static.meowrain.cn/i/2023/05/02/r0dxmq-3.webp" /></p>
+<p>LEFT JOIN 是这样的</p>
+<p><img alt="image-20230502163348033" src="https://static.meowrain.cn/i/2023/05/02/r0j2iz-3.webp" /></p>
+<p>RIGHT JOIN 是这样的</p>
+<p><img alt="image-20230502163423017" src="https://static.meowrain.cn/i/2023/05/02/r0z7ed-3.webp" /></p>
+<h3 id="on">关于 ON</h3>
+<p>在 MySQL 中，ON 关键字用于指定两个表之间的关联条件。在使用 JOIN 操作时，需要指定两个表之间的关系，这通常通过使用 ON 关键字来实现。</p>
+<p>ON 关键字后面的条件指定了两个表之间的关联条件，它可以是一个简单的条件，也可以是一个复杂的条件。例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.customer_id = customers.id;
+</code></pre>
+<p>在上面的例子中，使用 INNER JOIN 操作将 orders 表和 customers 表连接起来，并指定了 orders.customer_id = <a href="http://customers.id/">customers.id</a> 作为两个表之间的关联条件。这意味着，只有 orders 表中的 customer_id 值与 customers 表中的 id 值匹配时，才会返回相关的行。</p>
+<p>ON 关键字后面的条件可以使用多个运算符和函数，例如：</p>
+<ol>
+<li>等于运算符（=）</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.customer_id = customers.id;
+</code></pre>
+<ol>
+<li>不等于运算符（&lt;&gt;）</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.customer_id &lt;&gt; customers.id;
+</code></pre>
+<ol>
+<li>大于运算符（&gt;）</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.order_date &gt; customers.join_date;
+</code></pre>
+<ol>
+<li>小于运算符（&lt;）</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.order_date &lt; customers.join_date;
+</code></pre>
+<ol>
+<li>IN 运算符</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON orders.customer_id IN (1, 2, 3);
+</code></pre>
+<ol>
+<li>LIKE 运算符</li>
+</ol>
+<pre><code>SELECT *
+FROM orders
+INNER JOIN customers
+ON customers.name LIKE 'J%';
+</code></pre>
+<ol>
+<li>函数</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM orders
+INNER JOIN customers
+ON YEAR(orders.order_date) = YEAR(customers.join_date);
+</code></pre>
+<p>在使用 ON 关键字时，需要确保关联条件是正确的，并且可以确保正确地关联两个表。如果关联条件不正确，则可能会导致错误的查询结果。</p>
+<h3 id="andornot">关于 AND,OR,NOT</h3>
+<p>在 MySQL 中，AND、OR 和 NOT 是逻辑运算符，用于组合和操作多个条件。下面是一些使用 AND、OR 和 NOT 运算符的示例：</p>
+<ol>
+<li>AND 运算符</li>
+</ol>
+<p>AND 运算符用于组合多个条件，并返回同时满足这些条件的行。例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE age &gt; 18 AND gender = 'F';
+</code></pre>
+<p>上面的查询将返回所有年龄大于 18 岁且性别为女性的客户。</p>
+<ol>
+<li>OR 运算符</li>
+</ol>
+<p>OR 运算符用于组合多个条件，并返回满足任意一个条件的行。例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE age &gt; 18 OR gender = 'F';
+</code></pre>
+<p>上面的查询将返回所有年龄大于 18 岁或性别为女性的客户。</p>
+<ol>
+<li>NOT 运算符</li>
+</ol>
+<p>NOT 运算符用于否定一个条件，返回不满足该条件的行。例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE NOT age &gt; 18;
+</code></pre>
+<p>上面的查询将返回所有年龄小于或等于 18 岁的客户。</p>
+<ol>
+<li>组合使用 AND、OR 和 NOT 运算符</li>
+</ol>
+<p>AND、OR 和 NOT 运算符可以组合使用，以便更复杂的条件筛选。例如：</p>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE age &gt; 18 AND (gender = 'F' OR city = 'New York') AND NOT status = 'inactive';
+</code></pre>
+<p>上面的查询将返回所有年龄大于 18 岁、性别为女性或住在纽约市、且状态不为“inactive”的客户。</p>
+<p>需要注意的是，在使用 AND、OR 和 NOT 运算符时，需要使用括号来明确条件的优先级，以便确保条件组合的正确性。</p>
+<h3 id="like">关于 LIKE</h3>
+<p>在 MySQL 中，LIKE 是一种模式匹配运算符，用于在字符串中查找指定的模式或子字符串。LIKE 运算符通常与通配符一起使用，以便更灵活地匹配字符串。</p>
+<p>LIKE 运算符的语法如下：</p>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+WHERE column_name LIKE pattern;
+</code></pre>
+<p>其中，column_name 是要匹配的列名，table_name 是要查询的表名，pattern 是要匹配的模式或子字符串。pattern 可以包含通配符，以便更灵活地匹配字符串。</p>
+<p>在 MySQL 中，LIKE 运算符支持两种通配符：</p>
+<ol>
+<li>百分号（%）：表示零个或多个字符。例如，'a%' 匹配以字母 a 开头的任何字符串，'%a' 匹配以字母 a 结尾的任何字符串，'%a%' 匹配包含字母 a 的任何字符串。</li>
+<li>下划线（<em>）：表示一个字符。例如，'a</em>' 匹配以字母 a 开头且长度为两个字符的任何字符串，'_a' 匹配以字母 a 结尾且长度为两个字符的任何字符串。</li>
+</ol>
+<p>下面是一些使用 LIKE 运算符的示例：</p>
+<ol>
+<li>查找以 'J' 开头的所有客户名：</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE name LIKE 'J%';
+</code></pre>
+<ol>
+<li>查找包含 'doe' 子字符串的所有客户名：</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE name LIKE '%doe%';
+</code></pre>
+<ol>
+<li>查找以 'j' 开头且长度为 4 个字符的所有客户名：</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE name LIKE 'j___';
+</code></pre>
+<ol>
+<li>查找以 'j' 开头或以 's' 结尾的所有客户名：</li>
+</ol>
+<pre><code class="language-sql">SELECT *
+FROM customers
+WHERE name LIKE 'j%' OR name LIKE '%s';
+</code></pre>
+<p>需要注意的是，LIKE 运算符对于大型数据集可能会导致性能问题，因为它需要对每个字符串执行模式匹配。如果要进行高效的字符串匹配，可以考虑使用全文本搜索引擎，如 MySQL 提供的全文本搜索引擎 MyISAM 或 InnoDB 引擎中的全文本搜索插件。</p>
+<h1 id="mysql-function">MYSQL Function</h1>
+<blockquote>
+<p>比如，我现在有个需求，计算上面消费次数</p>
+</blockquote>
+<pre><code class="language-sql">SELECT COUNT(amount)
+FROM transactions;
+</code></pre>
+<p><img alt="image-20230502165226874" src="https://static.meowrain.cn/i/2023/05/02/rbpvga-3.webp" /></p>
+<pre><code class="language-sql">SELECT
+    MAX( amount ) AS max_amount
+FROM
+    transactions;
+</code></pre>
+<p><img alt="image-20230502165340914" src="https://static.meowrain.cn/i/2023/05/02/rce5qd-3.webp" /></p>
+<pre><code class="language-sql">SELECT
+    SUM( amount ) AS all_amount
+FROM
+    transactions;
+</code></pre>
+<p><img alt="image-20230502165425895" src="https://static.meowrain.cn/i/2023/05/02/rcwdf7-3.webp" /></p>
+<p>链接字符串</p>
+<p>employee 表内容</p>
+<p><img alt="image-20230502165626186" src="https://static.meowrain.cn/i/2023/05/02/re3cop-3.webp" /></p>
+<p>接下来我们尝试把名字连起来</p>
+<pre><code class="language-sql">SELECT CONCAT(first_name,&quot; &quot;,last_name) FROM employees;
+</code></pre>
+<p><img alt="image-20230502165555691" src="https://static.meowrain.cn/i/2023/05/02/rdo8qz-3.webp" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-present <a href="https://github.com/meowrain" target="_blank" rel="noopener noreferrer">MeowRain</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "header.autohide", "search.highlight", "search.share", "search.suggest", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
