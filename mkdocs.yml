@@ -11,7 +11,15 @@ theme:
   logo: assets/129314812.jpg
   favicon: assets/129314812.jpg
   palette:
-      primary: pink
+      - scheme: default
+        toggle:
+          icon: material/brightness-7
+          name: 切换到黑暗模式
+      # Palette toggle for dark mode
+      - scheme: slate
+        toggle:
+          icon: material/brightness-3
+          name: 切换到白天模式
   features:
     - navigation.instant
     - navigation.tracking
