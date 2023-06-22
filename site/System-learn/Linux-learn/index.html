@@ -19,7 +19,7 @@
         <link rel="next" href="../Windows-learn/">
       
       <link rel="icon" href="../../assets/129314812.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -1606,6 +1606,34 @@
 <li><a href="https://www.bilibili.com/video/BV1Sv411r7vd/?spm_id_from=333.337.search-card.all.click">⭐韩顺平linux</a></li>
 <li><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/base/index.html">Linux Tools Quic Tutorial</a></li>
 </ul>
+<h1 id="fedora">Fedora使用体验</h1>
+<h2 id="_1">更换软件源为清华源</h2>
+<p>https://mirrors.tuna.tsinghua.edu.cn/help/fedora/</p>
+<blockquote>
+<p>参考上面清华源官方写的文档那个，进行更换</p>
+</blockquote>
+<h2 id="flatpak">启用flatpak</h2>
+<p>https://www.flatpak.org/setup/Fedora</p>
+<blockquote>
+<p>见上面的文档</p>
+</blockquote>
+<pre><code class="language-shell"> flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</code></pre>
+<h2 id="nvidia">NVIDIA显卡驱动安装</h2>
+<p>https://docs.fedoraproject.org/en-US/quick-docs/how-to-set-nvidia-as-primary-gpu-on-optimus-based-laptops</p>
+<blockquote>
+<p>见上，fedora官方文档，按照上面操作一般是没问题的</p>
+</blockquote>
+<h2 id="_2">输入法</h2>
+<h3 id="ibus-rime">ibus-rime</h3>
+<p>在Fedora中安装<code>ibus-rime</code></p>
+<pre><code class="language-shell">dnf install ibus-rime
+</code></pre>
+<h4 id="_3">配置</h4>
+<p>https://blog.mikelyou.com/2020/07/31/rime-input/</p>
+<blockquote>
+<p>可以看上面这个链接里面的，写的很好</p>
+</blockquote>
 
 
 
@@ -1650,7 +1678,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "header.autohide", "search.highlight", "search.share", "search.suggest", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
       
     
   </body>

@@ -23,3 +23,28 @@ Arch Linux：Arch Linux 是一个轻量级、灵活的 Linux 发行版，以其�
 # Linux教程
 - [⭐韩顺平linux](https://www.bilibili.com/video/BV1Sv411r7vd/?spm_id_from=333.337.search-card.all.click)
 - [Linux Tools Quic Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/base/index.html)
+
+
+# Fedora使用体验
+## 更换软件源为清华源
+https://mirrors.tuna.tsinghua.edu.cn/help/fedora/
+> 参考上面清华源官方写的文档那个，进行更换
+
+## 启用flatpak
+https://www.flatpak.org/setup/Fedora
+> 见上面的文档
+```shell
+ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+## NVIDIA显卡驱动安装
+https://docs.fedoraproject.org/en-US/quick-docs/how-to-set-nvidia-as-primary-gpu-on-optimus-based-laptops
+>见上，fedora官方文档，按照上面操作一般是没问题的
+## 输入法
+### ibus-rime
+在Fedora中安装`ibus-rime`
+```shell
+dnf install ibus-rime
+```
+#### 配置
+https://blog.mikelyou.com/2020/07/31/rime-input/
+> 可以看上面这个链接里面的，写的很好
