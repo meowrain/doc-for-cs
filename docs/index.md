@@ -64,20 +64,20 @@
 
 ## ⭐ 如何提问
 
-[HowToQuestion](/skills-learn/HowToQuestion.md)
+[HowToQuestion](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
 
 ---
 
 ## ⭐ 利用人工智能
 
-- [关于 Artificial Intelligence](/Artificial%20Intelligence/about-ai.md)
-- [使用 AI](/Artificial%20Intelligence/use-ai.md)
+- [关于 Artificial Intelligence](./Artificial%20Intelligence/about-ai.md)
+- [使用 AI](./Artificial%20Intelligence/use-ai.md)
 - [使用 AI 搜索引擎]()
 
 ## ⭐ 很不错的文档和书
 
-- [收集的一些对计算机系学生很有指导意义的文档](/Nice-document-for-cs/Collections-Document-CsStudent.md)
-- [一些不错的书](/Nice-document-for-cs/Nice-Books-CsStudent.md)
+- [收集的一些对计算机系学生很有指导意义的文档](./Nice-document-for-cs/Collections-Document-CsStudent.md)
+- [一些不错的书](./Nice-document-for-cs/Nice-Books-CsStudent.md)
 
 > 上面推荐的书大家可以在网上自己看电子书或者去淘宝买实体书 😊
 
@@ -85,20 +85,20 @@
 
 ## 😽工具学习
 
-- [😽 博客搭建](/tools-learn/blog-create.md)
-- [屏幕截图工具的使用](/tools-learn/screencapture-use.md)
-- [vscode 编辑器使用](/tools-learn/vscode-use.md)
-- [markdown 笔记标记语言学习](/tools-learn/markdown-use.md)
-- [vim 编辑器学习](/tools-learn/vim-use.md)
-- [Git 学习](/tools-learn/git-learn.md)
+- [😽 博客搭建](./tools-learn/blog-create.md)
+- [屏幕截图工具的使用](./tools-learn/screencapture-use.md)
+- [vscode 编辑器使用](./tools-learn/vscode-use.md)
+- [markdown 笔记标记语言学习](./tools-learn/markdown-use.md)
+- [vim 编辑器学习](./tools-learn/vim-use.md)
+- [Git 学习](./tools-learn/git-learn.md)
 
 ---
 
 ## 技能学习
 
-- [正则表达式](/skills-learn/regexp.md)
-- [Github-向开源项目贡献](/skills-learn/Github-use.md)
-- [了解开源协议](/Nice-document-for-cs/license-learn.md)
+- [正则表达式](./skills-learn/regexp.md)
+- [Github-向开源项目贡献](./skills-learn/Github-use.md)
+- [了解开源协议](./Nice-document-for-cs/license-learn.md)
 - [使用 github 关注一些新鲜好玩的项目-HelloGithub](https://github.com/521xueweihan/HelloGitHub)
 
 ---
@@ -128,28 +128,28 @@
 
 #### 前端一些文档
 
-[查看](/Front-learn/Front-end.md)
+[查看](./Front-learn/Front-end.md)
 
 ### 第一阶段(前端三件套)
 
-- [html 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
+- [html 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
 
-- [css 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
+- [css 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
 
-- [css 扩展](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
+- [css 扩展](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
 
-- [javascript 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
+- [javascript 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
 
   > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
-  > [Emmet 语法大全](/Front-learn//%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
+  > [Emmet 语法大全](./Front-learn//%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
 
 ### 第二阶段(框架学习)
 
 #### 框架文档
 
-- [Typescript 学习](/Front-learn//%E5%85%B6%E5%AE%83/Typescript-learn.md)
-- [Vue 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
-- [React 学习](/Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn.md)
+- [Typescript 学习](./Front-learn//%E5%85%B6%E5%AE%83/Typescript-learn.md)
+- [Vue 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/vue/vue-learn.md)
+- [React 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/react/react-learn.md)
 
 ### 第三阶段(应用开发)
 
@@ -163,12 +163,12 @@
 
 ### Nodejs
 
-- [Nodejs 学习](/Front-learn//%E5%85%B6%E5%AE%83/nodejs-learn.md)
+- [Nodejs 学习](./Front-learn//%E5%85%B6%E5%AE%83/nodejs-learn.md)
 
 #### 数据库
 
-- [MYSQL](/Backend-learn/MySQL-Learn.md)
-- [MYSQL-meowrain](/Backend-learn/MYSQL-Learn-meowrain.md)
+- [MYSQL](./Backend-learn/MySQL-Learn.md)
+- [MYSQL-meowrain](./Backend-learn/MYSQL-Learn-meowrain.md)
 
 ---
 
@@ -176,17 +176,17 @@
 
 ### 算法与数据结构学习
 
-- [数据结构学习](/Datastructure/datastructure-learn.md)
-- [算法学习](/Datastructure/algorithm-learn.md)
+- [数据结构学习](./Datastructure/datastructure-learn.md)
+- [算法学习](./Datastructure/algorithm-learn.md)
 
 ### 操作系统学习
 
-- [Windows 系统学习](/System-learn/Windows-learn.md)
-- [Linux 系统学习](/System-learn/Linux-learn.md)
+- [Windows 系统学习](./System-learn/Windows-learn.md)
+- [Linux 系统学习](./System-learn/Linux-learn.md)
 
 ## 学习习惯
 
-- [学习习惯](/Habit-learn/habit.md)
+- [学习习惯](./Habit-learn/habit.md)
 
 ---
 
