@@ -1,4 +1,4 @@
-> 当前项目需要大家的参与，个人精力有限。❤️
+> 本文档还在更新中，需要同学们的加入！❤️
 ## 寄语
 
 😊 亲爱的学弟学妹们：
@@ -26,7 +26,6 @@
   <br>
   🌈University Programmer 开摆群 🌈
 </p>
-
 
 ---
 
@@ -134,15 +133,13 @@
 ### 第一阶段(前端三件套)
 
 - [html 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/html/How-to-Learn-html.md)
-
 - [css 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/How-to-learn-css.md)
-
 - [css 扩展](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/css/Extends-css.md)
-
 - [javascript 学习](./Front-learn//%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/javascript/javascript-learn.md)
 
   > 往后学，记住一定要把 javascript 学好，不然后面的东西很容易看不懂，就连学框架都可能费劲！
   > [Emmet 语法大全](./Front-learn//%E5%85%B6%E5%AE%83/Emmet%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.pdf)
+  >
 
 ### 第二阶段(框架学习)
 
