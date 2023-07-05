@@ -1,0 +1,3 @@
+@echo off
+echo 正在执行git pull,执行仓库更新操作...
+git pull
