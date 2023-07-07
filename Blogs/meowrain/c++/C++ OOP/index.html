@@ -638,8 +638,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#privateprivate" class="md-nav__link">
-    private(默认就是private)
+  <a href="#private-private" class="md-nav__link">
+    private(默认就是 private)
   </a>
   
 </li>
@@ -2132,8 +2132,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#privateprivate" class="md-nav__link">
-    private(默认就是private)
+  <a href="#private-private" class="md-nav__link">
+    private(默认就是 private)
   </a>
   
 </li>
@@ -2224,7 +2224,7 @@
 <h1 id="c-oop">C++ OOP</h1>
 <h2 id="class1">Class(1)</h2>
 <h3 id="privateprotectedpublic">private,protected,public</h3>
-<h4 id="privateprivate">private(默认就是private)</h4>
+<h4 id="private-private">private(默认就是 private)</h4>
 <p>private 声明的类的私有成员只能由同一类的其他成员或者它们的朋友访问</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
@@ -2247,7 +2247,7 @@ int main(void) {
 }
 </code></pre>
 <p><img alt="image-20230705191917170" src="https://static.meowrain.cn/i/2023/07/05/vqmqjj-3.webp" /></p>
-<p>我们如果在main函数中直接用对象输出学生的分数，就不能</p>
+<p>我们如果在 main 函数中直接用对象输出学生的分数，就不能</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
 class Student {
@@ -2271,7 +2271,7 @@ int main(void) {
 <p><img alt="image-20230705192009344" src="https://static.meowrain.cn/i/2023/07/05/vr6m6j-3.webp" /></p>
 <p><img alt="image-20230705192032009" src="https://static.meowrain.cn/i/2023/07/05/vrbig8-3.webp" /></p>
 <h4 id="protected">protected</h4>
-<p>protected   受保护的成员可以从同一类的其他成员（或从他们的“朋友”）访问，也可以从其派生类的成员访问。</p>
+<p>protected 受保护的成员可以从同一类的其他成员（或从他们的“朋友”）访问，也可以从其派生类的成员访问。</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
 class Human {
@@ -2382,7 +2382,7 @@ int main(void) {
 }
 </code></pre>
 <blockquote>
-<p>上面是c++构造器一个简单的用法</p>
+<p>上面是 c++构造器一个简单的用法</p>
 </blockquote>
 <h4 id="_2">重载构造器（包括成员初始化列表）</h4>
 <blockquote>
@@ -2440,15 +2440,15 @@ int main(void) {
 }
 </code></pre>
 <blockquote>
-<p>😊有没有发现这样很麻烦呢？</p>
-<p>其实在c++中有一个东西，叫<code>成员初始化列表</code>，看到上面的重载的第二个构造函数了吗？我们可以像下面这样写</p>
+<p>😊 有没有发现这样很麻烦呢？</p>
+<p>其实在 c++中有一个东西，叫<code>成员初始化列表</code>，看到上面的重载的第二个构造函数了吗？我们可以像下面这样写</p>
 <p><code>cpp
      Rectangle(int _w, int _h) : width(_w), height(_h) {};</code></p>
 <p>这样就大大简化了我们的构造函数书写啦！😊</p>
 </blockquote>
 <hr />
 <h3 id="pointers-to-class">指向类的指针（Pointers to Class)</h3>
-<p>在c++中，我们也 能用指针去指向类，然后通过指针调用类</p>
+<p>在 c++中，我们也 能用指针去指向类，然后通过指针调用类</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
 class Human {
@@ -2469,7 +2469,7 @@ int main() {
 }
 </code></pre>
 <blockquote>
-<p>😊既然这样，那我们就可以创建类数组啦</p>
+<p>😊 既然这样，那我们就可以创建类数组啦</p>
 <p>```cpp</p>
 <h1 id="include">include <iostream></h1>
 <p>class Rectangle {
@@ -2490,7 +2490,7 @@ int main(void) {
 }</p>
 <p>```</p>
 <blockquote>
-<p>关于指针和new这个我会后面参考<code>c++ primer plus</code>进行进一步说明</p>
+<p>关于指针和 new 这个我会后面参考<code>c++ primer plus</code>进行进一步说明</p>
 </blockquote>
 </blockquote>
 <h2 id="class2">Class(2)</h2>
@@ -2600,6 +2600,183 @@ int main() {
     return 0;
 }
 </code></pre>
+<h3 id="copy-constructor">Copy Constructor</h3>
+<p>拷贝构造函数是一种特殊的构造函数，它在创建对象时，是使用同一类中之前创建的对象来初始化新创建的对象。拷贝构造函数通常用于：</p>
+<p>通过使用另一个同类型的对象来初始化新创建的对象。</p>
+<p>复制对象把它作为参数传递给函数。</p>
+<p>复制对象，并从函数返回这个对象。</p>
+<p>如果在类中没有定义拷贝构造函数，编译器会自行定义一个。如果类带有指针变量，并有动态内存分配，则它必须有一个拷贝构造函数。拷贝构造函数的最常见形式如下：</p>
+<pre><code class="language-cpp">classname (const classname &amp;obj) {
+   // 构造函数的主体
+}
+</code></pre>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+class Person {
+public:
+    string name;
+    int age;
+    Person() {
+        name = &quot;meow&quot;;
+        age = 10;
+    }
+    Person(string _name,int _age) {
+        name = _name;
+        age = _age;
+    }
+    Person(const Person&amp; other) {
+        name = other.name;
+        age = other.age;
+    }
+    void getInfo() {
+        cout &lt;&lt; name &lt;&lt; &quot; &quot; &lt;&lt; age &lt;&lt; &quot;  &quot; &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Person p(&quot;mew&quot;,19);
+    Person p1 = p;
+    Person p2(p);
+    p.getInfo();
+    p1.getInfo();
+    p2.getInfo();
+    return 0;
+
+}
+</code></pre>
+<blockquote>
+<p>p1 是通过使用赋值语句来初始化的，即 Person p1 = p;。这实际上是一种隐式的赋值操作，编译器会使用 copy constructor 来创建 p1 对象，并将 p 对象的值复制到 p1 对象中。</p>
+<p>而 p2 是通过直接调用 copy constructor 来初始化的，即 Person p2(p);。这是一种显式调用 copy constructor 的方法，它直接使用现有对象 p 来创建新对象 p2，不需要使用赋值语句。</p>
+</blockquote>
+<h3 id="copy-assignment">Copy assignment(复制赋值操作符)</h3>
+<p>是 C++中的一个运算符，用于将一个对象的值复制到另一个对象中。它通常用于将一个已经存在的对象的值赋给另一个已经存在的对象，从而使它们具有相同的值。</p>
+<p>语法格式：</p>
+<pre><code class="language-cpp">classname&amp; operator=(const classname&amp; other)
+</code></pre>
+<blockquote>
+<p>默认情况下，C++会提供一个浅复制的 copy assignment 运算符</p>
+</blockquote>
+<p>看一个例子：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Person {
+public:
+    std::string name;
+    int age;
+
+    Person() {
+        name = &quot;meo&quot;;
+        age = 12;
+    }
+
+    Person(std::string _name, int _age) : name(_name), age(_age) {
+
+    }
+
+    // copy constructor
+    Person(const Person &amp;other) {
+        name = other.name;
+        age = other.age;
+    }
+
+    // copy assignment
+    Person &amp;operator=(const Person &amp;other) {
+        name = other.name;
+        age = other.age;
+        return *this;
+    }
+
+};
+
+
+int main(void) {
+    Person p1(&quot;meow&quot;, 12);
+    Person p2;
+    p2 = p1;
+    std::cout &lt;&lt; &quot;p1.name &quot; &lt;&lt; p1.name &lt;&lt; &quot; age: &quot; &lt;&lt; p1.age &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;p2.name &quot; &lt;&lt; p2.name &lt;&lt; &quot; age: &quot; &lt;&lt; p2.age &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+<p>浅复制是指简单地将现有对象的成员变量的值复制到新对象中。如果成员变量是基本类型，那么浅复制是没有问题的，因为它们只是简单的值。但是，如果成员变量是指针，浅复制可能会导致问题。在这种情况下，浅复制只会复制指针本身，而不会复制指针指向的数据。这意味着新对象和现有对象将共享同一块数据，这可能会导致内存泄漏或数据损坏。</p>
+<p>深复制是指将现有对象的成员变量的值复制到新对象中，并复制指针指向的数据。这意味着新对象将有自己的数据副本，与现有对象完全独立。这通常需要手动实现，因为 C++默认提供的复制构造函数和赋值运算符只会执行浅复制。</p>
+<h3 id="_3">友元</h3>
+<p>友元是一种特殊的访问权限，允许一个函数或类访问另一个类的私有或受保护成员。</p>
+<p>友元有三种：</p>
+<ul>
+<li>友元函数</li>
+<li>友元类</li>
+<li>友元成员函数</li>
+</ul>
+<h4 id="_4">友元函数</h4>
+<p>创建友元函数得第一步 hi 把原型放在类声明中，在原型声明前面加上<code>friend</code></p>
+<blockquote>
+<p>需要注意的是，友元函数并不是 MyClass 的成员函数，它是一个独立的函数，只是被声明为 MyClass 的友元函数。</p>
+</blockquote>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+class Person {
+private:
+    std::string name;
+    int age;
+public:
+    Person(std::string _name,int _age) : name(_name),age(_age){}
+    friend void printValue(Person &amp;p) {
+        std::cout &lt;&lt; &quot;Person name: &quot; &lt;&lt; p.name &lt;&lt; &quot;\t&quot; &lt;&lt;
+        &quot;Person age: &quot; &lt;&lt; p.age &lt;&lt; std::endl;
+    }
+
+    /* 在友元函数中，我们能访问Person类的私有成员变量 */
+};
+int main(void) {
+    Person p(&quot;meow&quot;,18);
+    printValue(p); //友元函数不是类Person的成员函数
+    return 0;
+}
+</code></pre>
+<h4 id="_5">友元类</h4>
+<p>友元类是指一个类可以访问另一个类的私有成员，这使得它们之间的关系更加密切。</p>
+<p>例子：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+class MainClass {
+private:
+    std::string name;
+    int age;
+public:
+    MainClass() {
+        name = &quot;Main class&quot;;
+        age = 129;
+    }
+    friend class FriendClass;
+};
+class FriendClass {
+private:
+    std::string name;
+    int age;
+public:
+    FriendClass() {
+        name = &quot;friend&quot;;
+        age = 120;
+    }
+    void printMainClassInfo(MainClass &amp;m) {
+        std::cout &lt;&lt; &quot;MainClass!!!!&quot; &lt;&lt; std::endl;
+        std::cout &lt;&lt; m.name &lt;&lt; &quot; &quot; &lt;&lt; m.age &lt;&lt; std::endl;
+    }
+    void printFriendClassInfo() {
+        std::cout &lt;&lt; &quot;Friend!!!&quot; &lt;&lt; std::endl;
+        std::cout &lt;&lt; name &lt;&lt; &quot; &quot; &lt;&lt; age &lt;&lt; std::endl;
+    }
+};
+int main(void) {
+    MainClass m;
+    FriendClass f;
+    f.printFriendClassInfo();
+    f.printMainClassInfo(m);
+    return 0;
+}
+
+</code></pre>
+<p><img alt="1688739423295" src="../image/C%2B%2BOOP/1688739423295.png" /></p>
 
 
 
