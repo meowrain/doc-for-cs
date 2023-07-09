@@ -2,7 +2,7 @@
   <h1>doc-for-sxau</h1>
 一份为山西农业大学计算机专业学弟学妹们的指南与资料文档<br><br>
  
-[![madewithlove](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/liujing04/Retrieval-based-Voice-Conversion-WebUI)
+[![madewithlove](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/meowrain/doc-for-sxau)
 
   <img src="https://counter.seku.su/cmoe?name=meowrain&theme=r34" /><br>
 </div>
