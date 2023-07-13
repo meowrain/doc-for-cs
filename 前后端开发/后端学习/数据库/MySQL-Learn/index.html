@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
   
     
     
@@ -122,9 +122,15 @@
             
             
             
-            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到黑暗模式"  type="radio" name="__palette" id="__palette_1">
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
             
-              <label class="md-header__button md-icon" title="切换到黑暗模式" for="__palette_2" hidden>
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到黑暗模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换到黑暗模式" for="__palette_1" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
               </label>
             
@@ -132,9 +138,9 @@
             
             
             
-            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_2">
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_3">
             
-              <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_1" hidden>
+              <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_2" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
               </label>
             
@@ -2637,44 +2643,47 @@
   
 
 
-<h1 id="mysql">MySQL数据库</h1>
-<h3 id="rdbms">关系型数据库（RDBMS)</h3>
+<h1 id="mysql">MySQL数据库<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
+<h3 id="rdbms">关系型数据库（RDBMS)<a class="headerlink" href="#rdbms" title="Permanent link">&para;</a></h3>
 <p><strong>概念</strong>：建立在关系模型基础上，有多张相互连接的二维表组成的数据库。</p>
 <p><strong>特点</strong>：</p>
 <p>1.使用表存储数据，格式统一，便于维护</p>
 <p>2.使用SQL语言操作，标准统一，使用方便</p>
-<h3 id="sql">SQL语言</h3>
-<h5 id="sql_1">SQL通用语法</h5>
+<h3 id="sql">SQL语言<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
+<h5 id="sql_1">SQL通用语法<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h5>
 <p>1.SQL语句可以单行或多行书写，分号结尾</p>
 <p>2.SQL语句可以使用空格缩进来增强语句可读性</p>
 <p>3.SQL语句不区分大小写，关键字建议使用大写</p>
 <p>4.注释：</p>
 <p>​           单行注释：--或#</p>
 <p>​           多行注释：/<em>    </em>/</p>
-<h5 id="_1">分类</h5>
+<h5 id="_1">分类<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
 <p>1.DDL 数据定义语言，用来定义数据库对象（数据库，表，字段）</p>
 <p>2.DML数据操作语言，用来对数据库表的数据进行增删减</p>
 <p>3.DQL数据查询语言，用来查询数据库表的记录</p>
 <p>4.DCL数据控制语言，用来创建数据库用户，控制数据库的访问权限</p>
-<h5 id="ddl">DDL</h5>
-<h6 id="_2"><strong>数据库操作</strong></h6>
+<h5 id="ddl">DDL<a class="headerlink" href="#ddl" title="Permanent link">&para;</a></h5>
+<h6 id="_2"><strong>数据库操作</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h6>
 <p>查询</p>
 <p>查询所有数据   <code>SHOW DATABASES;</code></p>
 <p>查询当前数据   <code>SELECT DATABASE();</code></p>
 <p>创建  <code>CREATE DATABASE[IF NOT EXISTS]数据库名[DEFAULT CHARSET字符集] [COLLATE 排序规则];</code></p>
 <p>删除  <code>DROP DATABASE[IF EXISTS]数据库名;</code></p>
 <p>使用  <code>USE 数据库名;</code></p>
-<h6 id="_3"><strong>表操作</strong></h6>
+<h6 id="_3"><strong>表操作</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h6>
 <p>查询</p>
 <p>查询当前数据库所有表 <code>SHOW TABLES;</code></p>
 <p>查询表结构 <code>DESC 表名;</code></p>
 <p>查询指定表的建表语句 <code>SHOW CERATE TABLE 表名;</code></p>
 <p>创建</p>
-<pre><code class="language-sql">CREATE TABLE 表名(
-字段1 字段1类型[COMMENT 字段1注释],
-字段2 字段2类型[COMMENT 字段2注释]
-)[COMMENT 表注释];
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="err">字段</span><span class="mi">1</span><span class="w"> </span><span class="err">字段</span><span class="mi">1</span><span class="err">类型</span><span class="p">[</span><span class="k">COMMENT</span><span class="w"> </span><span class="err">字段</span><span class="mi">1</span><span class="err">注释</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="err">字段</span><span class="mi">2</span><span class="w"> </span><span class="err">字段</span><span class="mi">2</span><span class="err">类型</span><span class="p">[</span><span class="k">COMMENT</span><span class="w"> </span><span class="err">字段</span><span class="mi">2</span><span class="err">注释</span><span class="p">]</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">)[</span><span class="k">COMMENT</span><span class="w"> </span><span class="err">表注释</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div>
 <p>数据类型</p>
 <p>数值类型，字符串类型，日期类型；</p>
 <p>修改</p>
@@ -2686,41 +2695,54 @@
 <p>删除</p>
 <p>删除表 <code>DROP TABLE[IF EXISTS] 表名;</code></p>
 <p>删除指定表，并重新创建该表 (清空数据)<code>TRUNCATE TABLE 表名;</code></p>
-<h5 id="mysql_1">MySQL图形化工具</h5>
+<h5 id="mysql_1">MySQL图形化工具<a class="headerlink" href="#mysql_1" title="Permanent link">&para;</a></h5>
 <p>Navicat，Datagrip</p>
 <p>Navicat的安装和破解：(https://www.bilibili.com/video/BV1V84y137VG/?p=6&amp;spm_id_from=333.880.my_history.page.click)</p>
-<h5 id="dml">DML</h5>
-<h6 id="nsert">添加数据  (NSERT)</h6>
+<h5 id="dml">DML<a class="headerlink" href="#dml" title="Permanent link">&para;</a></h5>
+<h6 id="nsert">添加数据  (NSERT)<a class="headerlink" href="#nsert" title="Permanent link">&para;</a></h6>
 <p>1.给指定字段添加数据 <code>INSET INTO 表名（字段名1，字段名2）VALUES(值1，值2);</code></p>
 <p>2.给全部字段添加数据 <code>INSET INTO 表名 VALUES(值1，值2);</code></p>
 <p>3.批量添加数据 </p>
 <p><code>INSET INTO 表名（字段名1，字段名2）VALUES(值1，值2),(值1，值2);</code></p>
 <p><code>INSET INTO 表名 VALUES(值1，值2),(值1，值2);</code></p>
-<h6 id="update">修改数据  (UPDATE)</h6>
+<h6 id="update">修改数据  (UPDATE)<a class="headerlink" href="#update" title="Permanent link">&para;</a></h6>
 <p><code>UPDATE表名 SET 字段名1 = 值1,字段名2 = 值2， [WHERE 条件];</code></p>
 <p>注：如果没有条件，会修改整张表的所有数据。</p>
-<h6 id="delete">删除数据  (DELETE)</h6>
+<h6 id="delete">删除数据  (DELETE)<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h6>
 <p><code>DELETE FROM 表名 [WHERE 条件]</code></p>
 <p>注：1.如果没有条件，会删除整张表的所有数据。</p>
 <p>​        2.不能删除某一个字段的值。</p>
-<h5 id="dql">DQL</h5>
-<h6 id="_4">语法</h6>
-<pre><code class="language-SQL">SELECT 
-   字段列表
-FROM 
-   表名列表
-WHERE 
-   条件列表
-GROUP BY 
-   分组字段列表
-HAVING 
-   分组后条件列表
-ORDER BY 
-   排序字段列表
-LIMIT 
-   分页参数
-</code></pre>
-<h6 id="_5">基本查询</h6>
+<h5 id="dql">DQL<a class="headerlink" href="#dql" title="Permanent link">&para;</a></h5>
+<h6 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="err">字段列表</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">FROM</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">   </span><span class="err">表名列表</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">WHERE</span><span class="w"> </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">   </span><span class="err">条件列表</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">   </span><span class="err">分组字段列表</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">HAVING</span><span class="w"> </span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">   </span><span class="err">分组后条件列表</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">   </span><span class="err">排序字段列表</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="k">LIMIT</span><span class="w"> </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">   </span><span class="err">分页参数</span>
+</code></pre></div></td></tr></table></div>
+<h6 id="_5">基本查询<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h6>
 <p>1.查询多个字段</p>
 <p><code>SELECT 字段1，字段2 FROM 表名;</code></p>
 <p><code>SELECT *FROM 表名;</code>  查询所有字段返回（不建议写*，效率低）</p>
@@ -2728,7 +2750,7 @@ LIMIT
 <p><code>SELECT 字段1[AS 别名1]，字段2[AS 别名2] FROM 表名;</code></p>
 <p>3.去除重复记录</p>
 <p><code>SELECT DISTINCT 字段列表 FROM 表名;</code></p>
-<h6 id="where">条件查询(WHERE)</h6>
+<h6 id="where">条件查询(WHERE)<a class="headerlink" href="#where" title="Permanent link">&para;</a></h6>
 <p>1.语法</p>
 <p><code>SELECT 字段列表 FROM 表名 WHERE 条件列表;</code></p>
 <p>2.条件</p>
@@ -2738,18 +2760,22 @@ LIMIT
 <p>IN（...）在in之后的列表中的值，多选一</p>
 <p>LIKE 占位符   模糊匹配（_匹配单个字符，%匹配任意个字符）</p>
 <p>IS NULL    是NULL</p>
-<h6 id="countmaxminavgsum">聚合函数(count,max,min,avg,sum)</h6>
+<h6 id="countmaxminavgsum">聚合函数(count,max,min,avg,sum)<a class="headerlink" href="#countmaxminavgsum" title="Permanent link">&para;</a></h6>
 <p>1.介绍： 将一列数据作为一个整体，进行纵向计算。</p>
 <p>2.常见的聚合函数</p>
-<pre><code class="language-sql">count  统计数量
-max    最大值
-min    最小值
-avg    平均值
-sum    求和
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">count</span><span class="w">  </span><span class="err">统计数量</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">max</span><span class="w">    </span><span class="err">最大值</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">min</span><span class="w">    </span><span class="err">最小值</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">avg</span><span class="w">    </span><span class="err">平均值</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">sum</span><span class="w">    </span><span class="err">求和</span>
+</code></pre></div></td></tr></table></div>
 <p>3.语法</p>
 <p><code>SELECT 聚合函数（字段列表） FROM 表名;</code></p>
-<h6 id="group-by">分组查询(GROUP BY)</h6>
+<h6 id="group-by">分组查询(GROUP BY)<a class="headerlink" href="#group-by" title="Permanent link">&para;</a></h6>
 <p>1.语法</p>
 <p><code>SELECT 字段列表 FROM 表名 [WHERE 条件] GROUP BY 分组字段名 [HAVING 分组后过滤条件];</code></p>
 <p>2.where和having的区别</p>
@@ -2757,12 +2783,12 @@ sum    求和
 <p>判断条件不同：where不能对聚合函数进行判断，having可以。</p>
 <p>注：where&gt;聚合函数&gt;having。</p>
 <p>​        分组之后，查询的字段一般为聚合函数和分组字段，查询其他字段无意义。</p>
-<h6 id="order-by">排序查询(ORDER BY)</h6>
+<h6 id="order-by">排序查询(ORDER BY)<a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h6>
 <p>1.语法</p>
 <p><code>SELECT 字段列表 FROM 表名 ORDER BY 字段1  排序方式1，字段2，排序方式2;</code></p>
 <p>2.排序方式： ASC（ 升序，可省略） DESC (降序，不可省略）。</p>
 <p>注：多字段排序，第一个字段相同时，才会根据第二个排序。</p>
-<h6 id="limiy">分页查询(LIMIY)</h6>
+<h6 id="limiy">分页查询(LIMIY)<a class="headerlink" href="#limiy" title="Permanent link">&para;</a></h6>
 <p>1.语法</p>
 <p><code>SELECT  字段列表 FROM 表名 LIMIT 起始索引，查询记录数;</code></p>
 <p>注：起始索引从0开始，起始索引=（查询页码-1）*每页显示记录数。</p>
