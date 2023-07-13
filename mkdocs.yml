@@ -1,10 +1,10 @@
-site_name: 山西农业大学开源软件团队
-site_url: https://meowrain.github.io/doc-for-sxau/
+site_name: 山西农业大学计算机学习指南
+site_url: https://cs.meowrain.cn
 site_description: >-
-  山西农业大学开源软件团队文档
+  山西农业大学计算机学习指南，这里有从网络上收集的计算机各种方面的知识技能，可供查阅和学习
 repo_name: doc-for-sxau
 repo_url: https://github.com/meowrain/doc-for-sxau
-copyright: Copyright &copy; 2023-present <a href="https://github.com/meowrain" target="_blank" rel="noopener noreferrer">MeowRain</a>
+copyright: Copyright &copy; 2023-present <a href="https://github.com/SXAU-Open-Source-Software-Team" target="_blank" rel="noopener noreferrer">山西农业大学开源软件爱好者协会</a>
 theme:
   language: zh
   name: material
