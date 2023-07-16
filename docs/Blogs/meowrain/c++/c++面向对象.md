@@ -409,6 +409,7 @@ int main(void)
     return 0;
 }
 ```
+![1689419708614](image/c++面向对象/1689419708614.png)
 
 ## Class(2)
 
