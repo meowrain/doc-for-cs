@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/c%2B%2B/c%2B%2Bstl/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://cs.meowrain.cn/Blogs/meowrain/c%2B%2B/c%2B%2B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
          <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
@@ -46,32 +41,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/c%2B%2B/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/c%2B%2B/%E9%93%BE%E6%8E%A5%E9%9D%99%E6%80%81%E5%BA%93/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/datastructure/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/datastructure/linklist/note/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/datastructure/queues/note/</loc>
-         <lastmod>2023-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cs.meowrain.cn/Blogs/meowrain/datastructure/stack/note/</loc>
+         <loc>https://cs.meowrain.cn/Blogs/meowrain/datastructure/linklist/</loc>
          <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
