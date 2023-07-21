@@ -15,3 +15,13 @@
 ## AI搜索引擎
 [you.com](https://you.com/)
 [Phind](https://www.phind.com/)
+
+# 好用的人工智能网站
+聊天AI
+https://www.pm-ai.cn/prd
+https://app.writesonic.com/
+https://chat.openai.com
+
+搜索引擎
+https://you.com/
+https://www.perplexity.ai/

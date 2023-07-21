@@ -1,26 +1,29 @@
-site_name: 山西农业大学计算机学习指南
+site_name: 计算机学习指南
 site_url: https://cs.meowrain.cn
 site_description: >-
-  山西农业大学计算机学习指南，这里有从网络上收集的计算机各种方面的知识技能，可供查阅和学习
-repo_name: doc-for-sxau
+  计算机学习指南，这里有从网络上收集的计算机各种方面的知识技能，可供查阅和学习
+repo_name: doc-for-cs
 repo_url: https://github.com/meowrain/doc-for-sxau
-copyright: Copyright &copy; 2023-present <a href="https://github.com/SXAU-Open-Source-Software-Team" target="_blank" rel="noopener noreferrer">山西农业大学开源软件爱好者协会</a>
+copyright: Copyright &copy; 2023-present <a href="https://github.com/SXAU-Open-Source-Software-Team" target="_blank" rel="noopener noreferrer"></a>
 theme:
   language: zh
   name: material
-  logo: assets/129314812.jpg
-  favicon: assets/129314812.jpg
+  custom_dir: overrides
   palette:
-      - primary: pink
-      - scheme: default
-        toggle:
-          icon: material/brightness-7
-          name: 切换到黑暗模式
-      # Palette toggle for dark mode
-      - scheme: slate
-        toggle:
-          icon: material/brightness-3
-          name: 切换到白天模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
@@ -31,13 +34,6 @@ theme:
     - content.code.annotate
 extra:
   homepage: #
-  constent:
-    title: Cookie政策
-    description: 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
 markdown_extensions:
   - abbr
   - pymdownx.caret

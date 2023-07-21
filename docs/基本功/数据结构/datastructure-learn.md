@@ -1,2 +1,4 @@
 # 数据结构学习
-- [数据结构与算法可视化](https://visualgo.net/zh)
+
+[https://visualgo.net/zh/](https://visualgo.net/zh/)
+[https://the-algorithms.com/category/datastructures](https://the-algorithms.com/category/datastructures)

@@ -1,4 +1,3 @@
-> *我想说的第一句话，就是利用好搜索引擎和新诞生的gpt类问答式ai*
 # 一些好的资源
 
 [⭐csdiy wiki](https://csdiy.wiki)
@@ -6,7 +5,7 @@
 [⭐ 新加坡南洋理工大学一位老师的教案](https://www3.ntu.edu.sg/home/ehchua/programming/index.html#HowTo)
 
 [无涯教程](https://www.learnfk.com/)
----
+--------
 
 # 技术社区
 
