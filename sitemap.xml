@@ -311,12 +311,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/CompileC%2B%2B/</loc>
+         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/C%26C%2B%2BCompile/CompileC%2B%2B/</loc>
          <lastmod>2023-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/CompileC/</loc>
+         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/C%26C%2B%2BCompile/CompileC/</loc>
+         <lastmod>2023-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/Intro/1.GCC_Introduction/</loc>
+         <lastmod>2023-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/GNU%20Make/Intro/2.ComputerSystem/</loc>
          <lastmod>2023-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
