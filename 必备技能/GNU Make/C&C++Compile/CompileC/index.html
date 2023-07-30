@@ -2780,7 +2780,7 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="1-fundamental-compiling">1 Fundamental Compiling<a class="headerlink" href="#1-fundamental-compiling" title="Permanent link">&para;</a></h1>
+<h1 id="1-fundamental-compiling">1 Fundamental Compiling<a class="headerlink" href="#1-fundamental-compiling" title="Permanent link">#</a></h1>
 <blockquote>
 <p>编译 C 语言相关的后缀</p>
 </blockquote>
@@ -2789,126 +2789,114 @@
 </div>
 <p>&emsp;</p>
 <p>&emsp;</p>
-<h1 id="2-compiling-c">2 Compiling C<a class="headerlink" href="#2-compiling-c" title="Permanent link">&para;</a></h1>
-<h2 id="21-preprocessing">2.1 Preprocessing<a class="headerlink" href="#21-preprocessing" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 不会生成 .i 文件</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>gcc<span class="w"> </span>-E<span class="w"> </span>main.c
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>gcc<span class="w"> </span>-E<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>helloworld.i
-</code></pre></div></td></tr></table></div>
-- -E 选项告诉编译器只进行预处理操作
+<h1 id="2-compiling-c">2 Compiling C<a class="headerlink" href="#2-compiling-c" title="Permanent link">#</a></h1>
+<h2 id="21-preprocessing">2.1 Preprocessing<a class="headerlink" href="#21-preprocessing" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># 不会生成 .i 文件</span>
+gcc<span class="w"> </span>-E<span class="w"> </span>main.c
+gcc<span class="w"> </span>-E<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>helloworld.i
+</code></pre></div><br />
+- -E 选项告诉编译器只进行预处理操作<br />
 - -o 选项把预处理的结果输出到指定文件      </p>
 <p>&emsp;</p>
-<h2 id="22-generating-assembly-language">2.2 Generating Assembly Language<a class="headerlink" href="#22-generating-assembly-language" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>gcc<span class="w"> </span>-S<span class="w"> </span>main.c
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>gcc<span class="w"> </span>-S<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx.s
-</code></pre></div></td></tr></table></div>
+<h2 id="22-generating-assembly-language">2.2 Generating Assembly Language<a class="headerlink" href="#22-generating-assembly-language" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-S<span class="w"> </span>main.c
+gcc<span class="w"> </span>-S<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx.s
+</code></pre></div><br />
 - -S 选项告诉编译器，进行预处理和编译成汇编语言操作</p>
 <p>每个平台对应的汇编语言的形式是不同的，例如有很多型号的开发板，有很多型号的 CPU</p>
 <p>&emsp;</p>
-<h2 id="23-source-file-to-object-file">2.3 Source File to Object File<a class="headerlink" href="#23-source-file-to-object-file" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>gcc<span class="w"> </span>-c<span class="w"> </span>main.c
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>gcc<span class="w"> </span>-c<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx.o
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># 编译多个 .c 文件</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>gcc<span class="w"> </span>-c<span class="w"> </span>main.c<span class="w"> </span>add.c<span class="w"> </span>minus.c
-</code></pre></div></td></tr></table></div>
+<h2 id="23-source-file-to-object-file">2.3 Source File to Object File<a class="headerlink" href="#23-source-file-to-object-file" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-c<span class="w"> </span>main.c
+gcc<span class="w"> </span>-c<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx.o
+<span class="c1"># 编译多个 .c 文件</span>
+gcc<span class="w"> </span>-c<span class="w"> </span>main.c<span class="w"> </span>add.c<span class="w"> </span>minus.c
+</code></pre></div>
 <p>&emsp;</p>
-<h2 id="24-single-source-to-executable">2.4 Single Source to Executable<a class="headerlink" href="#24-single-source-to-executable" title="Permanent link">&para;</a></h2>
+<h2 id="24-single-source-to-executable">2.4 Single Source to Executable<a class="headerlink" href="#24-single-source-to-executable" title="Permanent link">#</a></h2>
 <ul>
 <li>注意：后面三个命令执行后并没有按编译过程出现 .i .s 或 .o 文件，并不意味着没有经历这些过程</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>gcc<span class="w"> </span>main.c
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>gcc<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx
-</code></pre></div></td></tr></table></div>
-<p>执行程序
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>./可执行文件
-</code></pre></div></td></tr></table></div></p>
-<h2 id="25-multiple-sources-to-executable">2.5 Multiple Sources to Executable<a class="headerlink" href="#25-multiple-sources-to-executable" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>gcc main.c add.c minus.c -o exec
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>./exec
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>main.c
+gcc<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>xxx
+</code></pre></div>
+<p>执行程序<br />
+<div class="highlight"><pre><span></span><code>./可执行文件
+</code></pre></div></p>
+<h2 id="25-multiple-sources-to-executable">2.5 Multiple Sources to Executable<a class="headerlink" href="#25-multiple-sources-to-executable" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>gcc main.c add.c minus.c -o exec
+./exec
+</code></pre></div>
 <p>&emsp;</p>
-<h1 id="3-creating-a-static-library">3 Creating a Static Library<a class="headerlink" href="#3-creating-a-static-library" title="Permanent link">&para;</a></h1>
+<h1 id="3-creating-a-static-library">3 Creating a Static Library<a class="headerlink" href="#3-creating-a-static-library" title="Permanent link">#</a></h1>
 <ul>
-<li>编译成 .o 的文件
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>gcc<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义文件名<span class="o">]</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>gcc<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>...
-</code></pre></div></td></tr></table></div></li>
-<li>编静态库
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>ar<span class="w"> </span>-r<span class="w"> </span><span class="o">[</span>lib自定义库名.a<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o<span class="o">]</span><span class="w"> </span>...
-</code></pre></div></td></tr></table></div></li>
-<li>链接成可执行文件
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>gcc<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span><span class="o">[</span>.a<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义输出文件名<span class="o">]</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>gcc<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义输出文件名<span class="o">]</span><span class="w"> </span>-l<span class="o">[</span>库名<span class="o">]</span><span class="w"> </span>-L<span class="o">[</span>库所在路径<span class="o">]</span>
-</code></pre></div></td></tr></table></div></li>
+<li>编译成 .o 的文件<br />
+    <div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义文件名<span class="o">]</span><span class="w"> </span>
+gcc<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>...
+</code></pre></div></li>
+<li>编静态库<br />
+    <div class="highlight"><pre><span></span><code>ar<span class="w"> </span>-r<span class="w"> </span><span class="o">[</span>lib自定义库名.a<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o<span class="o">]</span><span class="w"> </span>...
+</code></pre></div></li>
+<li>链接成可执行文件<br />
+    <div class="highlight"><pre><span></span><code>gcc<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span><span class="o">[</span>.a<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义输出文件名<span class="o">]</span>
+gcc<span class="w"> </span><span class="o">[</span>.c<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义输出文件名<span class="o">]</span><span class="w"> </span>-l<span class="o">[</span>库名<span class="o">]</span><span class="w"> </span>-L<span class="o">[</span>库所在路径<span class="o">]</span>
+</code></pre></div></li>
 </ul>
 <p>&emsp;</p>
-<h1 id="4-creating-a-shared-library">4 Creating a Shared Library<a class="headerlink" href="#4-creating-a-shared-library" title="Permanent link">&para;</a></h1>
+<h1 id="4-creating-a-shared-library">4 Creating a Shared Library<a class="headerlink" href="#4-creating-a-shared-library" title="Permanent link">#</a></h1>
 <blockquote>
-<p>编译二进制.o文件
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>gcc<span class="w"> </span>-c<span class="w"> </span>-fpic<span class="w"> </span><span class="o">[</span>.c/.cpp<span class="o">][</span>.c/.cpp<span class="o">]</span>...<span class="w"> </span>
-</code></pre></div></td></tr></table></div>
-编库
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>gcc<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.o<span class="o">][</span>.o<span class="o">]</span>...<span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>lib自定义库名.so<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
-- 链接库到可执行文件
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>gcc<span class="w"> </span><span class="o">[</span>.c/.cpp<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义可执行文件名<span class="o">]</span><span class="w">  </span>-l<span class="o">[</span>库名<span class="o">]</span><span class="w"> </span>-L<span class="o">[</span>库路径<span class="o">]</span><span class="w"> </span>-Wl,-rpath<span class="o">=[</span>库路径<span class="o">]</span>
-</code></pre></div></td></tr></table></div></p>
+<p>编译二进制.o文件<br />
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-c<span class="w"> </span>-fpic<span class="w"> </span><span class="o">[</span>.c/.cpp<span class="o">][</span>.c/.cpp<span class="o">]</span>...<span class="w"> </span>
+</code></pre></div><br />
+编库<br />
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.o<span class="o">][</span>.o<span class="o">]</span>...<span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>lib自定义库名.so<span class="o">]</span>
+</code></pre></div><br />
+- 链接库到可执行文件<br />
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span><span class="o">[</span>.c/.cpp<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>自定义可执行文件名<span class="o">]</span><span class="w">  </span>-l<span class="o">[</span>库名<span class="o">]</span><span class="w"> </span>-L<span class="o">[</span>库路径<span class="o">]</span><span class="w"> </span>-Wl,-rpath<span class="o">=[</span>库路径<span class="o">]</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h1 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1">1 编译过程<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h1 id="总结">总结<a class="headerlink" href="#总结" title="Permanent link">#</a></h1>
+<h2 id="1-编译过程">1 编译过程<a class="headerlink" href="#1-编译过程" title="Permanent link">#</a></h2>
 <p>源文件.c文件 -&gt; 预编译成.i文件 -&gt; 编译成汇编语言.s -&gt; 汇编成.o文件 -&gt; 链接成可执行文件（名字自定义，后缀没关系）</p>
-<h2 id="2">2 编译过程命令<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2-编译过程命令">2 编译过程命令<a class="headerlink" href="#2-编译过程命令" title="Permanent link">#</a></h2>
 <ul>
-<li>预处理： 
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>gcc -E [.c源文件] -o [自定义输出文件名.i]
-</code></pre></div></td></tr></table></div></li>
-<li>编译成汇编语言(隐藏了预处理操作) :
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>gcc -S [.c源文件] 
-</code></pre></div></td></tr></table></div></li>
-<li>会变成.o的object文件（二进制文件，可用于链接） :
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>gcc -c [.c源文件] [.c源文件] [...] (可选选项：-o [自定文件名])
-</code></pre></div></td></tr></table></div></li>
+<li>预处理： <br />
+    <div class="highlight"><pre><span></span><code>gcc -E [.c源文件] -o [自定义输出文件名.i]
+</code></pre></div></li>
+<li>编译成汇编语言(隐藏了预处理操作) :<br />
+    <div class="highlight"><pre><span></span><code>gcc -S [.c源文件] 
+</code></pre></div></li>
+<li>会变成.o的object文件（二进制文件，可用于链接） :<br />
+    <div class="highlight"><pre><span></span><code>gcc -c [.c源文件] [.c源文件] [...] (可选选项：-o [自定文件名])
+</code></pre></div></li>
 </ul>
-<h2 id="3">3 库<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h2 id="3-库">3 库<a class="headerlink" href="#3-库" title="Permanent link">#</a></h2>
 <blockquote>
-<p>静态库
-- 编库（先转成.o文件，再编成lib[自定库名].a）
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>gcc -c [.c源文件] [.c源文件] [...] (可选选项：-o [自定文件名])
-</code></pre></div></td></tr></table></div>
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>ar -r lib[自定库名].a [.o文件] [.o文件] [...]
-</code></pre></div></td></tr></table></div>
-- 链接
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>gcc [main文件] -o [自定义输出可执行文件名] -l[库名] -L[库的路径]
-</code></pre></div></td></tr></table></div>
-动态库
+<p>静态库<br />
+- 编库（先转成.o文件，再编成lib[自定库名].a）<br />
+    <div class="highlight"><pre><span></span><code>gcc -c [.c源文件] [.c源文件] [...] (可选选项：-o [自定文件名])
+</code></pre></div><br />
+    <div class="highlight"><pre><span></span><code>ar -r lib[自定库名].a [.o文件] [.o文件] [...]
+</code></pre></div><br />
+- 链接<br />
+    <div class="highlight"><pre><span></span><code>gcc [main文件] -o [自定义输出可执行文件名] -l[库名] -L[库的路径]
+</code></pre></div><br />
+动态库<br />
 - 编库    <br />
-    - 第一种做法， 先转成.o文件，再编成.so文件
-        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>gcc<span class="w"> </span>-c<span class="w"> </span>-fpic<span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
-        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>gcc<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.o文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>lib<span class="o">[</span>库名<span class="o">]</span>.so
-</code></pre></div></td></tr></table></div>
-    - 第二种做法，直接转成.so
-        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>gcc<span class="w"> </span>-fpic<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>lib<span class="o">[</span>库名<span class="o">]</span>.so
-</code></pre></div></td></tr></table></div>
+    - 第一种做法， 先转成.o文件，再编成.so文件<br />
+        <div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-c<span class="w"> </span>-fpic<span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span>
+</code></pre></div><br />
+        <div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.o文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.o文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>lib<span class="o">[</span>库名<span class="o">]</span>.so
+</code></pre></div><br />
+    - 第二种做法，直接转成.so<br />
+        <div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>-fpic<span class="w"> </span>-shared<span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>.c源文件<span class="o">]</span><span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>lib<span class="o">[</span>库名<span class="o">]</span>.so
+</code></pre></div><br />
 - 链接</p>
 </blockquote>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>```shell
+<div class="codehilite"><pre><span></span><code>```shell
 gcc [main文件] -o [自定义输出可执行文件名] -l[库名] -L[库所在路径] -Wl,-rpath=[库所在路径]
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
                 
               
               
@@ -3026,6 +3014,10 @@ gcc [main文件] -o [自定义输出可执行文件名] -l[库名] -L[库所在�
     
     
       <script src="../../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

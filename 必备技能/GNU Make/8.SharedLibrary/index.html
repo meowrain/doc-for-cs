@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#动态库共享库" class="md-skip">
           跳转至
         </a>
       
@@ -2184,14 +2184,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-编库" class="md-nav__link">
     1 编库
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-链接" class="md-nav__link">
     2 链接
   </a>
   
@@ -2808,14 +2808,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-编库" class="md-nav__link">
     1 编库
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-链接" class="md-nav__link">
     2 链接
   </a>
   
@@ -2839,26 +2839,26 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="_1">动态库（共享库）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1">1 编库<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h1 id="动态库共享库">动态库（共享库）<a class="headerlink" href="#动态库共享库" title="Permanent link">#</a></h1>
+<h2 id="1-编库">1 编库<a class="headerlink" href="#1-编库" title="Permanent link">#</a></h2>
 <blockquote>
-<p>编译 .c 文件
-源文件[.c/cpp] -&gt; Object文件[.o]
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">g++</span><span class="w"> </span><span class="err">-c</span><span class="w"> </span><span class="err">[.c/cpp][.c/cpp]...</span><span class="w"> </span><span class="err">-o</span><span class="w"> </span><span class="err">[.o][.o]...</span><span class="w"> </span><span class="err">-I[.h/hpp]</span><span class="w"> </span><span class="err">-g</span><span class="w"> </span><span class="err">-fpic</span>
-</code></pre></div></td></tr></table></div>
-Object文件[.o] -&gt; 动态库文件[lib库名.so]
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>g++ -shared [.o][.o]... -o [lib库名.so] 
-</code></pre></div></td></tr></table></div>
-main文件[.c/cpp] -&gt; Object文件[.o]
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>g++ -c [main.c/cpp] -o [.o] -I[.h/hpp] -g
-</code></pre></div></td></tr></table></div></p>
+<p>编译 .c 文件<br />
+源文件[.c/cpp] -&gt; Object文件[.o]<br />
+<div class="highlight"><pre><span></span><code><span class="err">g++</span><span class="w"> </span><span class="err">-c</span><span class="w"> </span><span class="err">[.c/cpp][.c/cpp]...</span><span class="w"> </span><span class="err">-o</span><span class="w"> </span><span class="err">[.o][.o]...</span><span class="w"> </span><span class="err">-I[.h/hpp]</span><span class="w"> </span><span class="err">-g</span><span class="w"> </span><span class="err">-fpic</span>
+</code></pre></div><br />
+Object文件[.o] -&gt; 动态库文件[lib库名.so]<br />
+<div class="highlight"><pre><span></span><code>g++ -shared [.o][.o]... -o [lib库名.so] 
+</code></pre></div><br />
+main文件[.c/cpp] -&gt; Object文件[.o]<br />
+<div class="highlight"><pre><span></span><code>g++ -c [main.c/cpp] -o [.o] -I[.h/hpp] -g
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="2">2 链接<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2-链接">2 链接<a class="headerlink" href="#2-链接" title="Permanent link">#</a></h2>
 <blockquote>
-<p>链接 main 的 Object 文件与动态库文件[lib库名.so]
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>g++ [main.o] -o [可执行文件] -l[库名] -L[库路径] -Wl,-rpath=[库路径]
-</code></pre></div></td></tr></table></div></p>
+<p>链接 main 的 Object 文件与动态库文件[lib库名.so]<br />
+<div class="highlight"><pre><span></span><code>g++ [main.o] -o [可执行文件] -l[库名] -L[库路径] -Wl,-rpath=[库路径]
+</code></pre></div></p>
 </blockquote>
                 
               
@@ -2977,6 +2977,10 @@ main文件[.c/cpp] -&gt; Object文件[.o]
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

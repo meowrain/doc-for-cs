@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#简单编译原理" class="md-skip">
           跳转至
         </a>
       
@@ -2780,11 +2780,11 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="_1">简单编译原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h1 id="1-hello-world">1 hello, world在计算机的表示<a class="headerlink" href="#1-hello-world" title="Permanent link">&para;</a></h1>
+<h1 id="简单编译原理">简单编译原理<a class="headerlink" href="#简单编译原理" title="Permanent link">#</a></h1>
+<h1 id="1-hello-world在计算机的表示">1 hello, world在计算机的表示<a class="headerlink" href="#1-hello-world在计算机的表示" title="Permanent link">#</a></h1>
 <p>hello 程序的生命周期是从一个源程序（或者说源文件）开始的，即程序员通过编辑器创建并保存的文本文件，文件名是 hello.c。源程序实际上就是一个由值 0 和 1组成的位（又称为比特）序列，8 个位被组织成一组，称为字节。每个字节表示程序中的某些文本字符</p>
-<p>大部分计算机使用 ASCII 标准来表示文本字符
-- 用一个唯一的单字节大小的整数值息来表示每个字符
+<p>大部分计算机使用 ASCII 标准来表示文本字符<br />
+- 用一个唯一的单字节大小的整数值息来表示每个字符<br />
 - hello.c 程序是以字节序列的方式储存在文件中的</p>
 <p>hello.c 的表示方法说明了一个基本思想∶ 系统中所有的信息——包括磁盘文件、内存中的程序、内存中存放的用户数据以及网络上传送的数据，都是由一串比特表示的</p>
 <div align='center'>
@@ -2792,7 +2792,7 @@
 </div>
 
 <p>&emsp;</p>
-<h1 id="2">2 编译过程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<h1 id="2-编译过程">2 编译过程<a class="headerlink" href="#2-编译过程" title="Permanent link">#</a></h1>
 <p>hello 程序的生命周期从一个高级 C 语言程序开始</p>
 <p>为了在系统上运行 hello.c 程序，每条 C 语句都必须被其他程序转化为一系列的低级机器语言指令</p>
 <p>然后这些指令按照一种称为可执行目标程序的格式打好包，并以二进制磁盘文件的形式存放起来</p>
@@ -2800,38 +2800,32 @@
 <p>执行这四个阶段的程序（预处理器、编译器、汇编器和链接器）一起构成了编译系统（compilation system）</p>
 <p><img alt="" src="../images/compilesystem.png" /></p>
 <p>&emsp;</p>
-<h2 id="21">2.1 预处理阶段<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<h2 id="21-预处理阶段">2.1 预处理阶段<a class="headerlink" href="#21-预处理阶段" title="Permanent link">#</a></h2>
 <p><code>预处理器（cpp）</code>根据以字符#开头的命令，修改原始的 C 程序。比如 hello.c中第 1行的#include &lt; stdio.h&gt;命令告诉预处理器读取系统头文件 stdio.h 的内容，并把它直接插入程序文本中。结果就得到了另一个 C程序，通常是以.i作为文件扩展名。</p>
 <p>&emsp;</p>
-<h2 id="22">2.2 编译阶段<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
-<p><code>编译器（ccl）</code>将文本文件 hello.i翻译成文本文件 hello.s，它包含一
-个汇编语言程序。该程序包含函数 main 的定义，如下所示：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>            main:
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>            subq    $8, %rsp 
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>            mov1    $.LCO,%edi 
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>            call    puts 
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>            mov1    $0,%eax 
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>            addq    $8,%rsp 
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>            ret
-</code></pre></div></td></tr></table></div>
+<h2 id="22-编译阶段">2.2 编译阶段<a class="headerlink" href="#22-编译阶段" title="Permanent link">#</a></h2>
+<p><code>编译器（ccl）</code>将文本文件 hello.i翻译成文本文件 hello.s，它包含一<br />
+个汇编语言程序。该程序包含函数 main 的定义，如下所示：<br />
+<div class="highlight"><pre><span></span><code>            main:
+            subq    $8, %rsp 
+            mov1    $.LCO,%edi 
+            call    puts 
+            mov1    $0,%eax 
+            addq    $8,%rsp 
+            ret
+</code></pre></div><br />
 每条语句都以一种文本格式描述了一条低级机器语言指令。汇编语言非常有用，它为不同高级语言的不同编译器提供了通用的输出语言</p>
 <p>&emsp;</p>
-<h2 id="23">2.3 汇编阶段<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<h2 id="23-汇编阶段">2.3 汇编阶段<a class="headerlink" href="#23-汇编阶段" title="Permanent link">#</a></h2>
 <p><code>汇编器（as）</code>将 hello.s 翻译成机器语言指令，把这些指令打包成一种叫做可重定位目标程序（relocatable object program）的格式，并将结果保存在目标文件 hello.o中。</p>
 <p>hello.o 文件是一个二进制文件，它包含的17 个字节是函数 main的指令编码。如果我们在文本编辑器中打开 hello.o文件，将看到一堆乱码。</p>
 <p>&emsp;</p>
-<h2 id="24">2.4 链接阶段<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
+<h2 id="24-链接阶段">2.4 链接阶段<a class="headerlink" href="#24-链接阶段" title="Permanent link">#</a></h2>
 <p>注意，hello程序调用了 printf 函数，它是每个 C 编译器都提供的标准 C 库中的一个函数。printf 函数存在于一个名为 printf.o 的单独的预编译好了的目标文件中，而这个文件必须以某种方式合并到我们的 hello.o 程序中。</p>
 <p><code>链接器（ld）</code>就负责处理这种合并。结果就得到 hello 文件，它是一个可执行目标文件（或者简称为可执行文件），可以被加载到内存中，由系统执行。</p>
 <p>&emsp;</p>
-<h1 id="3-hello-world">3 hello, world的执行过程<a class="headerlink" href="#3-hello-world" title="Permanent link">&para;</a></h1>
-<h2 id="_2">第一步<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="3-hello-world的执行过程">3 hello, world的执行过程<a class="headerlink" href="#3-hello-world的执行过程" title="Permanent link">#</a></h1>
+<h2 id="第一步">第一步<a class="headerlink" href="#第一步" title="Permanent link">#</a></h2>
 <ul>
 <li>shell 等待我们输入一个命令</li>
 <li>当我们在键盘上输入字符串"./hello"（注意这里是编译好的可执行目标文件）后</li>
@@ -2842,7 +2836,7 @@
 <image src='images/hello_1.png' width=500>
 </div>
 <p>&emsp;</p>
-<h2 id="_3">第二步<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="第二步">第二步<a class="headerlink" href="#第二步" title="Permanent link">#</a></h2>
 <ul>
 <li>当我们在键盘上敲回车键时，shell 程序就知道我们已经结束了命令的输人</li>
 <li>然后 shell 执行一系列指令来加载可执行的 hello 文件</li>
@@ -2853,7 +2847,7 @@
 <image src='images/hello_2.png' width=500>
 </div>
 <p>&emsp;</p>
-<h2 id="_4">第三步<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="第三步">第三步<a class="headerlink" href="#第三步" title="Permanent link">#</a></h2>
 <ul>
 <li>一旦目标文件 hello 中的代码和数据被加载到主存</li>
 <li>处理器就开始执行 hello 程序的 main 程序中的机器语言指令</li>
@@ -2865,10 +2859,10 @@
 </div>
 <p>&emsp;</p>
 <p>&emsp;</p>
-<h1 id="4">4 程序在计算机内的存储<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
-<p>上面的例子揭示了一个重要的问题，即系统“似乎”花费了大量的时间和步骤把信息从一个地方挪到另一个地方
+<h1 id="4-程序在计算机内的存储">4 程序在计算机内的存储<a class="headerlink" href="#4-程序在计算机内的存储" title="Permanent link">#</a></h1>
+<p>上面的例子揭示了一个重要的问题，即系统“似乎”花费了大量的时间和步骤把信息从一个地方挪到另一个地方<br />
 - hello程序的机器指令最初是存放在磁盘上 <br />
-- 当程序加载时，它们被复制到主存
+- 当程序加载时，它们被复制到主存<br />
 - 当处理器运行程序时，指令又从主存复制到处理器</p>
 <p>相似地，数据串 "hello，world\n"开始时在磁盘上，然后被复制到主存，最后从主存上复制到显示设备</p>
                 
@@ -2988,6 +2982,10 @@
     
     
       <script src="../../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

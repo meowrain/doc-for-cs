@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#makefile" class="md-skip">
+        <a href="#makefile-常用符号" class="md-skip">
           跳转至
         </a>
       
@@ -2114,35 +2114,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-" class="md-nav__link">
     1 =
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-" class="md-nav__link">
     2 :=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-" class="md-nav__link">
     3 ?=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-累加-" class="md-nav__link">
     4 累加 +=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#6--与-" class="md-nav__link">
     6 * 与 %
   </a>
   
@@ -2829,35 +2829,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-" class="md-nav__link">
     1 =
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-" class="md-nav__link">
     2 :=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-" class="md-nav__link">
     3 ?=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-累加-" class="md-nav__link">
     4 累加 +=
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#6--与-" class="md-nav__link">
     6 * 与 %
   </a>
   
@@ -2881,33 +2881,26 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="makefile">Makefile 常用符号<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
-<h2 id="1">1 =<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h1 id="makefile-常用符号">Makefile 常用符号<a class="headerlink" href="#makefile-常用符号" title="Permanent link">#</a></h1>
+<h2 id="1-">1 =<a class="headerlink" href="#1-" title="Permanent link">#</a></h2>
 <ul>
 <li>简单的赋值运算符</li>
 <li>用于将右边的值分配给左边的变量</li>
 <li>如果在后面的语句中重新定义了该变量，则将使用新的值</li>
 </ul>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>aarch64
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c"># 更改了变量 a</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>amd64
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nf">debug</span><span class="o">:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>aarch64
+<span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
+
+<span class="c"># 更改了变量 a</span>
+<span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>amd64
+
+<span class="nf">debug</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>
+</code></pre></div></p>
 </blockquote>
-<h2 id="2">2 :=<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2-">2 :=<a class="headerlink" href="#2-" title="Permanent link">#</a></h2>
 <ul>
 <li>立即赋值运算符</li>
 <li>用于在定义变量时立即求值</li>
@@ -2915,63 +2908,48 @@
 <li>即使在后面的语句中重新定义了该变量</li>
 </ul>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span>aarch64
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c"># 更改了变量 a</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>amd64
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nf">debug</span><span class="o">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span>aarch64
+<span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
+
+<span class="c"># 更改了变量 a</span>
+<span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>amd64
+
+<span class="nf">debug</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="3">3 ?=<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h2 id="3-">3 ?=<a class="headerlink" href="#3-" title="Permanent link">#</a></h2>
 <ul>
 <li>默认赋值运算符</li>
 <li>如果该变量已经定义，则不进行任何操作</li>
-<li>如果该变量尚未定义，则求值并分配
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">HOST_ARCH</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>aarch64
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span>amd64
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nf">debug</span><span class="o">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
-</code></pre></div></td></tr></table></div></li>
+<li>如果该变量尚未定义，则求值并分配<br />
+<div class="highlight"><pre><span></span><code><span class="nv">HOST_ARCH</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>aarch64
+<span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span>amd64
+
+<span class="nf">debug</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
+</code></pre></div></li>
 </ul>
 <p>&emsp;</p>
-<h2 id="4">4 累加 +=<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>-m64<span class="w"> </span>-fPIC<span class="w"> </span>-g<span class="w"> </span>-O0<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-w<span class="w"> </span>-fopenmp
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">$(</span>include_paths<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-<p>&emsp;
-## 5 \
+<h2 id="4-累加-">4 累加 +=<a class="headerlink" href="#4-累加-" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>-m64<span class="w"> </span>-fPIC<span class="w"> </span>-g<span class="w"> </span>-O0<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-w<span class="w"> </span>-fopenmp
+
+<span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">$(</span>include_paths<span class="k">)</span>
+</code></pre></div>
+<p>&emsp;<br />
+## 5 \<br />
 - 续行符</p>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">LDLIBS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>cudart<span class="w"> </span>opencv_core<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">          </span>gomp<span class="w"> </span>nvinfer<span class="w"> </span>protobuf<span class="w"> </span>cudnn<span class="w"> </span>pthread<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">          </span>cublas<span class="w"> </span>nvcaffe_parser<span class="w"> </span>nvinfer_plugin<span class="w"> </span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="nv">LDLIBS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>cudart<span class="w"> </span>opencv_core<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>gomp<span class="w"> </span>nvinfer<span class="w"> </span>protobuf<span class="w"> </span>cudnn<span class="w"> </span>pthread<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>cublas<span class="w"> </span>nvcaffe_parser<span class="w"> </span>nvinfer_plugin<span class="w"> </span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="6">6 * 与 %<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h2 id="6--与-">6 * 与 %<a class="headerlink" href="#6--与-" title="Permanent link">#</a></h2>
 <ul>
 <li><code>*</code>: 通配符表示匹配任意字符串，可以用在目录名或文件名中</li>
 <li><code>%</code>: 通配符表示匹配任意字符串，并将匹配到的字符串作为变量使用</li>
@@ -3093,6 +3071,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

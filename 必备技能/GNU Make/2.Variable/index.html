@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#makefile" class="md-skip">
+        <a href="#makefile-的变量" class="md-skip">
           跳转至
         </a>
       
@@ -2100,21 +2100,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-变量的定义" class="md-nav__link">
     1 变量的定义
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-变量的引用" class="md-nav__link">
     2 变量的引用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-预定义变量" class="md-nav__link">
     3 预定义变量
   </a>
   
@@ -2822,21 +2822,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-变量的定义" class="md-nav__link">
     1 变量的定义
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-变量的引用" class="md-nav__link">
     2 变量的引用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-预定义变量" class="md-nav__link">
     3 预定义变量
   </a>
   
@@ -2867,59 +2867,44 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="makefile">Makefile 的变量<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
+<h1 id="makefile-的变量">Makefile 的变量<a class="headerlink" href="#makefile-的变量" title="Permanent link">#</a></h1>
 <p>变量在声明时需要给予初值，而在使用时，需要给在变量名前加上 <code>$</code> 符号，并用小括号 <code>()</code> 把变量给包括起来。</p>
 <p>&emsp;</p>
-<h2 id="1">1 变量的定义<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
-</code></pre></div></td></tr></table></div>
-<h2 id="2">2 变量的引用<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="1-变量的定义">1 变量的定义<a class="headerlink" href="#1-变量的定义" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
+<span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
+</code></pre></div>
+<h2 id="2-变量的引用">2 变量的引用<a class="headerlink" href="#2-变量的引用" title="Permanent link">#</a></h2>
 <ul>
-<li>可以用 <code>()</code> 或 <code>{}</code>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nf">$(obj) </span><span class="o">:</span><span class="w"> </span>${<span class="n">cpp</span>}
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span>@g++<span class="w"> </span>-c<span class="w"> </span><span class="k">$(</span>cpp<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="k">$(</span>obj<span class="k">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nf">compile </span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">obj</span><span class="k">)</span>
-</code></pre></div></td></tr></table></div></li>
+<li>可以用 <code>()</code> 或 <code>{}</code><br />
+<div class="highlight"><pre><span></span><code><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
+<span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
+
+<span class="nf">$(obj) </span><span class="o">:</span><span class="w"> </span>${<span class="n">cpp</span>}
+<span class="w">    </span>@g++<span class="w"> </span>-c<span class="w"> </span><span class="k">$(</span>cpp<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="k">$(</span>obj<span class="k">)</span>
+
+<span class="nf">compile </span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">obj</span><span class="k">)</span>
+</code></pre></div></li>
 </ul>
 <p>&emsp;</p>
-<h2 id="3">3 预定义变量<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h2 id="3-预定义变量">3 预定义变量<a class="headerlink" href="#3-预定义变量" title="Permanent link">#</a></h2>
 <ul>
 <li><code>$@</code>: 目标(target)的完整名称</li>
 <li><code>$&lt;</code>: 第一个依赖文件（prerequisties）的名称</li>
-<li><code>$^</code>: 所有的依赖文件（prerequisties），以空格分开，不包含重复的依赖文件
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nf">$(obj) </span><span class="o">:</span><span class="w"> </span>${<span class="n">cpp</span>}
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span>@g++<span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span>@echo<span class="w"> </span>$^
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nf">compile </span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">obj</span><span class="k">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nf">.PHONY </span><span class="o">:</span><span class="w"> </span><span class="n">compile</span>
-</code></pre></div></td></tr></table></div></li>
+<li><code>$^</code>: 所有的依赖文件（prerequisties），以空格分开，不包含重复的依赖文件<br />
+<div class="highlight"><pre><span></span><code><span class="nv">cpp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src/main.cpp<span class="w"> </span>
+<span class="nv">obj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>objs/main.o
+
+<span class="nf">$(obj) </span><span class="o">:</span><span class="w"> </span>${<span class="n">cpp</span>}
+<span class="w">    </span>@g++<span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span>
+<span class="w">    </span>@echo<span class="w"> </span>$^
+
+<span class="nf">compile </span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">obj</span><span class="k">)</span>
+<span class="nf">.PHONY </span><span class="o">:</span><span class="w"> </span><span class="n">compile</span>
+</code></pre></div></li>
 </ul>
 <p>&emsp;</p>
-<h2 id="4">4<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h2 id="4">4<a class="headerlink" href="#4" title="Permanent link">#</a></h2>
                 
               
               
@@ -3037,6 +3022,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

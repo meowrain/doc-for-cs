@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#makefile" class="md-skip">
+        <a href="#makefile-的常用函数" class="md-skip">
           跳转至
         </a>
       
@@ -2923,119 +2923,107 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="makefile">Makefile 的常用函数<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
-<p>函数调用，很像变量的使用，也是以 “$” 来标识的，其语法如下：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">$(</span><span class="nv">fn</span>, <span class="nv">arguments</span><span class="k">)</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">${fn,</span><span class="w"> </span><span class="err">arguments}</span>
-</code></pre></div></td></tr></table></div>
-- fn: 函数名
+<h1 id="makefile-的常用函数">Makefile 的常用函数<a class="headerlink" href="#makefile-的常用函数" title="Permanent link">#</a></h1>
+<p>函数调用，很像变量的使用，也是以 “$” 来标识的，其语法如下：<br />
+<div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">fn</span>, <span class="nv">arguments</span><span class="k">)</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">${fn,</span><span class="w"> </span><span class="err">arguments}</span>
+</code></pre></div><br />
+- fn: 函数名<br />
 - arguments: 函数参数，参数间以逗号 <code>,</code> 分隔，而函数名和参数之间以“空格”分隔</p>
 <p>&emsp;</p>
-<h2 id="1-shell">1 shell<a class="headerlink" href="#1-shell" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">$(</span><span class="nv">shell</span> &lt;<span class="nv">command</span>&gt; &lt;<span class="nv">arguments</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-- 名称：shell 命令函数 —— shell
-- 功能：调用 shell 命令 command
+<h2 id="1-shell">1 shell<a class="headerlink" href="#1-shell" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">shell</span> &lt;<span class="nv">command</span>&gt; &lt;<span class="nv">arguments</span>&gt;<span class="k">)</span>
+</code></pre></div><br />
+- 名称：shell 命令函数 —— shell<br />
+- 功能：调用 shell 命令 command<br />
 - 返回：函数返回 shell 命令 command 的执行结果</p>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c"># shell 指令，src 文件夹下找到 .cpp 文件</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span><span class="w"> </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c"># shell 指令, 获取计算机架构</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-m<span class="k">)</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="c"># shell 指令，src 文件夹下找到 .cpp 文件</span>
+<span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span><span class="w"> </span>
+<span class="c"># shell 指令, 获取计算机架构</span>
+<span class="nv">HOST_ARCH</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-m<span class="k">)</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="2-subst">2 subst<a class="headerlink" href="#2-subst" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">$(</span><span class="nv">subst</span> &lt;<span class="nv">from</span>&gt;,&lt;<span class="nv">to</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-- 名称：字符串替换函数——subst
-- 功能：把字串 \<text> 中的 \<from> 字符串替换成 \<to>
+<h2 id="2-subst">2 subst<a class="headerlink" href="#2-subst" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">subst</span> &lt;<span class="nv">from</span>&gt;,&lt;<span class="nv">to</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
+</code></pre></div><br />
+- 名称：字符串替换函数——subst<br />
+- 功能：把字串 \<text> 中的 \<from> 字符串替换成 \<to><br />
 - 返回：函数返回被替换过后的字符串</p>
 <blockquote>
-<p>示例：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nv">cpp_objs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>src/,objs/,<span class="k">$(</span>cpp_objs<span class="k">))</span><span class="w"> </span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例：<br />
+<div class="highlight"><pre><span></span><code><span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span>
+<span class="nv">cpp_objs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>src/,objs/,<span class="k">$(</span>cpp_objs<span class="k">))</span><span class="w"> </span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="3-patsubst">3 patsubst<a class="headerlink" href="#3-patsubst" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">$(</span><span class="nv">patsubst</span> &lt;<span class="nv">pattern</span>&gt;,&lt;<span class="nv">replacement</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-- 名称：模式字符串替换函数 —— patsubst
-- 功能：通配符 <code>%</code>，表示任意长度的字串，从 text 中取出 patttern， 替换成 replacement
+<h2 id="3-patsubst">3 patsubst<a class="headerlink" href="#3-patsubst" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">patsubst</span> &lt;<span class="nv">pattern</span>&gt;,&lt;<span class="nv">replacement</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
+</code></pre></div><br />
+- 名称：模式字符串替换函数 —— patsubst<br />
+- 功能：通配符 <code>%</code>，表示任意长度的字串，从 text 中取出 patttern， 替换成 replacement<br />
 - 返回：函数返回被替换过后的字符串</p>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span><span class="w"> </span><span class="c1">#shell指令，src文件夹下找到.cpp文件</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nv">cpp_objs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>patsubst<span class="w"> </span>%.cpp,%.o,<span class="k">$(</span>cpp_srcs<span class="k">))</span><span class="w"> </span><span class="c1">#cpp_srcs变量下cpp文件替换成 .o文件</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="nv">cpp_srcs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span><span class="w"> </span><span class="c1">#shell指令，src文件夹下找到.cpp文件</span>
+<span class="nv">cpp_objs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>patsubst<span class="w"> </span>%.cpp,%.o,<span class="k">$(</span>cpp_srcs<span class="k">))</span><span class="w"> </span><span class="c1">#cpp_srcs变量下cpp文件替换成 .o文件</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="4-foreach">4 foreach<a class="headerlink" href="#4-foreach" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">$(</span><span class="nv">foreach</span> &lt;<span class="nv">var</span>&gt;,&lt;<span class="nv">list</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-- 名称：循环函数——foreach。
-- 功能：把字串\<list>中的元素逐一取出来，执行\<text>包含的表达式
+<h2 id="4-foreach">4 foreach<a class="headerlink" href="#4-foreach" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">foreach</span> &lt;<span class="nv">var</span>&gt;,&lt;<span class="nv">list</span>&gt;,&lt;<span class="nv">text</span>&gt;<span class="k">)</span>
+</code></pre></div><br />
+- 名称：循环函数——foreach。<br />
+- 功能：把字串\<list>中的元素逐一取出来，执行\<text>包含的表达式<br />
 - 返回：\<text>所返回的每个字符串所组成的整个字符串（以空格分隔）</p>
 <blockquote>
-<p>示例：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/datav/shared/100_du/03.08/lean/protobuf-3.11.4/lib<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">                 </span>/usr/local/cuda-10.1/lib64<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>library_paths<span class="k">)</span>,-L<span class="k">$(</span>item<span class="k">))</span>
-</code></pre></div></td></tr></table></div>
-同等效果
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nv">I_flag</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>include_paths:%<span class="o">=</span>-I%<span class="k">)</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例：<br />
+<div class="highlight"><pre><span></span><code><span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/datav/shared/100_du/03.08/lean/protobuf-3.11.4/lib<span class="w"> </span><span class="se">\</span>
+<span class="w">                 </span>/usr/local/cuda-10.1/lib64<span class="w"> </span><span class="se">\</span>
+
+<span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>library_paths<span class="k">)</span>,-L<span class="k">$(</span>item<span class="k">))</span>
+</code></pre></div><br />
+同等效果<br />
+<div class="highlight"><pre><span></span><code><span class="nv">I_flag</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>include_paths:%<span class="o">=</span>-I%<span class="k">)</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="5-dir">5 dir<a class="headerlink" href="#5-dir" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">$(</span><span class="nv">dir</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-- 名称：取目录函数——dir。
-- 功能：从文件名序列<names>中取出目录部分。目录部分是指最后一个反斜杠（“/”）之前
-的部分。如果没有反斜杠，那么返回“./”。
-- 返回：返回文件名序列<names>的目录部分。
-- 示例： 
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">$(</span><span class="nv">dir</span> <span class="nv">src</span>/<span class="nv">foo.c</span> <span class="nv">hacks</span><span class="k">)</span><span class="w">    </span><span class="c"># 返回值是“src/ ./”。</span>
-</code></pre></div></td></tr></table></div></p>
+<h2 id="5-dir">5 dir<a class="headerlink" href="#5-dir" title="Permanent link">#</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">dir</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
+</code></pre></div><br />
+- 名称：取目录函数——dir。<br />
+- 功能：从文件名序列<names>中取出目录部分。目录部分是指最后一个反斜杠（“/”）之前<br />
+的部分。如果没有反斜杠，那么返回“./”。<br />
+- 返回：返回文件名序列<names>的目录部分。<br />
+- 示例： <br />
+<div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">dir</span> <span class="nv">src</span>/<span class="nv">foo.c</span> <span class="nv">hacks</span><span class="k">)</span><span class="w">    </span><span class="c"># 返回值是“src/ ./”。</span>
+</code></pre></div></p>
 <p>&emsp;</p>
-<h2 id="6-notdir">6 notdir<a class="headerlink" href="#6-notdir" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">$(</span><span class="nv">notdir</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="6-notdir">6 notdir<a class="headerlink" href="#6-notdir" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">notdir</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
+</code></pre></div>
 <blockquote>
-<p>示例
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nv">libs</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
-</code></pre></div></td></tr></table></div></p>
+<p>示例<br />
+<div class="highlight"><pre><span></span><code><span class="nv">libs</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
+</code></pre></div></p>
 </blockquote>
 <p>&emsp;</p>
-<h2 id="7-filter">7 filter<a class="headerlink" href="#7-filter" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">$(</span><span class="nv">filter</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span>
-<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nv">libs</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nv">a_libs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.a,<span class="k">$(</span>libs<span class="k">))</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nv">so_libs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.so,<span class="k">$(</span>libs<span class="k">))</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="7-filter">7 filter<a class="headerlink" href="#7-filter" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">filter</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nv">libs</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
+<span class="nv">a_libs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.a,<span class="k">$(</span>libs<span class="k">))</span>
+<span class="nv">so_libs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.so,<span class="k">$(</span>libs<span class="k">))</span>
+</code></pre></div>
 <p>&emsp;</p>
-<h2 id="8-basename">8 basename<a class="headerlink" href="#8-basename" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">$(</span><span class="nv">basename</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nv">libs</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="nv">a_libs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>lib,,<span class="k">$(</span>basename<span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.a,<span class="k">$(</span>libs<span class="k">))))</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nv">so_libs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>lib,,<span class="k">$(</span>basename<span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.so,<span class="k">$(</span>libs<span class="k">))))</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="8-basename">8 basename<a class="headerlink" href="#8-basename" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">$(</span><span class="nv">basename</span> &lt;<span class="nv">names...</span>&gt;<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nv">libs</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>/usr/lib<span class="w"> </span>-name<span class="w"> </span>lib*<span class="k">))</span>
+<span class="nv">a_libs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>lib,,<span class="k">$(</span>basename<span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.a,<span class="k">$(</span>libs<span class="k">))))</span>
+<span class="nv">so_libs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span>lib,,<span class="k">$(</span>basename<span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.so,<span class="k">$(</span>libs<span class="k">))))</span>
+</code></pre></div>
                 
               
               
@@ -3153,6 +3141,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

@@ -2142,21 +2142,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ifeq-else-endif" class="md-nav__link">
+  <a href="#1-ifeq--else--endif" class="md-nav__link">
     1 ifeq / else / endif
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ifneq-else-endif" class="md-nav__link">
+  <a href="#2-ifneq--else--endif" class="md-nav__link">
     2 ifneq / else / endif
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ifdef-else-endif" class="md-nav__link">
+  <a href="#3-ifdef--else--endif" class="md-nav__link">
     3 ifdef / else / endif
   </a>
   
@@ -2815,21 +2815,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ifeq-else-endif" class="md-nav__link">
+  <a href="#1-ifeq--else--endif" class="md-nav__link">
     1 ifeq / else / endif
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ifneq-else-endif" class="md-nav__link">
+  <a href="#2-ifneq--else--endif" class="md-nav__link">
     2 ifneq / else / endif
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ifdef-else-endif" class="md-nav__link">
+  <a href="#3-ifdef--else--endif" class="md-nav__link">
     3 ifdef / else / endif
   </a>
   
@@ -2853,79 +2853,51 @@
                 
                 
                 <p>&emsp;</p>
-<h1 id="conditional-rules">Conditional Rules<a class="headerlink" href="#conditional-rules" title="Permanent link">&para;</a></h1>
+<h1 id="conditional-rules">Conditional Rules<a class="headerlink" href="#conditional-rules" title="Permanent link">#</a></h1>
 <blockquote>
-<p>注意：
-- Condition 语句里面全部不能用 Tab 缩进, 你看到的 Makefile 如果好像有 "Tab", 那全部是空格
+<p>注意：<br />
+- Condition 语句里面全部不能用 Tab 缩进, 你看到的 Makefile 如果好像有 "Tab", 那全部是空格<br />
 - 使用 Tab 会报错：*** commands commence before first target</p>
 </blockquote>
-<h2 id="1-ifeq-else-endif">1 ifeq / else / endif<a class="headerlink" href="#1-ifeq-else-endif" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c"># build flags</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">ifeq ($(TARGET_OS),darwin)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-rpath<span class="w"> </span><span class="k">$(</span>CUDA_PATH<span class="k">)</span>/lib
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-arch<span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="cp">else ifeq ($(HOST_ARCH)-$(TARGET_ARCH)-$(TARGET_OS),x86_64-armv7l-linux)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>--dynamic-linker<span class="o">=</span>/lib/ld-linux-armhf.so.3
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-mfloat-abi<span class="o">=</span>hard
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="cp">else ifeq ($(TARGET_OS),android)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-pie
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-fpie<span class="w"> </span>-fpic<span class="w"> </span>-fexceptions
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="cp">endif</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="1-ifeq--else--endif">1 ifeq / else / endif<a class="headerlink" href="#1-ifeq--else--endif" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c"># build flags</span>
+<span class="cp">ifeq ($(TARGET_OS),darwin)</span>
+<span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-rpath<span class="w"> </span><span class="k">$(</span>CUDA_PATH<span class="k">)</span>/lib
+<span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-arch<span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
+<span class="cp">else ifeq ($(HOST_ARCH)-$(TARGET_ARCH)-$(TARGET_OS),x86_64-armv7l-linux)</span>
+<span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>--dynamic-linker<span class="o">=</span>/lib/ld-linux-armhf.so.3
+<span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-mfloat-abi<span class="o">=</span>hard
+<span class="cp">else ifeq ($(TARGET_OS),android)</span>
+<span class="w">    </span><span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-pie
+<span class="w">    </span><span class="nv">CCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-fpie<span class="w"> </span>-fpic<span class="w"> </span>-fexceptions
+<span class="cp">endif</span>
+</code></pre></div>
 <p>&emsp;</p>
-<h2 id="2-ifneq-else-endif">2 ifneq / else / endif<a class="headerlink" href="#2-ifneq-else-endif" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-m<span class="k">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">temp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>,x86_64<span class="w"> </span>aarch64<span class="w"> </span>sbsa<span class="w"> </span>ppc64le<span class="w"> </span>armv7l<span class="k">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="cp">ifneq (,$(filter $(TARGET_ARCH),x86_64 aarch64 sbsa ppc64le armv7l))</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="cp">    ifneq ($(TARGET_ARCH),$(HOST_ARCH))</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="cp">        ifneq (,$(filter $(TARGET_ARCH),x86_64 aarch64 sbsa ppc64le))</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="m">64</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="cp">        else ifneq (,$(filter $(TARGET_ARCH),armv7l))</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="m">32</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="cp">        endif</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cp">    else</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>getconf<span class="w"> </span>LONG_BIT<span class="k">)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="cp">    endif</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cp">else</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="k">$(</span>error<span class="w"> </span>ERROR<span class="w"> </span>-<span class="w"> </span>unsupported<span class="w"> </span>value<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>TARGET_ARCH!<span class="k">)</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="cp">endif</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="2-ifneq--else--endif">2 ifneq / else / endif<a class="headerlink" href="#2-ifneq--else--endif" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nv">HOST_ARCH</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-m<span class="k">)</span>
+<span class="nv">TARGET_ARCH</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="k">$(</span>HOST_ARCH<span class="k">)</span>
+<span class="nv">temp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span>,x86_64<span class="w"> </span>aarch64<span class="w"> </span>sbsa<span class="w"> </span>ppc64le<span class="w"> </span>armv7l<span class="k">)</span>
+
+<span class="cp">ifneq (,$(filter $(TARGET_ARCH),x86_64 aarch64 sbsa ppc64le armv7l))</span>
+<span class="cp">    ifneq ($(TARGET_ARCH),$(HOST_ARCH))</span>
+<span class="cp">        ifneq (,$(filter $(TARGET_ARCH),x86_64 aarch64 sbsa ppc64le))</span>
+<span class="w">            </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="m">64</span>
+<span class="cp">        else ifneq (,$(filter $(TARGET_ARCH),armv7l))</span>
+<span class="w">            </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="m">32</span>
+<span class="cp">        endif</span>
+<span class="cp">    else</span>
+<span class="w">        </span>TARGET_SIZE<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>getconf<span class="w"> </span>LONG_BIT<span class="k">)</span>
+<span class="cp">    endif</span>
+<span class="cp">else</span>
+<span class="w">    </span><span class="k">$(</span>error<span class="w"> </span>ERROR<span class="w"> </span>-<span class="w"> </span>unsupported<span class="w"> </span>value<span class="w"> </span><span class="k">$(</span>TARGET_ARCH<span class="k">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>TARGET_ARCH!<span class="k">)</span>
+<span class="cp">endif</span>
+</code></pre></div>
 <p>&emsp;</p>
-<h2 id="3-ifdef-else-endif">3 ifdef / else / endif<a class="headerlink" href="#3-ifdef-else-endif" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">ifdef TARGET_OVERRIDE # cuda toolkit targets override</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nv">NVCCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-target-dir<span class="w"> </span><span class="k">$(</span>TARGET_OVERRIDE<span class="k">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cp">endif</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="3-ifdef--else--endif">3 ifdef / else / endif<a class="headerlink" href="#3-ifdef--else--endif" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">ifdef TARGET_OVERRIDE # cuda toolkit targets override</span>
+<span class="w">    </span><span class="nv">NVCCFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-target-dir<span class="w"> </span><span class="k">$(</span>TARGET_OVERRIDE<span class="k">)</span>
+<span class="cp">endif</span>
+</code></pre></div>
                 
               
               
@@ -3043,6 +3015,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

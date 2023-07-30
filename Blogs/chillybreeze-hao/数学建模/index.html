@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#微分方程模型" class="md-skip">
           跳转至
         </a>
       
@@ -362,7 +362,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#人口模型" class="md-nav__link">
     人口模型
   </a>
   
@@ -370,7 +370,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-malthus" class="md-nav__link">
+  <a href="#1-malthus马尔萨斯人口模型" class="md-nav__link">
     1. Malthus（马尔萨斯人口模型）
   </a>
   
@@ -378,7 +378,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matlab" class="md-nav__link">
+  <a href="#matlab代码求解" class="md-nav__link">
     MATLAB代码求解
   </a>
   
@@ -390,7 +390,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-logistic" class="md-nav__link">
+  <a href="#2--logistic人口模型" class="md-nav__link">
     2 . Logistic人口模型
   </a>
   
@@ -398,7 +398,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matlab_1" class="md-nav__link">
+  <a href="#matlab代码求解_1" class="md-nav__link">
     MATLAB代码求解
   </a>
   
@@ -410,7 +410,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-leslie" class="md-nav__link">
+  <a href="#3--leslie-人口模型" class="md-nav__link">
     3 . Leslie 人口模型
   </a>
   
@@ -2854,7 +2854,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#人口模型" class="md-nav__link">
     人口模型
   </a>
   
@@ -2862,7 +2862,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-malthus" class="md-nav__link">
+  <a href="#1-malthus马尔萨斯人口模型" class="md-nav__link">
     1. Malthus（马尔萨斯人口模型）
   </a>
   
@@ -2870,7 +2870,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matlab" class="md-nav__link">
+  <a href="#matlab代码求解" class="md-nav__link">
     MATLAB代码求解
   </a>
   
@@ -2882,7 +2882,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-logistic" class="md-nav__link">
+  <a href="#2--logistic人口模型" class="md-nav__link">
     2 . Logistic人口模型
   </a>
   
@@ -2890,7 +2890,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matlab_1" class="md-nav__link">
+  <a href="#matlab代码求解_1" class="md-nav__link">
     MATLAB代码求解
   </a>
   
@@ -2902,7 +2902,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-leslie" class="md-nav__link">
+  <a href="#3--leslie-人口模型" class="md-nav__link">
     3 . Leslie 人口模型
   </a>
   
@@ -2930,9 +2930,9 @@
                   </a>
                 
                 
-                <h1 id="_1">微分方程模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">人口模型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1-malthus">1. Malthus（马尔萨斯人口模型）<a class="headerlink" href="#1-malthus" title="Permanent link">&para;</a></h3>
+                <h1 id="微分方程模型">微分方程模型<a class="headerlink" href="#微分方程模型" title="Permanent link">#</a></h1>
+<h2 id="人口模型">人口模型<a class="headerlink" href="#人口模型" title="Permanent link">#</a></h2>
+<h3 id="1-malthus马尔萨斯人口模型">1. Malthus（马尔萨斯人口模型）<a class="headerlink" href="#1-malthus马尔萨斯人口模型" title="Permanent link">#</a></h3>
 <p>变量表示：</p>
 <ul>
 <li>(t, P(t))：表示人口的数对，t为时间，P(t) 为 t 时刻的人口数</li>
@@ -2955,28 +2955,23 @@
 <li>人口数量为时间的连续可微函数；</li>
 <li>人口增长率是与时间无关的常数 ;</li>
 </ul>
-<p>由前面的分析可得
-                                 <span class="arithmatex">\(P(t+▵t)-P(t)=rP(t)▵t\)</span>          </p>
+<p>由前面的分析可得<br />
+<span class="arithmatex">\(P(t+▵t)-P(t)=rP(t)▵t\)</span>          </p>
 <p>​                                <span class="arithmatex">\(P(t+dt)-P(t)=rP(t)dt\)</span>         (离散形式)</p>
 <p>​                                 <span class="arithmatex">\(\frac{dP(t)}{dt}=rP(t)\)</span>    ,  <span class="arithmatex">\(P(t_0)=P_0\)</span>    (连续形式)</p>
 <p>进一步得到 Malthus 人口模型   </p>
 <p>​                               <span class="arithmatex">\(P(t)=P_0e^{r(t-t_0)}\)</span></p>
-<h4 id="matlab">MATLAB代码求解<a class="headerlink" href="#matlab" title="Permanent link">&para;</a></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">syms</span><span class="w"> </span><span class="s">r</span><span class="w"> </span><span class="s">P(t)</span><span class="w"> </span><span class="s">t0</span><span class="w"> </span><span class="s">P0</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">eqn</span><span class="p">=</span><span class="nb">diff</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="o">==</span><span class="n">r</span><span class="o">*</span><span class="n">P</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">cond</span><span class="p">=</span><span class="n">P</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span><span class="o">==</span><span class="n">P0</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">PSol</span><span class="p">(</span><span class="n">t</span><span class="p">)=</span><span class="n">dsolve</span><span class="p">(</span><span class="n">eqn</span><span class="p">,</span><span class="w"> </span><span class="nb">cond</span><span class="p">);</span><span class="w">  </span><span class="c">% 返回符号函数symfun</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">simplify</span><span class="p">(</span><span class="n">PSol</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>运行结果：
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">ans</span><span class="p">=</span><span class="n">P0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="2-logistic">2 . Logistic人口模型<a class="headerlink" href="#2-logistic" title="Permanent link">&para;</a></h3>
+<h4 id="matlab代码求解">MATLAB代码求解<a class="headerlink" href="#matlab代码求解" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">syms</span><span class="w"> </span><span class="s">r</span><span class="w"> </span><span class="s">P(t)</span><span class="w"> </span><span class="s">t0</span><span class="w"> </span><span class="s">P0</span>
+<span class="n">eqn</span><span class="p">=</span><span class="nb">diff</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="o">==</span><span class="n">r</span><span class="o">*</span><span class="n">P</span><span class="p">;</span>
+<span class="nb">cond</span><span class="p">=</span><span class="n">P</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span><span class="o">==</span><span class="n">P0</span><span class="p">;</span>
+<span class="n">PSol</span><span class="p">(</span><span class="n">t</span><span class="p">)=</span><span class="n">dsolve</span><span class="p">(</span><span class="n">eqn</span><span class="p">,</span><span class="w"> </span><span class="nb">cond</span><span class="p">);</span><span class="w">  </span><span class="c">% 返回符号函数symfun</span>
+<span class="nb">simplify</span><span class="p">(</span><span class="n">PSol</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>运行结果：
+<span class="nb">ans</span><span class="p">=</span><span class="n">P0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="2--logistic人口模型">2 . Logistic人口模型<a class="headerlink" href="#2--logistic人口模型" title="Permanent link">#</a></h3>
 <ol>
 <li>阻滞增长模型</li>
 </ol>
@@ -2996,39 +2991,34 @@
 <p>​                       <span class="arithmatex">\(r(t)=r(P(t))=r(1-\frac{P(t)}{K})\)</span>                                                </p>
 <p>​                 </p>
 <p>这里 K 为新引入的参数，表示地球所能容纳的最大人口数量。</p>
-<p>​       Malthus 时代， P(t) 相对于 K 来说很小，括号项很接近1，所以也就合理了。若取 K=+∞，就退化为 Malthus 人口模型。
-​        用 N(t) 表示 t 时刻的人口数，类似 Malthus 人口模型，可得到 Logistic 人口模型：
+<p>​       Malthus 时代， P(t) 相对于 K 来说很小，括号项很接近1，所以也就合理了。若取 K=+∞，就退化为 Malthus 人口模型。<br />
+​        用 N(t) 表示 t 时刻的人口数，类似 Malthus 人口模型，可得到 Logistic 人口模型：<br />
 ​                    </p>
 <p>​                       <span class="arithmatex">\(\frac{dN(t)}{dt}=r(1-\frac{N(t)}{K})\)</span> </p>
 <p>​                        <span class="arithmatex">\(N(t_0)=N_0\)</span></p>
 <p>仍用分离变量法就能求解：<span class="arithmatex">\(N(t)=\frac{k}{1+Ce^{-r(t-t_0)}}\)</span></p>
 <p>其中  C=<span class="arithmatex">\(\frac{K-N_0}{N_0}\)</span></p>
-<h4 id="matlab_1">MATLAB代码求解<a class="headerlink" href="#matlab_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">syms</span><span class="w"> </span><span class="s">r</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">N(t)</span><span class="w"> </span><span class="s">t0</span><span class="w"> </span><span class="s">N0</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">eqn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N</span><span class="o">/</span><span class="n">K</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">cond</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">N0</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">NSol</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dsolve</span><span class="p">(</span><span class="n">eqn</span><span class="p">,</span><span class="w"> </span><span class="nb">cond</span><span class="p">)</span><span class="w">  </span><span class="c">% 返回符号函数symfun</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">simplify</span><span class="p">(</span><span class="n">NSol</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
+<h4 id="matlab代码求解_1">MATLAB代码求解<a class="headerlink" href="#matlab代码求解_1" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">syms</span><span class="w"> </span><span class="s">r</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">N(t)</span><span class="w"> </span><span class="s">t0</span><span class="w"> </span><span class="s">N0</span>
+<span class="n">eqn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N</span><span class="o">/</span><span class="n">K</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<span class="nb">cond</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">N0</span><span class="p">;</span>
+<span class="n">NSol</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dsolve</span><span class="p">(</span><span class="n">eqn</span><span class="p">,</span><span class="w"> </span><span class="nb">cond</span><span class="p">)</span><span class="w">  </span><span class="c">% 返回符号函数symfun</span>
+<span class="nb">simplify</span><span class="p">(</span><span class="n">NSol</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</code></pre></div>
 <p>运行结果：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Nsol</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K</span><span class="o">/</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="p">((</span><span class="nb">log</span><span class="p">(</span><span class="n">K</span><span class="o">/</span><span class="n">N0</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">t0</span><span class="p">)</span><span class="o">/</span><span class="n">K</span><span class="w"> </span>–<span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="n">K</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nb">ans</span><span class="w"> </span><span class="p">=(</span><span class="n">K</span><span class="o">*</span><span class="n">N0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span>–<span class="w"> </span><span class="n">t0</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">N0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="p">)))</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="n">Nsol</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K</span><span class="o">/</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="p">((</span><span class="nb">log</span><span class="p">(</span><span class="n">K</span><span class="o">/</span><span class="n">N0</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">t0</span><span class="p">)</span><span class="o">/</span><span class="n">K</span><span class="w"> </span>–<span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="n">K</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">ans</span><span class="w"> </span><span class="p">=(</span><span class="n">K</span><span class="o">*</span><span class="n">N0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span>–<span class="w"> </span><span class="n">t0</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">N0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="p">)))</span>
+</code></pre></div>
 <p>考察时间 t 趋近于无穷大时的极限，可以发现结果与 Malthus 模型完全不同！</p>
 <p>具体做法:</p>
 <p>​   1.先粗略（目测）估计一个 <span class="arithmatex">\(\psi\)</span> ，它是容纳量的界限，拐点处是它的一半，</p>
 <p>​     有了它再对 <span class="arithmatex">\(\frac{N(t)}{\psi}\)</span> 做 Logit 变换。</p>
 <p>2) 再用线性回归估计系数  <span class="arithmatex">\(\psi_2\)</span>,<span class="arithmatex">\(\psi_3\)</span>，这样就得到了要估计的3个参数较好的一   <br />
-   组初始值。
+   组初始值。<br />
 3) 有了这 3 个参数的较好的初始值，再做原模型的非线性拟合。</p>
-<h3 id="3-leslie">3 . Leslie 人口模型<a class="headerlink" href="#3-leslie" title="Permanent link">&para;</a></h3>
-<p>​        只对人口总量建模是不够的，特别是需要研究和年龄段有关的问题：老龄化、劳动力人口等。这就需要关注人口的年龄分布（每个年龄段人口的数量），适合的数学模型是基于差分方程理论的Leslie模型。
-​       Leslie模型，是基于年龄和性别，将人口各年龄段的发展过程建立差分方程组，引入矩阵表示后可变成离散矩阵模型。
+<h3 id="3--leslie-人口模型">3 . Leslie 人口模型<a class="headerlink" href="#3--leslie-人口模型" title="Permanent link">#</a></h3>
+<p>​        只对人口总量建模是不够的，特别是需要研究和年龄段有关的问题：老龄化、劳动力人口等。这就需要关注人口的年龄分布（每个年龄段人口的数量），适合的数学模型是基于差分方程理论的Leslie模型。<br />
+​       Leslie模型，是基于年龄和性别，将人口各年龄段的发展过程建立差分方程组，引入矩阵表示后可变成离散矩阵模型。<br />
 ​       <strong>Leslie模型构建的基本原理</strong>：首先将人口按性别分组，针对女性人口，选择某初始时期，记分年龄段的女性人口数作为一个列向量；然后通过各年龄段生育率、存活率构建 Leslie 人口矩阵；接着，用Leslie人口矩阵左乘分年龄段的女性人口向量，得到新的列向量即为预测的下一阶段分年龄段的女性人口向量；最后，根据男女性别比例推算出人口总数，根据预测年龄分布可以计算平均年龄、平均寿命、老龄化指数、抚养指数等。</p>
 <p>对女性人口按年龄切分，记为按年龄段的女性人口向量：</p>
 <p><img src="https://static.meowrain.cn/i/2023/07/29/y06my9-3.webp" alt="image-20230729205614140" style="zoom:33%;" /></p>
@@ -3152,6 +3142,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
