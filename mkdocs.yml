@@ -35,30 +35,36 @@ theme:
 extra:
   homepage: #
 markdown_extensions:
-  - abbr
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - md_in_html
-  - pymdownx.arithmatex:  # latex支持
-      generic: true
+  - attr_list # 增加css-html样式，例如按钮，比如图片定义大小，caption
+  - pymdownx.tabbed  # C++/python 代码例子切换
+  - nl2br # newline-to-break  markdown非严格换行
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      linenums: true # 显示行号
-      auto_title: true # 显示编程语言名称
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - attr_list
-  - pymdownx.emoji:
+      permalink: '#' # heading anchor 标题的#样式
+      slugify: !!python/name:pymdownx.slugs.uslugify # 默认的解析器遇到中文会有问题，需要改成这个
+  - admonition  # 突出显示一些东西，比如 !!!info|bug|tips之类
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - footnotes # 支持脚注[^1]
+  - meta # 好像是设置页面基本信息的
+  - def_list # 支持有序、无序、任务列表
+  - pymdownx.arithmatex: # 数学公式latex支持
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic  # 支持markdown高亮==，删除等高级样式
+  - pymdownx.emoji:  # 支持图标icons和表情渲染，比如:smile:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.superfences # 代码块高亮插件
-  - meta # 支持Markdown文件上方自定义标题标签等
-  - pymdownx.arithmatex:
-    generic: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
