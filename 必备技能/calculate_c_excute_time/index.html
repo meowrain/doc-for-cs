@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/markdown-use/">
+        <link rel="canonical" href="https://cs.meowrain.cn/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/calculate_c_excute_time/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-7.3.6">
     
     
       
-        <title>学会使用markdown - 计算机学习指南</title>
+        <title>计算c/c++程序运行时间 - 计算机学习指南</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#学会使用markdown" class="md-skip">
+        <a href="#计算cc程序运行时间" class="md-skip">
           跳转至
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              学会使用markdown
+              计算c/c++程序运行时间
             
           </span>
         </div>
@@ -1923,11 +1923,67 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../calculate_c_excute_time/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          计算c/c++程序运行时间
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         计算c/c++程序运行时间
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c语言程序" class="md-nav__link">
+    C语言程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c程序" class="md-nav__link">
+    C++程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-time命令" class="md-nav__link">
+    Linux time命令
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1979,21 +2035,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../markdown-use/" class="md-nav__link">
         学会使用markdown
       </a>
-      
     </li>
   
 
@@ -2897,6 +2943,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c语言程序" class="md-nav__link">
+    C语言程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c程序" class="md-nav__link">
+    C++程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-time命令" class="md-nav__link">
+    Linux time命令
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2907,24 +2982,65 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/meowrain/doc-for-sxau/edit/master/docs/必备技能/markdown-use.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/meowrain/doc-for-sxau/edit/master/docs/必备技能/calculate_c_excute_time.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="学会使用markdown">学会使用markdown<a class="headerlink" href="#学会使用markdown" title="Permanent link">#</a></h1>
-<blockquote>
-<p>Markdown是一种轻量级的标记语言，可以使用简单的文本格式来创建格式化文档。它最初由约翰·格鲁伯（John Gruber）和亚伦·斯沃茨（Aaron Swartz）在2004年创建，旨在为写作者提供一种易于阅读、易于编写的文本格式。<br />
-Markdown使用简单的标记语法来定义文本中的格式，例如标题、段落、列表、链接、图片等等。这些标记通常以纯文本方式编写，而不需要使用HTML或其他复杂的标记语言。</p>
-</blockquote>
-<p>因此学会使用markdown是有必要的，你可以用markdown来编写你的笔记</p>
-<h1 id="编辑器">编辑器<a class="headerlink" href="#编辑器" title="Permanent link">#</a></h1>
-<p>这里推荐两款编辑器：<br />
-- vscode(力荐，免费而且开源，插件库丰富)<br />
-- Typora(现在已经是收费软件了，不过可以下载之前的免费版本继续使用)</p>
-<h1 id="markdown语法学习">Markdown语法学习<a class="headerlink" href="#markdown语法学习" title="Permanent link">#</a></h1>
-<p><a href="https://markdown.com.cn/basic-syntax/">Markdown语法指南</a></p>
-<p>看上面的就够了，记住边写边练</p>
+                <h1 id="计算cc程序运行时间">计算c/c++程序运行时间<a class="headerlink" href="#计算cc程序运行时间" title="Permanent link">#</a></h1>
+<h2 id="c语言程序">C语言程序<a class="headerlink" href="#c语言程序" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">clock_t</span><span class="w"> </span><span class="n">start_time</span><span class="p">,</span><span class="w"> </span><span class="n">end_time</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">cpu_time_used</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clock</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 在这里执行你的程序逻辑</span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="n">end_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clock</span><span class="p">();</span>
+<span class="w">    </span><span class="n">cpu_time_used</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">CLOCKS_PER_SEC</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;程序运行时间: %f 秒</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cpu_time_used</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="c程序">C++程序<a class="headerlink" href="#c程序" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 获取当前时间点</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 在这里执行你的程序逻辑</span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="c1">// 获取结束时间点</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">end_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 计算时间差</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">microseconds</span><span class="o">&gt;</span><span class="p">(</span><span class="n">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 输出运行时间</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;程序运行时间: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">duration</span><span class="p">.</span><span class="n">count</span><span class="p">()</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 秒&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="linux-time命令">Linux time命令<a class="headerlink" href="#linux-time命令" title="Permanent link">#</a></h2>
+<p>使用time命令</p>
+<div class="highlight"><pre><span></span><code><span class="nb">time</span><span class="w"> </span>./your_program
+</code></pre></div>
+<p>例如，编译了一个c++程序，叫main<br />
+那么我就可以执行</p>
+<div class="highlight"><pre><span></span><code><span class="nb">time</span><span class="w"> </span>./main
+</code></pre></div>
+<p>来得到程序运行时长</p>
                 
               
               
@@ -2981,7 +3097,7 @@ Markdown使用简单的标记语法来定义文本中的格式，例如标题、
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../latex/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Latex" rel="prev">
+        <a href="../blog-create/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 搭建自己的博客" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2990,20 +3106,20 @@ Markdown使用简单的标记语法来定义文本中的格式，例如标题、
               <span class="md-footer__direction">
                 上一页
               </span>
-              Latex
+              搭建自己的博客
             </div>
           </div>
         </a>
       
       
         
-        <a href="../regexp/" class="md-footer__link md-footer__link--next" aria-label="下一页: 正则表达式" rel="next">
+        <a href="../git-env-config/" class="md-footer__link md-footer__link--next" aria-label="下一页: Git配置代理" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              正则表达式
+              Git配置代理
             </div>
           </div>
           <div class="md-footer__button md-icon">
