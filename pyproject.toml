@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "doc_for_cs"}]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
 mkdocs-material = "7.3.6"
 mkdocs-git-revision-date-localized-plugin = "0.9.3"
 
