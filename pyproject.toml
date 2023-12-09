@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "doc-for-cs"
+version = "0.1.0"
+description = ""
+authors = ["meowrain <meowrain@126.com>"]
+readme = "README.md"
+packages = [{include = "doc_for_cs"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs-material = "7.3.6"
+mkdocs-git-revision-date-localized-plugin = "0.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
