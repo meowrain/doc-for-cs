@@ -18,7 +18,7 @@
     
     
       
-        <title>Index - 计算机学习指南</title>
+        <title>安装python - 计算机学习指南</title>
       
     
     
@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#安装python" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              安装python
             
           </span>
         </div>
@@ -2929,9 +2934,11 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Index
+        安装python
       </a>
       
     </li>
@@ -2952,6 +2959,25 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2962,9 +2988,33 @@
                   </a>
                 
                 
-                  <h1>Index</h1>
-                
-                
+                <h1 id="安装python">安装python<a class="headerlink" href="#安装python" title="Permanent link">#</a></h1>
+<p>去python官网下载最新版就可以了！</p>
+<h1 id="安装pipx">安装pipx<a class="headerlink" href="#安装pipx" title="Permanent link">#</a></h1>
+<blockquote>
+<p><a href="https://pipx.pypa.io/stable/">https://pipx.pypa.io/stable/</a></p>
+</blockquote>
+<p>参考上面这个官方文档安装就可以了</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>python-pipx
+</code></pre></div>
+<h1 id="安装poetry">安装poetry<a class="headerlink" href="#安装poetry" title="Permanent link">#</a></h1>
+<blockquote>
+<p>检查pipx是否安装，如果安装成功</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pipx<span class="w"> </span>install<span class="w"> </span>poetry
+</code></pre></div>
+<h1 id="进入到当前项目安装项目依赖创建虚拟环境">进入到当前项目，安装项目依赖，创建虚拟环境<a class="headerlink" href="#进入到当前项目安装项目依赖创建虚拟环境" title="Permanent link">#</a></h1>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>poetry<span class="w"> </span>install
+</code></pre></div>
+<blockquote>
+<p>因为已经配置好了镜像，所以下载会很快</p>
+</blockquote>
+<h1 id="进入当前虚拟环境的shell">进入当前虚拟环境的shell<a class="headerlink" href="#进入当前虚拟环境的shell" title="Permanent link">#</a></h1>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>poetry<span class="w"> </span>shell
+</code></pre></div>
+<h1 id="启动当前项目">启动当前项目<a class="headerlink" href="#启动当前项目" title="Permanent link">#</a></h1>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdocs<span class="w"> </span>serve
+</code></pre></div>
                 
               
               
