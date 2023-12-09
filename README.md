@@ -11,6 +11,12 @@
 
 [cs.meowrain.cn](https://cs.meowrain.cn)
 
+## 贡献指南
+
+> 如果你想贡献内容，请看贡献指南！
+
+[贡献指南](./docs//贡献指南/index.md)
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=meowrain/doc-for-sxau&type=Date)](https://star-history.com/#meowrain/doc-for-cs&Date)
