@@ -1,6 +1,6 @@
 # 正则表达式
 
-![](https://static.meowrain.cn/i/2023/04/04/zhzwe9-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/04/04/zhzwe9-3.webp)
 
 - [正则表达式](#正则表达式)
   - [正则表达式介绍](#正则表达式介绍)

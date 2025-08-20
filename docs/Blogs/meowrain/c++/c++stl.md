@@ -46,7 +46,7 @@ int main(void) {
 }
 ```
 
-![](https://static.meowrain.cn/i/2023/07/21/ixxrov-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/07/21/ixxrov-3.webp)
 
 ### vector 方法
 
@@ -158,7 +158,7 @@ int main() {
 
 ```
 
-![image-20230721114558777](https://static.meowrain.cn/i/2023/07/21/iy1x5v-3.webp)
+![image-20230721114558777](https://blog.meowrain.cn/api/i/2023/07/21/iy1x5v-3.webp)
 
 #### vector 大小操作
 
@@ -251,7 +251,7 @@ int main(void)
 }
 ```
 
-![image-20230721123245170](https://static.meowrain.cn/i/2023/07/21/kdrj2s-3.webp)
+![image-20230721123245170](https://blog.meowrain.cn/api/i/2023/07/21/kdrj2s-3.webp)
 
 
 

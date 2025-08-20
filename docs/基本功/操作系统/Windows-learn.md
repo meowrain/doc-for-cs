@@ -22,7 +22,7 @@
 
 
 Scoop官网： https://scoop.sh/
-![](https://static.meowrain.cn/i/2023/03/31/z0j0d8-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/31/z0j0d8-3.webp)
 
 > 接下来，将给出它的安装和使用方法
 Scoop是一种Windows包管理器，可以帮助用户快速安装和管理各种软件和工具。在本文中，我们将介绍如何安装和使用Scoop，以及提供一些常见的操作示例。

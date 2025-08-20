@@ -4,7 +4,7 @@
 
 # mutable在c++中的使用
 
-![image-20230627211616676](https://static.meowrain.cn/i/2023/06/27/yzx17d-3.webp)
+![image-20230627211616676](https://blog.meowrain.cn/api/i/2023/06/27/yzx17d-3.webp)
 
 上面这个代码中，因为`get_value`和`set_value`被声明为const成员函数，所以它不能修改类中的其他值,然而因为`value_`被声明为`mutable`，所以它又变成可修改的了
 

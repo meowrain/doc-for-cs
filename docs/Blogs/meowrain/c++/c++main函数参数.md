@@ -22,4 +22,4 @@ int main(int argc,char* argv[]) {
 }
 ```
 
-![](https://static.meowrain.cn/i/2023/07/18/1142j1g-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/07/18/1142j1g-3.webp)

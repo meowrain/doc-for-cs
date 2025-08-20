@@ -18,7 +18,7 @@ DROP DATABASE myDB; -- 删除数据库
 SHOW TABLES;
 ```
 
-![image-20230501113946219](https://static.meowrain.cn/i/2023/05/01/iuercd-3.webp)
+![image-20230501113946219](https://blog.meowrain.cn/api/i/2023/05/01/iuercd-3.webp)
 
 #### 创建表
 
@@ -38,7 +38,7 @@ hire_date DATE
 RENAME TABLE employees TO workers;
 ```
 
-![image-20230501112218950](https://static.meowrain.cn/i/2023/05/01/ik4loa-3.webp)
+![image-20230501112218950](https://blog.meowrain.cn/api/i/2023/05/01/ik4loa-3.webp)
 
 #### 删除表
 
@@ -46,7 +46,7 @@ RENAME TABLE employees TO workers;
 DROP TABLE employees;
 ```
 
-![image-20230501112351215](https://static.meowrain.cn/i/2023/05/01/ikwu9v-3.webp)
+![image-20230501112351215](https://blog.meowrain.cn/api/i/2023/05/01/ikwu9v-3.webp)
 
 #### 更改表
 
@@ -55,9 +55,9 @@ ALTER TABLE employees
 ADD phone_number VARCHAR(15);
 ```
 
-![image-20230501112512802](https://static.meowrain.cn/i/2023/05/01/ilvmk6-3.webp)
+![image-20230501112512802](https://blog.meowrain.cn/api/i/2023/05/01/ilvmk6-3.webp)
 
-![image-20230501112539405](https://static.meowrain.cn/i/2023/05/01/im13sy-3.webp)
+![image-20230501112539405](https://blog.meowrain.cn/api/i/2023/05/01/im13sy-3.webp)
 
 修改字段名
 
@@ -66,9 +66,9 @@ ALTER TABLE employees
 CHANGE COLUMN `email` `emails` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `phone_number`;
 ```
 
-![image-20230501114358029](https://static.meowrain.cn/i/2023/05/01/iwv2u8-3.webp)
+![image-20230501114358029](https://blog.meowrain.cn/api/i/2023/05/01/iwv2u8-3.webp)
 
-![image-20230501114409126](https://static.meowrain.cn/i/2023/05/01/ix5vh0-3.webp)
+![image-20230501114409126](https://blog.meowrain.cn/api/i/2023/05/01/ix5vh0-3.webp)
 
 修改字段数据类型
 
@@ -77,7 +77,7 @@ ALTER TABLE employees
 MODIFY COLUMN `email` VARCHAR(300);
 ```
 
-![image-20230501114500300](https://static.meowrain.cn/i/2023/05/01/ixph3s-3.webp)
+![image-20230501114500300](https://blog.meowrain.cn/api/i/2023/05/01/ixph3s-3.webp)
 
 移动字段名位置
 
@@ -88,7 +88,7 @@ AFTER hire_date;
 SELECT * FROM employees;
 ```
 
-![image-20230501115516327](https://static.meowrain.cn/i/2023/05/01/j3rcj2-3.webp)
+![image-20230501115516327](https://blog.meowrain.cn/api/i/2023/05/01/j3rcj2-3.webp)
 
 删除字段名
 
@@ -98,7 +98,7 @@ DROP COLUMN `email`;
 SELECT * FROM employees;
 ```
 
-![image-20230501115606158](https://static.meowrain.cn/i/2023/05/01/j4akil-3.webp)
+![image-20230501115606158](https://blog.meowrain.cn/api/i/2023/05/01/j4akil-3.webp)
 
 ## DML 数据操作语言
 
@@ -113,9 +113,9 @@ VALUES
 SELECT * FROM employees;
 ```
 
-![image-20230501120125051](https://static.meowrain.cn/i/2023/05/01/jv70n7-3.webp)
+![image-20230501120125051](https://blog.meowrain.cn/api/i/2023/05/01/jv70n7-3.webp)
 
-![image-20230501120200153](https://static.meowrain.cn/i/2023/05/01/jvn557-3.webp)
+![image-20230501120200153](https://blog.meowrain.cn/api/i/2023/05/01/jvn557-3.webp)
 
 插入部分数据
 
@@ -125,7 +125,7 @@ VALUES (4,"Smith","Mike");
 SELECT * FROM employees;
 ```
 
-![image-20230501143646380](https://static.meowrain.cn/i/2023/05/01/nr8cme-3.webp)
+![image-20230501143646380](https://blog.meowrain.cn/api/i/2023/05/01/nr8cme-3.webp)
 
 ### 修改数据 UPDATE
 
@@ -136,11 +136,11 @@ WHERE employee_id = 1;
 SELECT * FROM employees;
 ```
 
-![image-20230501150657502](https://static.meowrain.cn/i/2023/05/01/owzbc7-3.webp)
+![image-20230501150657502](https://blog.meowrain.cn/api/i/2023/05/01/owzbc7-3.webp)
 
-![image-20230501150739810](https://static.meowrain.cn/i/2023/05/01/oxgvis-3.webp)
+![image-20230501150739810](https://blog.meowrain.cn/api/i/2023/05/01/oxgvis-3.webp)
 
-![image-20230501150844274](https://static.meowrain.cn/i/2023/05/01/oy38bo-3.webp)
+![image-20230501150844274](https://blog.meowrain.cn/api/i/2023/05/01/oy38bo-3.webp)
 
 ### 删除数据 DELETE
 
@@ -150,7 +150,7 @@ WHERE last_name = 'Kate';
 SELECT * FROM employees;
 ```
 
-![image-20230501151635101](https://static.meowrain.cn/i/2023/05/01/p2srq7-3.webp)
+![image-20230501151635101](https://blog.meowrain.cn/api/i/2023/05/01/p2srq7-3.webp)
 
 插入时间数据
 
@@ -164,13 +164,13 @@ CREATE TABLE time(
 );
 ```
 
-![image-20230501161655899](https://static.meowrain.cn/i/2023/05/01/qqqml5-3.webp)
+![image-20230501161655899](https://blog.meowrain.cn/api/i/2023/05/01/qqqml5-3.webp)
 
 ```sql
 SELECT * FROM time;
 ```
 
-![image-20230501161748316](https://static.meowrain.cn/i/2023/05/01/qr0et5-3.webp)
+![image-20230501161748316](https://blog.meowrain.cn/api/i/2023/05/01/qr0et5-3.webp)
 
 插入数据，并且查询结果
 
@@ -182,11 +182,11 @@ CURRENT_DATE(),CURRENT_TIME(),NOW()
 SELECT * FROM time;
 ```
 
-![image-20230501161929904](https://static.meowrain.cn/i/2023/05/01/qs32ae-3.webp)
+![image-20230501161929904](https://blog.meowrain.cn/api/i/2023/05/01/qs32ae-3.webp)
 
 这样可以插入第二天的日期数据
 
-![image-20230501162134528](https://static.meowrain.cn/i/2023/05/01/qtazuo-3.webp)
+![image-20230501162134528](https://blog.meowrain.cn/api/i/2023/05/01/qtazuo-3.webp)
 
 ## DQL 数据查询语言
 
@@ -196,7 +196,7 @@ SELECT * FROM time;
 SELECT first_name, last_name FROM employees;
 ```
 
-![image-20230501143908315](https://static.meowrain.cn/i/2023/05/01/nssll3-3.webp)
+![image-20230501143908315](https://blog.meowrain.cn/api/i/2023/05/01/nssll3-3.webp)
 
 通过上面的这个命令，我就能拿到数据库中已经存储的所有人名了
 
@@ -206,7 +206,7 @@ SELECT first_name, last_name FROM employees;
 SELECT * FROM employees WHERE employee_id = 1;
 ```
 
-![image-20230501144058078](https://static.meowrain.cn/i/2023/05/01/ntooq0-3.webp)
+![image-20230501144058078](https://blog.meowrain.cn/api/i/2023/05/01/ntooq0-3.webp)
 
 > 通过上面的命令，我们就能获取到 id 为 1 的这个员工的所有数据了，当然了，我们也可以用名字查找
 
@@ -214,7 +214,7 @@ SELECT * FROM employees WHERE employee_id = 1;
 SELECT * FROM employees WHERE first_name = 'Eugene' AND last_name = 'Krabs';
 ```
 
-![image-20230501144406858](https://static.meowrain.cn/i/2023/05/01/nvrlcf-3.webp)
+![image-20230501144406858](https://blog.meowrain.cn/api/i/2023/05/01/nvrlcf-3.webp)
 
 > 也可以用下面这个命令找到雇佣日期不是 NULL 的所有人的信息
 
@@ -222,7 +222,7 @@ SELECT * FROM employees WHERE first_name = 'Eugene' AND last_name = 'Krabs';
  SELECT * FROM employees WHERE hire_date IS NOT NULL;
 ```
 
-![image-20230501145923095](https://static.meowrain.cn/i/2023/05/01/o4sj8o-3.webp)
+![image-20230501145923095](https://blog.meowrain.cn/api/i/2023/05/01/o4sj8o-3.webp)
 
 ### 关于 UNIQUE
 
@@ -254,19 +254,19 @@ UNIQUE(product_name);
 SELECT * FROM products;
 ```
 
-![image-20230501163032840](https://static.meowrain.cn/i/2023/05/01/qynlia-3.webp)
+![image-20230501163032840](https://blog.meowrain.cn/api/i/2023/05/01/qynlia-3.webp)
 
 接下来实战一下，可以看到 unique 有什么作用
 
-![image-20230501163302899](https://static.meowrain.cn/i/2023/05/01/r09f4p-3.webp)
+![image-20230501163302899](https://blog.meowrain.cn/api/i/2023/05/01/r09f4p-3.webp)
 
-<img src="https://static.meowrain.cn/i/2023/05/01/r0emcn-3.webp" alt="image-20230501163326880" style="zoom: 50%;" />
+<img src="https://blog.meowrain.cn/api/i/2023/05/01/r0emcn-3.webp" alt="image-20230501163326880" style="zoom: 50%;" />
 
 这样写就正常了
 
-![image-20230501163433958](https://static.meowrain.cn/i/2023/05/01/r11gr8-3.webp)
+![image-20230501163433958](https://blog.meowrain.cn/api/i/2023/05/01/r11gr8-3.webp)
 
-![image-20230501163452829](https://static.meowrain.cn/i/2023/05/01/r15kst-3.webp)
+![image-20230501163452829](https://blog.meowrain.cn/api/i/2023/05/01/r15kst-3.webp)
 
 ### 关于 NOT NULL
 
@@ -296,15 +296,15 @@ MODIFY price DECIMAL(4,2) NOT NULL;
 
 ```
 
-![image-20230501163920984](https://static.meowrain.cn/i/2023/05/01/r3xxt7-3.webp)
+![image-20230501163920984](https://blog.meowrain.cn/api/i/2023/05/01/r3xxt7-3.webp)
 
 实战报错：
 
-![image-20230501164239816](https://static.meowrain.cn/i/2023/05/01/r5u8ef-3.webp)
+![image-20230501164239816](https://blog.meowrain.cn/api/i/2023/05/01/r5u8ef-3.webp)
 
 正确演示：
 
-![image-20230501164130723](https://static.meowrain.cn/i/2023/05/01/r56ud0-3.webp)
+![image-20230501164130723](https://blog.meowrain.cn/api/i/2023/05/01/r56ud0-3.webp)
 
 ### 关于 CHECK
 
@@ -365,7 +365,7 @@ VALUES (104,"straw"),(105,"napkin"),(106,"fork"),(106,"spoon");
 SELECT * FROM products;
 ```
 
-![image-20230502111217698](https://static.meowrain.cn/i/2023/05/02/ie5pr1-3.webp)
+![image-20230502111217698](https://blog.meowrain.cn/api/i/2023/05/02/ie5pr1-3.webp)
 
 ### 关于 PRIMARY KEY
 
@@ -392,7 +392,7 @@ CREATE TABLE transactions (
 SELECT * FROM transactions;
 ```
 
-![image-20230502153015175](https://static.meowrain.cn/i/2023/05/02/pb0lk4-3.webp)
+![image-20230502153015175](https://blog.meowrain.cn/api/i/2023/05/02/pb0lk4-3.webp)
 
 如果已经存在表，可以直接修改 id 为主键
 
@@ -403,7 +403,7 @@ PRIMARY KEY(transaction_id);
 SELECT * FROM transactions;
 ```
 
-![image-20230502153535947](https://static.meowrain.cn/i/2023/05/02/pe3ybi-3.webp)
+![image-20230502153535947](https://blog.meowrain.cn/api/i/2023/05/02/pe3ybi-3.webp)
 
 > 从上图我们可以知道，主键不能为 NULL
 
@@ -437,7 +437,7 @@ VALUES (4.99),(5.43),(3.22);
 SELECT * FROM transactions;
 ```
 
-![image-20230502154052065](https://static.meowrain.cn/i/2023/05/02/ph6qsh-3.webp)
+![image-20230502154052065](https://blog.meowrain.cn/api/i/2023/05/02/ph6qsh-3.webp)
 
 > 设置自增起始值
 
@@ -452,7 +452,7 @@ VALUES (4.23),(5.66),(5.78),(7.32);
 SELECT * FROM transactions;
 ```
 
-![image-20230502154418032](https://static.meowrain.cn/i/2023/05/02/pjd370-3.webp)
+![image-20230502154418032](https://blog.meowrain.cn/api/i/2023/05/02/pjd370-3.webp)
 
 ### 关于 FOREIGN KEY
 
@@ -484,7 +484,7 @@ CREATE TABLE customers (
 SELECT * FROM customers;
 ```
 
-![image-20230502154923754](https://static.meowrain.cn/i/2023/05/02/pmdkkr-3.webp)
+![image-20230502154923754](https://blog.meowrain.cn/api/i/2023/05/02/pmdkkr-3.webp)
 
 插入数据到 customers 表
 
@@ -497,7 +497,7 @@ VALUES
 SELECT * FROM customers;
 ```
 
-![image-20230502155120066](https://static.meowrain.cn/i/2023/05/02/pnjs9d-3.webp)
+![image-20230502155120066](https://blog.meowrain.cn/api/i/2023/05/02/pnjs9d-3.webp)
 
 创建 transaction 表
 
@@ -511,16 +511,16 @@ FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
 SELECT * FROM transactions;
 ```
 
-![image-20230502155331725](https://static.meowrain.cn/i/2023/05/02/poszon-3.webp)
+![image-20230502155331725](https://blog.meowrain.cn/api/i/2023/05/02/poszon-3.webp)
 
 插入数据
 
-![image-20230502155734009](https://static.meowrain.cn/i/2023/05/02/pr766o-3.webp)
+![image-20230502155734009](https://blog.meowrain.cn/api/i/2023/05/02/pr766o-3.webp)
 
 接下来我们尝试删除 customers 表中的一个人，但是这个人和 transactions 中的一个字段相关联
 
 我们就会得到下面的报错
-![image-20230502155846887](https://static.meowrain.cn/i/2023/05/02/prvbg0-3.webp)
+![image-20230502155846887](https://blog.meowrain.cn/api/i/2023/05/02/prvbg0-3.webp)
 
 ### 关于 JOINS
 
@@ -587,13 +587,13 @@ WHERE orders.customer_id = customers.id;
 
 #### INNER JOIN 实战
 
-![image-20230502163046327](https://static.meowrain.cn/i/2023/05/02/qyql0w-3.webp)
+![image-20230502163046327](https://blog.meowrain.cn/api/i/2023/05/02/qyql0w-3.webp)
 
 我们先来看一下 transactions 表和 customers 表中的内容
 
-![image-20230502162430520](https://static.meowrain.cn/i/2023/05/02/qv2kxm-3.webp)
+![image-20230502162430520](https://blog.meowrain.cn/api/i/2023/05/02/qv2kxm-3.webp)
 
-![image-20230502162441061](https://static.meowrain.cn/i/2023/05/02/qv4oxu-3.webp)
+![image-20230502162441061](https://blog.meowrain.cn/api/i/2023/05/02/qv4oxu-3.webp)
 
 ```sql
 SELECT *
@@ -601,9 +601,9 @@ FROM transactions INNER JOIN customers
 ON transactions.customer_id = customers.customer_id;
 ```
 
-![](https://static.meowrain.cn/i/2023/05/02/qukjp4-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/05/02/qukjp4-3.webp)
 
-![image-20230502162747415](https://static.meowrain.cn/i/2023/05/02/qwyg06-3.webp)
+![image-20230502162747415](https://blog.meowrain.cn/api/i/2023/05/02/qwyg06-3.webp)
 
 > 可以看到，我们这样拼起来，就能清晰的获得到用户的`transaction_id`还有`name`，以及消费的`amount`
 >
@@ -611,25 +611,25 @@ ON transactions.customer_id = customers.customer_id;
 
 #### 实战 LEFT JOIN，RIGHT JOIN
 
-![image-20230502163030371](https://static.meowrain.cn/i/2023/05/02/qyn197-3.webp)
+![image-20230502163030371](https://blog.meowrain.cn/api/i/2023/05/02/qyn197-3.webp)
 
-![image-20230502163451489](https://static.meowrain.cn/i/2023/05/02/r15fhf-3.webp)
+![image-20230502163451489](https://blog.meowrain.cn/api/i/2023/05/02/r15fhf-3.webp)
 
 现在我们往 transactions 表中插入一个没有 customer_id 属性的字段
 
-![image-20230502163255683](https://static.meowrain.cn/i/2023/05/02/qzzb78-3.webp)
+![image-20230502163255683](https://blog.meowrain.cn/api/i/2023/05/02/qzzb78-3.webp)
 
 INNER JOIN 结果是这样的
 
-![image-20230502163323936](https://static.meowrain.cn/i/2023/05/02/r0dxmq-3.webp)
+![image-20230502163323936](https://blog.meowrain.cn/api/i/2023/05/02/r0dxmq-3.webp)
 
 LEFT JOIN 是这样的
 
-![image-20230502163348033](https://static.meowrain.cn/i/2023/05/02/r0j2iz-3.webp)
+![image-20230502163348033](https://blog.meowrain.cn/api/i/2023/05/02/r0j2iz-3.webp)
 
 RIGHT JOIN 是这样的
 
-![image-20230502163423017](https://static.meowrain.cn/i/2023/05/02/r0z7ed-3.webp)
+![image-20230502163423017](https://blog.meowrain.cn/api/i/2023/05/02/r0z7ed-3.webp)
 
 ### 关于 ON
 
@@ -831,7 +831,7 @@ SELECT COUNT(amount)
 FROM transactions;
 ```
 
-![image-20230502165226874](https://static.meowrain.cn/i/2023/05/02/rbpvga-3.webp)
+![image-20230502165226874](https://blog.meowrain.cn/api/i/2023/05/02/rbpvga-3.webp)
 
 ```sql
 SELECT
@@ -840,7 +840,7 @@ FROM
 	transactions;
 ```
 
-![image-20230502165340914](https://static.meowrain.cn/i/2023/05/02/rce5qd-3.webp)
+![image-20230502165340914](https://blog.meowrain.cn/api/i/2023/05/02/rce5qd-3.webp)
 
 ```sql
 SELECT
@@ -849,13 +849,13 @@ FROM
 	transactions;
 ```
 
-![image-20230502165425895](https://static.meowrain.cn/i/2023/05/02/rcwdf7-3.webp)
+![image-20230502165425895](https://blog.meowrain.cn/api/i/2023/05/02/rcwdf7-3.webp)
 
 链接字符串
 
 employee 表内容
 
-![image-20230502165626186](https://static.meowrain.cn/i/2023/05/02/re3cop-3.webp)
+![image-20230502165626186](https://blog.meowrain.cn/api/i/2023/05/02/re3cop-3.webp)
 
 接下来我们尝试把名字连起来
 
@@ -863,4 +863,4 @@ employee 表内容
 SELECT CONCAT(first_name," ",last_name) FROM employees;
 ```
 
-![image-20230502165555691](https://static.meowrain.cn/i/2023/05/02/rdo8qz-3.webp)
+![image-20230502165555691](https://blog.meowrain.cn/api/i/2023/05/02/rdo8qz-3.webp)

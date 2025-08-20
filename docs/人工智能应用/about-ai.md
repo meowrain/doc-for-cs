@@ -28,6 +28,6 @@ ChatGPT 的优点包括：
 # Bito
 
 [Bito 官网](https://bito.ai)
-![](https://static.meowrain.cn/i/2023/05/02/sjssgk-3.webp)
-![](https://static.meowrain.cn/i/2023/05/02/sjcfs4-3.webp)
-![](https://static.meowrain.cn/i/2023/05/02/sjocpw-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/05/02/sjssgk-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/05/02/sjcfs4-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/05/02/sjocpw-3.webp)

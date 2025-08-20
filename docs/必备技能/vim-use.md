@@ -1,6 +1,6 @@
 # 学习vim
 # 为什么学习vim
-![](https://static.meowrain.cn/i/2023/03/31/yvole7-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/31/yvole7-3.webp)
 
 这里推荐使用linux下的vim进行练习。
 
@@ -10,11 +10,11 @@
 ## 使用常规方式安装
 - [vim官网](https://www.vim.org/download.php)
 首先打开上面的网址，如下
-![](https://static.meowrain.cn/i/2023/03/31/yy40hm-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/31/yy40hm-3.webp)
 安装后我们就能在系统里搜索到gvim啦
-![](https://static.meowrain.cn/i/2023/03/31/yycdfg-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/31/yycdfg-3.webp)
 打开后是这样的
-![](https://static.meowrain.cn/i/2023/03/31/yyprph-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/31/yyprph-3.webp)
 
 ## scoop安装
 > 关于scoop的使用，详情请看 [Windows系统使用-Scoop](/System-learn/Windows-learn.md#scoop)

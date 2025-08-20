@@ -30,7 +30,7 @@ windows的默认全屏截图是键盘上的`PrtSc`这个按键，按下这个键
 
 
 
-![](https://static.meowrain.cn/i/2023/03/29/12p6gtm-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/29/12p6gtm-3.webp)
 
 
 
@@ -48,7 +48,7 @@ windows的默认全屏截图是键盘上的`PrtSc`这个按键，按下这个键
 
 图：
 
-![](https://static.meowrain.cn/i/2023/03/29/12par0u-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/03/29/12par0u-3.webp)
 
 
 

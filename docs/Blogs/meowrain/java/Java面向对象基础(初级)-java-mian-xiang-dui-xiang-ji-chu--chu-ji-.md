@@ -25,13 +25,13 @@ tags:
 
 ## 初识对象和类
 
-![image-20221207221107547](https://static.meowrain.cn/i/2022/12/08/a3swjm-3.png)
+![image-20221207221107547](https://blog.meowrain.cn/api/i/2022/12/08/a3swjm-3.png)
 
-![image-20221207221135590](https://static.meowrain.cn/i/2022/12/08/a3yslr-3.png)
+![image-20221207221135590](https://blog.meowrain.cn/api/i/2022/12/08/a3yslr-3.png)
 
-![image-20221207221142578](https://static.meowrain.cn/i/2022/12/08/a409p0-3.png)
+![image-20221207221142578](https://blog.meowrain.cn/api/i/2022/12/08/a409p0-3.png)
 
-![image-20221207222150537](https://static.meowrain.cn/i/2022/12/08/aa0a4k-3.png)
+![image-20221207222150537](https://blog.meowrain.cn/api/i/2022/12/08/aa0a4k-3.png)
 
 ## 初次使用对象和类
 
@@ -114,7 +114,7 @@ Cat cat = new Cat();
 
 ## 对象在内存中的存在形式
 
-![image-20221207222229633](https://static.meowrain.cn/i/2022/12/08/aaheb6-3.png)
+![image-20221207222229633](https://blog.meowrain.cn/api/i/2022/12/08/aaheb6-3.png)
 
 
 
@@ -150,7 +150,7 @@ class Hunman {
 >
 >  > 基本数据类型和引用数据类型详见[Java数据类型：基本数据类型和引用数据类型 (biancheng.net)](http://c.biancheng.net/view/5672.html)
 >  >
->  > ![Java数据类型结构图](https://static.meowrain.cn/i/2022/12/08/ae0mrh-3.jpg)
+>  > ![Java数据类型结构图](https://blog.meowrain.cn/api/i/2022/12/08/ae0mrh-3.jpg)
 >  >
 >  > [Java数据类型（八种基本数据类型 + 四种引用数据类型）_火火笔记的博客-CSDN博客_引用数据类型有哪几种](https://blog.csdn.net/weixin_42428778/article/details/109603769)
 >
@@ -212,7 +212,7 @@ class Person {
 
 > 问题：`p2.age` 究竟是多少，画出内存图
 >
-> ![image-20221207224810174](https://static.meowrain.cn/i/2022/12/08/apujhh-3.png)
+> ![image-20221207224810174](https://blog.meowrain.cn/api/i/2022/12/08/apujhh-3.png)
 
 ### Java 内存的结构分析 
 
@@ -222,9 +222,9 @@ class Person {
 
 #### Java 创建对象的流程简单分析
 
-![image-20221207230136236](https://static.meowrain.cn/i/2022/12/08/bljtzj-3.png)
+![image-20221207230136236](https://blog.meowrain.cn/api/i/2022/12/08/bljtzj-3.png)
 
-![image-20221207230219768](https://static.meowrain.cn/i/2022/12/08/bm1vkd-3.png)
+![image-20221207230219768](https://blog.meowrain.cn/api/i/2022/12/08/bm1vkd-3.png)
 
 ## 方法重载
 
@@ -293,11 +293,11 @@ class rel_07 {
 }
 ```
 
-> ![image-20221208221302540](https://static.meowrain.cn/i/2022/12/09/a4yvcs-3.png)
+> ![image-20221208221302540](https://blog.meowrain.cn/api/i/2022/12/09/a4yvcs-3.png)
 
 ## 作用域
 
-![image-20221208221637490](https://static.meowrain.cn/i/2022/12/09/a6yf87-3.png)
+![image-20221208221637490](https://blog.meowrain.cn/api/i/2022/12/09/a6yf87-3.png)
 
 ```java
 package cn.meowrain.Object_;
@@ -341,7 +341,7 @@ class Dog {
 
 ### 注意事项和使用细节
 
-![image-20221208222256061](https://static.meowrain.cn/i/2022/12/09/aan8cn-3.png)
+![image-20221208222256061](https://blog.meowrain.cn/api/i/2022/12/09/aan8cn-3.png)
 
 > 属性可以加修饰符，但是局部变量不能加修饰符
 
@@ -355,7 +355,7 @@ class Dog {
 1) 没有返回值 
 1) 在创建对象时，系统会自动的调用该类的构造器完成对象的初始化。
 
-![image-20221208223933784](https://static.meowrain.cn/i/2022/12/09/akmmfe-3.png)
+![image-20221208223933784](https://blog.meowrain.cn/api/i/2022/12/09/akmmfe-3.png)
 
 基本语法：
 
@@ -365,7 +365,7 @@ class Dog {
 }
 ```
 
-> ![image-20221208224012942](https://static.meowrain.cn/i/2022/12/09/al3gvn-3.png)
+> ![image-20221208224012942](https://blog.meowrain.cn/api/i/2022/12/09/al3gvn-3.png)
 
 案例：
 
@@ -409,11 +409,11 @@ class rel_09 {
 }
 ```
 
-![image-20221208224712870](https://static.meowrain.cn/i/2022/12/09/ap9rk3-3.png)
+![image-20221208224712870](https://blog.meowrain.cn/api/i/2022/12/09/ap9rk3-3.png)
 
 ### 练习题：
 
-![image-20221208225109288](https://static.meowrain.cn/i/2022/12/09/armk4z-3.png)
+![image-20221208225109288](https://blog.meowrain.cn/api/i/2022/12/09/armk4z-3.png)
 
 ```java
 package cn.meowrain.Object_;
@@ -444,27 +444,27 @@ class Person_n {
 }
 ```
 
-![image-20221208230513474](https://static.meowrain.cn/i/2022/12/09/bnslbj-3.png)
+![image-20221208230513474](https://blog.meowrain.cn/api/i/2022/12/09/bnslbj-3.png)
 
 ## 对象创建的流程分析
 
-![image-20221208232146688](https://static.meowrain.cn/i/2022/12/09/bxix5a-3.png)
+![image-20221208232146688](https://blog.meowrain.cn/api/i/2022/12/09/bxix5a-3.png)
 
-![image-20221208232252577](https://static.meowrain.cn/i/2022/12/09/by5lwi-3.png)
+![image-20221208232252577](https://blog.meowrain.cn/api/i/2022/12/09/by5lwi-3.png)
 
 
 
 ## this关键字
 
-![image-20221208232330819](https://static.meowrain.cn/i/2022/12/09/bym9gu-3.png)
+![image-20221208232330819](https://blog.meowrain.cn/api/i/2022/12/09/bym9gu-3.png)
 
 > 什么是this?
 >
 > ==简单说：哪个对象调用，this就代表哪个对象==
 >
-> ![image-20221208232947980](https://static.meowrain.cn/i/2022/12/09/c2ajje-3.png)
+> ![image-20221208232947980](https://blog.meowrain.cn/api/i/2022/12/09/c2ajje-3.png)
 >
-> ![image-20221208233027570](https://static.meowrain.cn/i/2022/12/09/c2rgsf-3.png)
+> ![image-20221208233027570](https://blog.meowrain.cn/api/i/2022/12/09/c2rgsf-3.png)
 
 ```java
 package cn.meowrain.Object_;
@@ -494,7 +494,7 @@ class Dog_new {
 
 ### 练习题：
 
-![image-20221208233149601](https://static.meowrain.cn/i/2022/12/09/c3hjo6-3.png)
+![image-20221208233149601](https://blog.meowrain.cn/api/i/2022/12/09/c3hjo6-3.png)
 
 ```java
 package cn.meowrain.Object_;
@@ -531,7 +531,7 @@ class person_01 {
 
 ## 作业1
 
-![image-20221208233847713](https://static.meowrain.cn/i/2022/12/09/c7n9aw-3.png)
+![image-20221208233847713](https://blog.meowrain.cn/api/i/2022/12/09/c7n9aw-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -562,7 +562,7 @@ class A01 {
 
 ## 作业2
 
-![image-20221208233859783](https://static.meowrain.cn/i/2022/12/09/c7py2n-3.png)
+![image-20221208233859783](https://blog.meowrain.cn/api/i/2022/12/09/c7py2n-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -596,7 +596,7 @@ class A02 {
 
 ## 作业3
 
-![image-20221208233908170](https://static.meowrain.cn/i/2022/12/09/c80ehs-3.png)
+![image-20221208233908170](https://blog.meowrain.cn/api/i/2022/12/09/c80ehs-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -641,7 +641,7 @@ class Book {
 
 ## 作业4
 
-![image-20221208233917803](https://static.meowrain.cn/i/2022/12/09/c826s9-3.png)
+![image-20221208233917803](https://blog.meowrain.cn/api/i/2022/12/09/c826s9-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -672,7 +672,7 @@ class A03 {
 
 ## 作业5
 
-![image-20221208233925348](https://static.meowrain.cn/i/2022/12/09/c840f7-3.png)
+![image-20221208233925348](https://blog.meowrain.cn/api/i/2022/12/09/c840f7-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -711,7 +711,7 @@ class Circle {
 
 ## 作业6
 
-![image-20221208233941030](https://static.meowrain.cn/i/2022/12/09/c87b93-3.png)
+![image-20221208233941030](https://blog.meowrain.cn/api/i/2022/12/09/c87b93-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -757,7 +757,7 @@ class Cale {
 
 ## 作业7
 
-![image-20221208233951625](https://static.meowrain.cn/i/2022/12/09/c89j3i-3.png)
+![image-20221208233951625](https://blog.meowrain.cn/api/i/2022/12/09/c89j3i-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -787,13 +787,13 @@ class Dog {
 
 ## 作业8
 
-![image-20221208234033422](https://static.meowrain.cn/i/2022/12/09/c8r8su-3.png)
+![image-20221208234033422](https://blog.meowrain.cn/api/i/2022/12/09/c8r8su-3.png)
 
 
 
 ## 作业9
 
-![image-20221208234041063](https://static.meowrain.cn/i/2022/12/09/c8svca-3.png)
+![image-20221208234041063](https://blog.meowrain.cn/api/i/2022/12/09/c8svca-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -829,7 +829,7 @@ class Music
 
 ## 作业10
 
-![image-20221208234050200](https://static.meowrain.cn/i/2022/12/09/c8up21-3.png)
+![image-20221208234050200](https://blog.meowrain.cn/api/i/2022/12/09/c8up21-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -868,7 +868,7 @@ j=100
 
 ## 作业11
 
-![image-20221208234102159](https://static.meowrain.cn/i/2022/12/09/c8xbp3-3.png)
+![image-20221208234102159](https://blog.meowrain.cn/api/i/2022/12/09/c8xbp3-3.png)
 
 ```java
 不做了
@@ -878,7 +878,7 @@ j=100
 
 ## 作业12
 
-![image-20221208234109474](https://static.meowrain.cn/i/2022/12/09/c97cu8-3.png)
+![image-20221208234109474](https://blog.meowrain.cn/api/i/2022/12/09/c97cu8-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;
@@ -920,7 +920,7 @@ class Employee_ {
 
 ## 作业13
 
-![image-20221208234123863](https://static.meowrain.cn/i/2022/12/09/c9aok3-3.png)
+![image-20221208234123863](https://blog.meowrain.cn/api/i/2022/12/09/c9aok3-3.png)
 
 ```java
 package cn.meowrain.Object_.homework;

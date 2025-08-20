@@ -48,7 +48,7 @@ Consolas, 'Courier New', monospace
 
 ### 常用的包
 
-![image-20221209184119352](https://static.meowrain.cn/i/2022/12/10/3zkt3u-3.png)
+![image-20221209184119352](https://blog.meowrain.cn/api/i/2022/12/10/3zkt3u-3.png)
 
 ### 引入包
 
@@ -72,11 +72,11 @@ public class package_01 {
 
 ## 访问修饰符
 
-![image-20221209194630958](https://static.meowrain.cn/i/2022/12/10/5q5tda-3.png)
+![image-20221209194630958](https://blog.meowrain.cn/api/i/2022/12/10/5q5tda-3.png)
 
-![image-20221209194636928](https://static.meowrain.cn/i/2022/12/10/5q78mr-3.png)
+![image-20221209194636928](https://blog.meowrain.cn/api/i/2022/12/10/5q78mr-3.png)
 
-![image-20221209194754093](https://static.meowrain.cn/i/2022/12/10/5qw5s4-3.png)
+![image-20221209194754093](https://blog.meowrain.cn/api/i/2022/12/10/5qw5s4-3.png)
 
 ## 封装
 
@@ -112,7 +112,7 @@ public class package_01 {
 
 ### 快速入门案例
 
-![image-20221118101742062](https://static.meowrain.cn/i/2022/11/18/u1yi7u-3.png)
+![image-20221118101742062](https://blog.meowrain.cn/api/i/2022/11/18/u1yi7u-3.png)
 
 ```java
 package cn.meowrain.Encap_;
@@ -172,7 +172,7 @@ class Person
 }
 ```
 
-![image-20221209200402253](https://static.meowrain.cn/i/2022/12/10/6oa8gj-3.png)
+![image-20221209200402253](https://blog.meowrain.cn/api/i/2022/12/10/6oa8gj-3.png)
 
 ### 把构造器和封装结合
 
@@ -258,7 +258,7 @@ class Person {
 
 ### 课堂练习
 
-![image-20221118113154656](https://static.meowrain.cn/i/2022/11/18/vxwxwt-3.png)
+![image-20221118113154656](https://blog.meowrain.cn/api/i/2022/11/18/vxwxwt-3.png)
 
 ```java
 package cn.meowrain.Encap_;
@@ -308,11 +308,11 @@ class AccountTest {
 
 ### 为什么需要继承
 
-![](https://static.meowrain.cn/i/2022/12/10/8eozay-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/10/8eozay-3.png)
 
 ### 继承的基本介绍和示意图
 
-![](https://static.meowrain.cn/i/2022/12/10/8f3jcg-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/10/8f3jcg-3.png)
 
 ### 继承的基本语法
 
@@ -490,11 +490,11 @@ class Son extends Father { // 子类
 ```
 
 > **子类创建的内存布局**
-> ![](https://static.meowrain.cn/i/2022/12/10/aes0io-3.png)
+> ![](https://blog.meowrain.cn/api/i/2022/12/10/aes0io-3.png)
 
 ### 练习
 
-![](https://static.meowrain.cn/i/2022/12/10/ajhkeh-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/10/ajhkeh-3.png)
 
 > 会输出
 > a
@@ -605,11 +605,11 @@ class Child_01 extends Base_01 {
 }
 ```
 ### super给编程带来的便利
-![](https://static.meowrain.cn/i/2022/12/11/5vpim6-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/11/5vpim6-3.png)
 
 ### super和this的比较
 
-![](https://static.meowrain.cn/i/2022/12/11/5w5d9r-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/11/5w5d9r-3.png)
 
 
 ## 方法重写（Override）
@@ -648,19 +648,19 @@ class Child_02 extends Base_02 {
 ### 方法重写和重载的区别
 重载是 https://meowrain.cn/archives/java-mian-xiang-dui-xiang-ji-chu--chu-ji-
 中的内容，回顾清看上面链接的内容
-![](https://static.meowrain.cn/i/2022/12/11/6szuyj-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/11/6szuyj-3.png)
 
 ## 多态
 ### 基本介绍
 方法或对象具有多种形态，是面向对象的第三大特征，多态是建立在封装和继承基础上的
-![](https://static.meowrain.cn/i/2022/12/11/779d3z-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/11/779d3z-3.png)
 ### 多态存在的三个必要条件
 - 继承
 - 重写
 - 父类引用指向子类对象：`Parent p = new Child();`
 ### 多态的具体体现
 #### 方法的多态
-![](https://static.meowrain.cn/i/2022/12/11/7a5tpq-3.png)
+![](https://blog.meowrain.cn/api/i/2022/12/11/7a5tpq-3.png)
 上图代码实现：
 Shap.java
 ```java
@@ -1203,9 +1203,9 @@ public class NormalEmployee extends Employee{
 
 == 是一个比较运算符
 
-![image-20221121193757084](https://static.meowrain.cn/i/2022/11/21/w1hxcz-3.png)
+![image-20221121193757084](https://blog.meowrain.cn/api/i/2022/11/21/w1hxcz-3.png)
 
-![image-20221121201430025](https://static.meowrain.cn/i/2022/11/21/xb6e82-3.png)
+![image-20221121201430025](https://blog.meowrain.cn/api/i/2022/11/21/xb6e82-3.png)
 
 > 在看下面这个东西之前，我们先抛出一个问题 
 > **String属于什么数据类型？**

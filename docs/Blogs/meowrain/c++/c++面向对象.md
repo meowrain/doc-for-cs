@@ -30,7 +30,7 @@ int main(void) {
 }
 ```
 
-![image-20230705191917170](https://static.meowrain.cn/i/2023/07/05/vqmqjj-3.webp)
+![image-20230705191917170](https://blog.meowrain.cn/api/i/2023/07/05/vqmqjj-3.webp)
 
 我们如果在 main 函数中直接用对象输出学生的分数，就不能
 
@@ -56,9 +56,9 @@ int main(void) {
 }
 ```
 
-![image-20230705192009344](https://static.meowrain.cn/i/2023/07/05/vr6m6j-3.webp)
+![image-20230705192009344](https://blog.meowrain.cn/api/i/2023/07/05/vr6m6j-3.webp)
 
-![image-20230705192032009](https://static.meowrain.cn/i/2023/07/05/vrbig8-3.webp)
+![image-20230705192032009](https://blog.meowrain.cn/api/i/2023/07/05/vrbig8-3.webp)
 
 #### protected
 
@@ -634,7 +634,7 @@ int main() {
 
 > **可重载运算符**
 >
-> ![image-20230705203726423](https://static.meowrain.cn/i/2023/07/05/xoxx73-3.webp)
+> ![image-20230705203726423](https://blog.meowrain.cn/api/i/2023/07/05/xoxx73-3.webp)
 
 > 为了方便说明，我这里直接拿牛客网的题来说明了，包括重载运算符有什么用
 

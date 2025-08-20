@@ -2,7 +2,7 @@
 
 ## Python学习建议
 
-![](https://static.meowrain.cn/i/2023/04/02/j2nm2p-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/04/02/j2nm2p-3.webp)
 十分推荐大家clone这个项目去学习python
 [Python-100-Days
 ](https://github.com/jackfrued/Python-100-Days)

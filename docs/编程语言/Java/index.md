@@ -2,7 +2,7 @@
 
 ## 前言
 
-![](https://static.meowrain.cn/i/2023/04/02/j37wt2-3.webp)
+![](https://blog.meowrain.cn/api/i/2023/04/02/j37wt2-3.webp)
 
 > 看到这里的同学们，相信你们已经完成了 C 语言的学习！接下来我们就开始 JAVA 的学习吧！
 
