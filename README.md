@@ -9,7 +9,8 @@
 
 ## 前言
 
-[cs.meowrain.cn](https://cs.meowrain.cn)
+2025继续维护
+
 
 ## 贡献指南
 
