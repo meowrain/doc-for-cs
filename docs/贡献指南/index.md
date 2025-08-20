@@ -21,7 +21,7 @@ $ pipx install poetry
 # 进入到当前项目，安装项目依赖，创建虚拟环境
 
 ```bash
-$ poetry install
+$ poetry install --no-root
 ```
 
 > 因为已经配置好了镜像，所以下载会很快
@@ -29,6 +29,7 @@ $ poetry install
 # 进入当前虚拟环境的shell
 
 ```bash
+$ poetry self add poetry-plugin-shell
 $ poetry shell
 ```
 

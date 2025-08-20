@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["meowrain <meowrain@126.com>"]
 readme = "README.md"
-
+package-mode = false
 [tool.poetry.dependencies]
 python = "^3.10"
 mkdocs-material = "7.3.6"
@@ -14,7 +14,7 @@ mkdocs-git-revision-date-localized-plugin = "0.9.3"
 [[tool.poetry.source]]
 name = "mirrors"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
-priority = "default"
+priority = "primary"
 
 [build-system]
 requires = ["poetry-core"]
